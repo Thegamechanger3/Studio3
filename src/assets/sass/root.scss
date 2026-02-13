@@ -13,29 +13,27 @@
 @media only screen and (min-width: 0px) {
 	/* All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
 	:root {
-		--primary: #ff6a3e;
-		--primaryLight: #ffba43;
-		--secondary: #ffba43;
-		--secondaryLight: #ffba43;
-		--headerColor: #1a1a1a;
-		--bodyTextColor: #4e4b66;
-		--bodyTextColorWhite: #fafbfc;
-
-		/* Dark Mode Styles */
+		--primary: #8F857C;
+		--primaryLight: #A79F97;
+	
+		--secondary: #7E8B7A;
+		--secondaryLight: #A3ADA0;
+	
+		--headerColor: #1C1C1C;
+		--bodyTextColor: #5E5A57;
+	
 		--dark: #082032;
 		--medium: #2c394b;
 		--accent: #334756;
-
-		/* 13px - 16px */
+	
 		--topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
-		/* 31px - 49px */
 		--headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
 		--bodyFontSize: 1rem;
-		/* 60px - 100px top and bottom */
 		--sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
-
-		--headerFont: "Roboto", Arial, sans-serif;
-		--bodyFont: "Roboto", Arial, sans-serif;
+	
+		/* 🔥 CHANGE THESE */
+		--headerFont: "Playfair Display", serif;
+		--bodyFont: "Playfair Display", serif; /* if you want everything Playfair */
 	}
 
 	html,
@@ -832,8 +830,7 @@
 			min-width: calc(200 / 16 * 1rem);
 			margin: 0;
 			padding: 0;
-			background-color: #fff;
-			box-shadow: rgba(149, 157, 165, 0.2) 0px 10px 16px;
+			background-color:transparent;
 			opacity: 0;
 			border-bottom: 5px solid var(--primary);
 			visibility: hidden;
@@ -971,8 +968,8 @@
 		/* prevents padding and border from affecting height and width */
 		box-sizing: border-box;
 		padding: 0 calc(16 / 16 * 1rem);
-		background-color: #fff;
-		box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+		background-color: transparent;
+	
 		position: fixed;
 		z-index: 10000;
 
