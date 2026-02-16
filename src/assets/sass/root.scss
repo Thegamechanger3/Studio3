@@ -15,25 +15,29 @@
 	:root {
 		--primary: #8F857C;
 		--primaryLight: #A79F97;
-	
-		--secondary: #7E8B7A;
-		--secondaryLight: #A3ADA0;
-	
-		--headerColor: #1C1C1C;
-		--bodyTextColor: #5E5A57;
-	
+		
+		--secondary: #1F2A24;       /* deep forest */
+		--secondaryLight: #2E3A33;
+		
+		--headerColor: #F5F2EE;     /* light text on dark */
+		--bodyTextColor: #D8D3CD;
+		--bodyTextColorWhite: #FFFFFF;
+
+		/* Dark Mode Styles */
 		--dark: #082032;
 		--medium: #2c394b;
 		--accent: #334756;
-	
+
+		/* 13px - 16px */
 		--topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+		/* 31px - 49px */
 		--headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
 		--bodyFontSize: 1rem;
+		/* 60px - 100px top and bottom */
 		--sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
-	
-		/* 🔥 CHANGE THESE */
-		--headerFont: "Playfair Display", serif;
-		--bodyFont: "Playfair Display", serif; /* if you want everything Playfair */
+
+		--headerFont: "Inria Serif", serif;
+	--bodyFont: "Inter", sans-serif;
 	}
 
 	html,
@@ -106,7 +110,7 @@
 		z-index: 1;
 		position: relative;
 		display: inline-block;
-		background-color: var(--primary);
+		background-color: #8F857C;
 		width: auto;
 		padding: calc(16 / 16 * 1rem) calc(32 / 16 * 1rem);
 		text-decoration: none;
@@ -116,6 +120,8 @@
 		font-weight: bold;
 		border-radius: calc(4 / 16 * 1rem);
 		overflow: hidden;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
 
 		// Transition Properties
 		color: var(--bodyTextColorWhite);
@@ -139,7 +145,7 @@
 			content: "";
 			opacity: 1;
 			display: block;
-			background-color: #000;
+			background-color:transparent;
 			height: 100%;
 
 			//Transition properties
@@ -291,37 +297,6 @@
 	}
 }
 
-/* Fonts */
-@media only screen and (min-width: 0px) {
-	// Grab your fonts to locally host from https://gwfh.mranftl.com/fonts
-	/* roboto-regular - latin */
-	@font-face {
-		font-style: normal;
-		font-family: "Roboto";
-		font-weight: 400;
-		font-display: swap;
-		src: local(""), url("/assets/fonts/roboto-v29-latin-regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-	}
-
-	/* roboto-700 - latin */
-	@font-face {
-		font-style: normal;
-		font-family: "Roboto";
-		font-weight: 700;
-		font-display: swap;
-		src: local(""), url("/assets/fonts/roboto-v29-latin-700.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-	}
-
-	/* roboto-900 - latin */
-	@font-face {
-		font-style: normal;
-		font-family: "Roboto";
-		font-weight: 900;
-		font-display: swap;
-		src: local(""), url("/assets/fonts/roboto-v29-latin-900.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-	}
-}
-
 /*-- -------------------------- -->
 <---      Dark Mode Toggle      -->
 <--- -------------------------- -*/
@@ -418,7 +393,7 @@
 		/* prevents padding and border from affecting height and width */
 		box-sizing: border-box;
 		padding: calc(12 / 16 * 1rem) calc(16 / 16 * 1rem);
-		background-color: #fff;
+		background-color: #8F857C;
 		box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 		position: fixed;
 		z-index: 10000;
@@ -703,7 +678,7 @@
 @media only screen and (max-width: 1023.5px) {
 	#cs-navigation {
 		.cs-dropdown {
-			color: var(--bodyTextColorWhite);
+			color: var(--bodyTxtColorWhite);
 			position: relative;
 
 			.cs-dropdown-toggle {
@@ -747,6 +722,7 @@
 			top: 50%;
 			right: calc(-20 / 16 * 1rem);
 			transform: translateY(-50%);
+			color: #7E8B7A;
 		}
 
 		.cs-drop-ul {
@@ -830,7 +806,8 @@
 			min-width: calc(200 / 16 * 1rem);
 			margin: 0;
 			padding: 0;
-			background-color:transparent;
+			background-color: #8F857C;
+			box-shadow: rgba(149, 157, 165, 0.2) 0px 10px 16px;
 			opacity: 0;
 			border-bottom: 5px solid var(--primary);
 			visibility: hidden;
@@ -909,13 +886,13 @@
 				box-sizing: border-box;
 				padding: calc(12 / 16 * 1rem);
 				color: var(--bodyTextColor);
-				background-color: #f7f7f7;
+				background-color: #8F857C;
 				outline: none;
 				display: block;
 				transition: color 0.3s, background-color 0.3s;
 
 				&:hover {
-					background-color: #f0f0f0;
+					background-color: #F5F2EE;
 				}
 
 				&:focus-visible {
@@ -968,8 +945,8 @@
 		/* prevents padding and border from affecting height and width */
 		box-sizing: border-box;
 		padding: 0 calc(16 / 16 * 1rem);
-		background-color: transparent;
-	
+		background-color:transparent;
+	 
 		position: fixed;
 		z-index: 10000;
 
@@ -1087,6 +1064,37 @@
 	}
 }
 
+/*-- -------------------------- -->
+<--- Desktop Nav Background scroll -->
+<--- -------------------------- -*/
+
+@media only screen and (min-width: 1024px) {
+	#cs-navigation {
+	  transition: background-color 0.3s; /* smooth change */
+	}
+  
+	#cs-navigation.cs-scrolled {
+	  background-color: #000; /* or var(--dark) */
+	}
+  
+	#cs-navigation.cs-scrolled .cs-li-link {
+	  color: #fff;
+	}
+  
+	#cs-navigation.cs-scrolled .cs-logo {
+	  filter: grayscale(1) brightness(1000%);
+	}
+  
+	/* optional: make dropdown match */
+	#cs-navigation.cs-scrolled .cs-drop-ul,
+	#cs-navigation.cs-scrolled .cs-li-link.cs-drop-link {
+	  background-color: #000;
+	}
+  
+	#cs-navigation.cs-scrolled .cs-drop-icon {
+	  filter: grayscale(1) brightness(1000%);
+	}
+  }
 /*-- -------------------------- -->
 <---          Banner            -->
 <--- -------------------------- -*/

@@ -1,6 +1,6 @@
 ---
-title: "Pixel Perfect Websites | Code Stitch Web Designs | Denver, CO"
-description: "Meta description for the page"
+title: Studio 3 | Salon de coiffure à Esch-sur-Alzette, Luxembourg
+description: Studio 3, salon de coiffure à Esch-sur-Alzette. Balayage, colorations et coupes sur mesure pour femmes et hommes au Luxembourg.
 permalink: "/"
 tags: "sitemap" # content/content.json will make sure that all pages in content/ are marked with a "sitemap" tag, for automatic sitemap generation. As index.html is not in content/, we need to add it here to ensure the root page is included in the sitemap generation
 ---
@@ -8,11 +8,10 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
 {% extends "layouts/base.html" %}
 
 {% block head %}
- <!-- Google Font: Playfair Display (with italics) -->
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <!-- Critical styles are loaded first -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/critical.css" />
 
     <!-- If we're in production, defer the rest of the home page styles. In development, always load it. Otherwise the site will break when hot-reload is used. -->
@@ -39,91 +38,69 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
 
     <section id="hero-143">
         <div class="cs-container">
-            <span class="cs-topper">CodeStitch Presents</span>
             <h1 class="cs-title">
-                The Intermediate Website Kit (SASS)
+                L'expérience coiffure unique 
             </h1>
             <p class="cs-text">
-                Building faster websites, faster. Just clone, update _data/client.js, swap out some sections, and away you go!
+                Salon de coiffure à Luxembourg où créativité et bien-être prennent de la hauteur
             </p>
-            <a href="/contact/" class="cs-button-solid">Get in Touch</a>
+            <a href="https://salonkee.lu/salon/studio-3" class="cs-button-solid">Réserver en Ligne</a>
         </div>
 
         <!-- Background Image -->
         <picture class="cs-background">
             <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 640, height: 1490 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 640, height: 1490 }) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 640, height: 1490 }) | jpeg %}" type="image/jpeg">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/test_home.webp" | resize({ width: 640, height: 1490 }) | avif %}" type="image/avif">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/test_home.webp" | resize({ width: 640, height: 1490 }) | webp %}" type="image/webp">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/test_home.webp" | resize({ width: 640, height: 1490 }) | jpeg %}" type="image/jpeg">
             <!--Tablet Image-->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | jpeg %}" type="image/jpeg">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/test_home.webp" | resize({ width: 2048, height: 1922 }) | avif %}" type="image/avif">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/test_home.webp" | resize({ width: 2048, height: 1922 }) | webp %}" type="image/webp">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/test_home.webp" | resize({ width: 2048, height: 1922 }) | jpeg %}" type="image/jpeg">
             <!--Large Tablet Image-->
-            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | jpeg %}" type="image/jpeg">
+            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/test_home.webp" | resize({ width: 2048, height: 1922 }) | avif %}" type="image/avif">
+            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/test_home.webp" | resize({ width: 2048, height: 1922 }) | webp %}" type="image/webp">
+            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/test_home.webp" | resize({ width: 2048, height: 1922 }) | jpeg %}" type="image/jpeg">
             <!--Desktop Image-->
-            <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | jpeg %}" alt="kitchen" width="1" height="1" loading="eager" decoding="async">
+            <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/test_home.webp" | resize({ width: 1, height: 1 }) | avif %}" type="image/avif">
+            <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/test_home.webp" | resize({ width: 1, height: 1 }) | webp %}" type="image/webp">
+            <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/test_home.webp" | resize({ width: 1, height: 1 }) | jpeg %}" type="image/jpeg">
+            <img src="{% getUrl "/assets/images/test_home.webp" | resize({ width: 1, height: 1 }) | jpeg %}" alt="kitchen" width="1" height="1" loading="eager" decoding="async">
         </picture>
     </section>
 
-    <!-- ============================================ -->
-    <!--                   Services                   -->
-    <!-- ============================================ -->
 
-    <section id="h-services-143">
-        <ul class="cs-card-group">
-            <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s1.svg" alt="icon" width="52" height="52" aria-hidden="true">
-                </picture>
-                <h2 class="cs-title">
-                    Full Kitchen Remodel
-                </h2>
-                <p class="cs-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s2.svg" alt="icon" width="52" height="52" aria-hidden="true">
-                </picture>
-                <h2 class="cs-title">
-                    Exterior Repairs
-                </h2>
-                <p class="cs-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s3.svg" alt="icon" width="52" height="52" aria-hidden="true">
-                </picture>
-                <h2 class="cs-title">
-                    Utility Maintenance
-                </h2>
-                <p class="cs-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s4.svg" alt="icon" width="52" height="52" aria-hidden="true">
-                </picture>
-                <h2 class="cs-title">
-                    Design Consultation
-                </h2>
-                <p class="cs-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-            </li>
-        </ul>
-    </section>
 
+
+
+    <section class="logo-carousel" aria-label="Partner logos">
+        <div class="logo-carousel__viewport">
+          <div class="logo-carousel__track">
+            <!-- Set A (your 3 logos) -->
+            <img src="/assets/svgs/BaByliss-Logo.png" alt="Logo 1" class="logo-carousel__logo">
+            <img src="/assets/svgs/BaByliss-Logo.png" alt="Logo 2" class="logo-carousel__logo">
+            <img src="/assets/svgs/BaByliss-Logo.png" alt="Logo 3" class="logo-carousel__logo">
+      
+            <!-- Set B (duplicate for seamless loop) -->
+            <img src="/assets/svgs/BaByliss-Logo.png" alt="" aria-hidden="true" class="logo-carousel__logo">
+            <img src="/assets/svgs/BaByliss-Logo.png" alt="" aria-hidden="true" class="logo-carousel__logo">
+            <img src="/assets/svgs/BaByliss-Logo.png" alt="" aria-hidden="true" class="logo-carousel__logo">
+
+            <img src="/assets/svgs/BaByliss-Logo.png" alt="" aria-hidden="true" class="logo-carousel__logo">
+            <img src="/assets/svgs/BaByliss-Logo.png" alt="" aria-hidden="true" class="logo-carousel__logo">
+            <img src="/assets/svgs/BaByliss-Logo.png" alt="" aria-hidden="true" class="logo-carousel__logo">
+
+            <img src="/assets/svgs/BaByliss-Logo.png" alt="" aria-hidden="true" class="logo-carousel__logo">
+            <img src="/assets/svgs/BaByliss-Logo.png" alt="" aria-hidden="true" class="logo-carousel__logo">
+            <img src="/assets/svgs/BaByliss-Logo.png" alt="" aria-hidden="true" class="logo-carousel__logo">
+
+            <img src="/assets/svgs/BaByliss-Logo.png" alt="" aria-hidden="true" class="logo-carousel__logo">
+            <img src="/assets/svgs/BaByliss-Logo.png" alt="" aria-hidden="true" class="logo-carousel__logo">
+            <img src="/assets/svgs/BaByliss-Logo.png" alt="" aria-hidden="true" class="logo-carousel__logo">
+          </div>
+        </div>
+      </section>
+      
     <!-- ============================================ -->
     <!--                 Side By Side                 -->
     <!-- ============================================ -->
@@ -461,6 +438,24 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
             <a href="/reviews/" class="cs-button-solid">Read All Reviews</a>
         </div>
     </section>
+
+    <script>
+        const nav = document.querySelector("#cs-navigation");
+        const hero = document.querySelector("#hero-143");
+      
+        if (nav && hero) {
+          const observer = new IntersectionObserver(
+            ([entry]) => {
+              // hero visible = transparent nav
+              // hero not visible = black nav
+              nav.classList.toggle("cs-scrolled", !entry.isIntersecting);
+            },
+            { threshold: 0 }
+          );
+      
+          observer.observe(hero);
+        }
+      </script>
 
     {% include 'sections/cta.html' %}
 {% endblock %}
