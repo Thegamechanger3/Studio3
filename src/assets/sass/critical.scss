@@ -147,50 +147,71 @@
         }
     }
 }
+/*-- -------------------------- -->
+<---         Carousel           -->
+<--- -------------------------- -*/
 
+/* Mobile - 0rem */
+@media only screen and (min-width: 0rem) {
 
-
-@media (max-width: 768px) {
-    .logo-carousel__logo {
-      height: 30px; /* slightly smaller logos */
-    }
-  
-    .logo-carousel__track {
-      gap: 40px; /* reduce spacing */
-      animation: logo-marquee 22s linear infinite; /* slightly slower */
-    }
-  }
-
-
-.logo-carousel {
+  .logo-carousel {
     background: #fff;
     padding: 50px 0;
     overflow: hidden;
   }
-  
+
   .logo-carousel__viewport {
     overflow: hidden;
     width: 100%;
   }
-  
+
   .logo-carousel__track {
     display: flex;
     align-items: center;
-    gap: 105px;                 /* spacing between logos */
-    width: max-content;        /* track can be wider than viewport */
-    animation: logo-marquee 18s linear infinite;
+    gap: 40px; /* tighter spacing on mobile */
+    width: max-content;
+    animation: logo-marquee 22s linear infinite; /* slower on small screens */
   }
-  
+
   .logo-carousel__logo {
-    height: 80px;              /* set your logo size */
+    height: 30px; /* smaller logos for phones */
     width: auto;
     display: block;
     object-fit: contain;
+  }
+}
 
+
+/* Tablet - 48rem (768px) */
+@media only screen and (min-width: 48rem) {
+
+  .logo-carousel__track {
+    gap: 70px;
+    animation: logo-marquee 20s linear infinite;
   }
-  
-  /* Move left by 50% because we duplicated the set once */
-  @keyframes logo-marquee {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
+
+  .logo-carousel__logo {
+    height: 55px;
   }
+}
+
+
+/* Desktop - 64rem (1024px) */
+@media only screen and (min-width: 64rem) {
+
+  .logo-carousel__track {
+    gap: 105px; /* wide spacing for desktop */
+    animation: logo-marquee 18s linear infinite;
+  }
+
+  .logo-carousel__logo {
+    height: 80px; /* full size logos */
+  }
+}
+
+
+/* Keyframes (outside media queries) */
+@keyframes logo-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
