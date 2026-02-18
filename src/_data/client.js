@@ -2,7 +2,7 @@ module.exports = {
     name: "Studio 3",
     email: "houseofhairlu@gmail.com",
     phoneForTel: "621 411 909",
-    phoneFormatted: "(352) 621411909",
+    phoneFormatted: "(+352) 621 411 909",
     address: {
         lineOne: "9 Rue de l'Alzette",
         city: "Esch-sur-Alzette",

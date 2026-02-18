@@ -1338,6 +1338,7 @@
 		.cs-text {
 			color: var(--bodyTextColorWhite);
 			margin-bottom: calc(16 / 16 * 1rem);
+			max-width: 35ch; 
 		}
 
 		.cs-social {
@@ -1353,7 +1354,7 @@
 		.cs-social-link {
 			width: calc(24 / 16 * 1rem);
 			height: calc(24 / 16 * 1rem);
-			background-color: #4e4b66;
+			background-color: #8F857C;
 			border-radius: 50%;
 			display: flex;
 			justify-content: center;
