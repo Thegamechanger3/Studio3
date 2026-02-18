@@ -224,38 +224,41 @@
     }
   }
   
-  /* Desktop - 64rem */
-  @media only screen and (min-width: 64rem) {
-    .benefitBanner {
-      /* requirement: 250px height on desktop */
-      height: 250px;
-      padding: 0 2rem;            /* no vertical padding so height stays 250px */
-      display: flex;
-      align-items: center;        /* centers content vertically */
-    }
-  
-    .benefitBanner__inner {
-      width: min(1200px, 100%);
-    }
-  
-    .benefitBanner__title {
-      margin-bottom: 1.25rem;
-    }
-  
-    .benefitBanner__grid {
-      grid-template-columns: repeat(4, 1fr); /* 4 in a row */
-      gap: 2rem;
-    }
-  
-    .benefitBanner__icon img {
-      width: 150px;
-      height: 150px;
-    }
-  
-    .benefitBanner__text {
-      font-size: 1.05rem;
-    }
+/* Desktop - 64rem */
+@media only screen and (min-width: 64rem) {
+  .benefitBanner {
+    height: 320px;   /* 🔥 increased from 250 */
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
   }
+
+  .benefitBanner__inner {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+  }
+
+  .benefitBanner__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .benefitBanner__icon {
+    width: 120px;
+    height: 120px;
+  }
+
+  .benefitBanner__icon img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    display: block;
+  }
+
+  .benefitBanner__text {
+    font-size: 1.05rem;
+  }
+}
 /*-- -------------------------- -->
 <---      3 Image Link Tiles    -->
 <--- -------------------------- -*/
