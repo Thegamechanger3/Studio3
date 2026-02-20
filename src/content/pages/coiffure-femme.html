@@ -12,139 +12,259 @@ permalink: "/coiffure-femme/"
 
 {% block body %}
 
-    <!-- ============================================ -->
+      <!-- ============================================ -->
     <!--                   Banner                     -->
     <!-- ============================================ -->
 
-   <div id="banner-310">
-  <div class="cs-container">
-    <div class="cs-content">
-      <h1 class="cs-title">Massages</h1>
-
-      <p class="cs-text">
-        Massage therapy is a profound experience that unites the body and soul,
-        harmonizing their rhythms and bringing balance and tranquility sensation.
-      </p>
-
-      <p class="cs-text">
-        Our comprehensive and holistic approach to wellness and well-being starts
-        with pampering from the inside out to reveal your outer—and inner beauty.
-      </p>
-
-      <p class="cs-text">
-        After a long and stressful day, let our therapists knead your cares away.
-        You can select different therapeutic techniques to meet your specific needs.
-        Select from Swedish, Deep Tissue, Hot Stone, and Bamboo Massage with our professional therapists.
-        We’ll help restore health, balance and stimulate positive energy flow.
-        <strong>Tomorrow is looking better already!</strong>
-      </p>
-
-      <a class="cs-button" href="/services/">
-        <span class="cs-buttonText">See services</span>
-        <span class="cs-buttonIcon" aria-hidden="true">→</span>
-      </a>
-    </div>
+    <div id="banner-310">
+      <div class="cs-container">
+          <span class="cs-int-title">À Propos</span>
+          <div class="cs-breadcrumbs">
+              <a href="/" class="cs-link">Accueil</a>
+              <a href="/about/" class="cs-link cs-active">À Propos</a>
+          </div>
+      </div>
+      <!--Background Image-->
+      <picture class="cs-background">
+          <!--Mobile Image-->
+          <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
+          <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
+          <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
+          <!--Tablet Image-->
+          <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
+          <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
+          <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
+          <!--Desktop Image-->
+          <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
+          <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
+          <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
+          <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
+      </picture>
   </div>
 
-  <!-- Right image -->
-  <picture class="cs-background">
-    <!-- Mobile Image -->
-    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/studio3-salon1.webp" | resize({ width: 900, height: 900 }) | avif %}" type="image/avif">
-    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/studio3-salon1.webp" | resize({ width: 900, height: 900 }) | webp %}" type="image/webp">
-    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/studio3-salon1.webp" | resize({ width: 900, height: 900 }) | jpeg %}" type="image/jpeg">
 
-    <!-- Tablet Image -->
-    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/studio3-salon1.webp" | resize({ width: 1600, height: 1200 }) | avif %}" type="image/avif">
-    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/studio3-salon1.webp" | resize({ width: 1600, height: 1200 }) | webp %}" type="image/webp">
-    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/studio3-salon1.webp" | resize({ width: 1600, height: 1200 }) | jpeg %}" type="image/jpeg">
-
-    <!-- Desktop Image -->
-    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/studio3-salon1.webp" | resize({ width: 2200, height: 1200 }) | avif %}" type="image/avif">
-    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/studio3-salon1.webp" | resize({ width: 2200, height: 1200 }) | webp %}" type="image/webp">
-    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/studio3-salon1.webp" | resize({ width: 2200, height: 1200 }) | jpeg %}" type="image/jpeg">
-
-    <img
-      src="{% getUrl "/assets/images/studio3-salon1.webp" | resize({ width: 2200, height: 1200 }) | jpeg %}"
-      alt="Massage session"
-      width="2200"
-      height="1200"
-      loading="eager"
-      decoding="async"
-    >
-  </picture>
-</div>
     <!-- ============================================ -->
-    <!--                   Gallery                    -->
+    <!--                PRICE LISTING                 -->
     <!-- ============================================ -->
 
-    <section id="gallery-48">
-        <div class="cs-container">
-            <div class="cs-content">
-                <span class="cs-topper">Our Portfolio</span>
-                <h2 class="cs-title">Et orci volutpat, back up generator installations</h2>
-            </div>
-            <div class="cs-image-group">
-                <div class="cs-row cs-row-1">
-                    <!-- Row 1-->
-                    <picture class="cs-picture cs-picture-1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port1.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port1.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port1.jpg" alt="new hallway" width="420" height="567">
-                    </picture>
-                    <picture class="cs-picture cs-picture-2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port4.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port4.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port4.jpg" alt="new home construction" width="420" height="630">
-                    </picture>
-                    <picture class="cs-picture cs-picture-3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port7.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port7.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port7.jpg" alt="building a new wall" width="420" height="512">
-                    </picture>
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                </div>
-                <!-- Row 2 -->
-                <div class="cs-row cs-row-2">
-                    <picture class="cs-picture cs-picture-1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port2.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port2.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port2.jpg" alt="new kitchen" width="420" height="492">
-                    </picture>
-                    <picture class="cs-picture cs-picture-2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port5.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port5.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port5.jpg" alt="apartment addition" width="420" height="517">
-                    </picture>
-                    <picture class="cs-picture cs-picture-3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port8.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port8.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port8.jpg" alt="kew kitchen cabinets" width="420" height="629">
-                    </picture>
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                </div>
-                <!-- Row 3 -->
-                <div class="cs-row cs-row-3">
-                    <picture class="cs-picture cs-picture-1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port3.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port3.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port3.jpg" alt="new black window structure" width="420" height="625">
-                    </picture>
-                    <picture class="cs-picture cs-picture-2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port6.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port6.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port6.jpg" alt="kitchen rebovation" width="420" height="452">
-                    </picture>
-                    <picture class="cs-picture cs-picture-3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port9.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port9.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port9.jpg" alt="bathroom renovation" width="420" height="629">
-                    </picture>
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                </div>
-            </div>
-            <a href="/contact/" class="cs-button-solid">Get Started</a>
+  <section class="pricing-section">
+    <div class="pricing-container">
+  
+      <!-- Block 1 -->
+      <div class="pricing-block">
+        <div class="pricing-left">
+          <h2>Balayage</h2>
+          <span class="pricing-category">[Femme]</span>
         </div>
-    </section>
+  
+        <div class="pricing-right">
+          <div class="pricing-item">
+            <div class="item-top">
+              <span class="item-title">Coup d'Éclat</span>
+              <span class="item-line"></span>
+              <span class="item-price">€249</span>
+            </div>
+            <span class="item-sub">[À partir de]</span>
+          </div>
+  
+          <div class="pricing-item">
+            <div class="item-top">
+              <span class="item-title">Inversé</span>
+              <span class="item-line"></span>
+              <span class="item-price">€219</span>
+            </div>
+            <span class="item-sub">[À partir de]</span>
+          </div>
+  
+          <div class="pricing-item">
+            <div class="item-top">
+              <span class="item-title">Coup de Soleil</span>
+              <span class="item-line"></span>
+              <span class="item-price">€199</span>
+            </div>
+            <span class="item-sub">[À partir de]</span>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Block 2 -->
+      <div class="pricing-block">
+        <div class="pricing-left">
+          <h2>Coupe & Coiffage Femme</h2>
+          <span class="pricing-category">[Femme]</span>
+        </div>
+  
+        <div class="pricing-right">
+          <div class="pricing-item">
+            <div class="item-top">
+              <span class="item-title">Sh. + Coupe + Brushing</span>
+              <span class="item-line"></span>
+              <span class="item-price">€64</span>
+            </div>
+            <span class="item-sub">[À partir de]</span>
+          </div>
+  
+          <div class="pricing-item">
+            <div class="item-top">
+              <span class="item-title">Sh. + Brushing</span>
+              <span class="item-line"></span>
+              <span class="item-price">€34</span>
+            </div>
+            <span class="item-sub">[À partir de]</span>
+          </div>
+  
+          <div class="pricing-item">
+            <div class="item-top">
+              <span class="item-title">Chignon</span>
+              <span class="item-line"></span>
+              <span class="item-price">€71</span>
+            </div>
+            <span class="item-sub">[À partir de]</span>
+          </div>
+        </div>
+      </div>
+
+       <!-- Block 3 -->
+       <div class="pricing-block">
+        <div class="pricing-left">
+          <h2>Coloration</h2>
+          <span class="pricing-category">[Femme]</span>
+        </div>
+  
+        <div class="pricing-right">
+          <div class="pricing-item">
+            <div class="item-top">
+              <span class="item-title">Coloration complète</span>
+              <span class="item-line"></span>
+              <span class="item-price">€88</span>
+            </div>
+   
+          </div>
+  
+          <div class="pricing-item">
+            <div class="item-top">
+              <span class="item-title">Coloration racines</span>
+              <span class="item-line"></span>
+              <span class="item-price">€54</span>
+            </div>
+          </div>
+  
+          <div class="pricing-item">
+            <div class="item-top">
+              <span class="item-title">Gloss (Patine)</span>
+              <span class="item-line"></span>
+              <span class="item-price">€40</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+          <!-- Block Students -->
+          <div class="pricing-block">
+            <div class="pricing-left">
+              <h2>Enfant & Étudiante</h2>
+              <span class="pricing-category">[Enfants]</span>
+            </div>
+      
+            <div class="pricing-right">
+              <div class="pricing-item">
+                <div class="item-top">
+                  <span class="item-title">Coupe Enfant 0-5 Ans</span>
+                  <span class="item-line"></span>
+                  <span class="item-price">€20</span>
+                </div>
+              </div>
+      
+              <div class="pricing-item">
+                <div class="item-top">
+                  <span class="item-title">Coupe + Coiffage Fille 6-11 ans</span>
+                  <span class="item-line"></span>
+                  <span class="item-price">€35</span>
+                </div>
+              </div>
+      
+              <div class="pricing-item">
+                <div class="item-top">
+                  <span class="item-title">Sh. + Coupe + Coiffage Étudiante</span>
+                  <span class="item-line"></span>
+                  <span class="item-price">€49</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    </div>
+  </section>
+
+  <section id="cta-banner-1">
+    <div class="cta-container">
+      <p class="cta-kicker">What are you waiting for?</p>
+      <h2 class="cta-title">Book a treatment</h2>
+      <a class="cta-btn" href="https://salonkee.lu/salon/studio-3">Book now</a>
+    </div>
+  </section>
+
+
+<!-- ============================================ -->
+<!--                   Gallery                    -->
+<!-- ============================================ -->
+
+<section id="gallery-1446">
+  <div class="cs-container">
+      <!--Gallery-->
+      <div class="cs-gallery">
+          <!--Picture 1-->
+          <picture class="cs-image">
+              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign.jpeg">
+              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign.jpeg">
+              <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign.jpeg" alt="gallery" width="305" height="400">
+          </picture>
+          <!--Picture 2-->
+          <picture class="cs-image">
+              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/melting-ice.jpeg">
+              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/melting-ice.jpeg">
+              <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/melting-ice.jpeg" alt="gallery" width="305" height="400">
+          </picture>
+          <!--Picture 3-->
+          <picture class="cs-image">
+              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/windmills.jpeg">
+              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/windmills.jpeg">
+              <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/windmills.jpeg" alt="gallery" width="305" height="400">
+          </picture>
+          <!--Picture 4-->
+          <picture class="cs-image">
+              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign2.jpeg">
+              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign2.jpeg">
+              <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign2.jpeg" alt="gallery" width="305" height="400">
+          </picture>
+          <!--Picture 5-->
+          <picture class="cs-image">
+              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/falling-rocks.jpeg">
+              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/falling-rocks.jpeg">
+              <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/falling-rocks.jpeg" alt="gallery" width="305" height="400">
+          </picture>
+          <!--Picture 6-->
+          <picture class="cs-image">
+              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign4.jpeg">
+              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign4.jpeg">
+              <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign4.jpeg" alt="gallery" width="305" height="400">
+          </picture>
+          <!--Picture 7-->
+          <picture class="cs-image">
+              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign3.jpeg">
+              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign3.jpeg">
+              <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign3.jpeg" alt="gallery" width="305" height="400">
+          </picture>
+          <!--Picture 8-->
+          <picture class="cs-image">
+              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/desert-tree.jpeg">
+              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/desert-tree.jpeg">
+              <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/desert-tree.jpeg" alt="gallery" width="305" height="400">
+          </picture>
+      </div>
+  </div>
+</section>
+                    
 
     <script>
         const nav = document.querySelector("#cs-navigation");
@@ -157,7 +277,7 @@ permalink: "/coiffure-femme/"
             },
             {
               threshold: 0,
-              rootMargin: "-500px 0px 0px 0px" 
+              rootMargin: "-800px 0px 0px 0px" 
               // déclenche 100px avant la fin du banner
             }
           );

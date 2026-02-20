@@ -12,20 +12,19 @@ permalink: "/coiffure-homme/"
 
 {% block body %}
 
-    <!-- ============================================ -->
+     <!-- ============================================ -->
     <!--                   Banner                     -->
     <!-- ============================================ -->
 
     <div id="banner-310">
         <div class="cs-container">
-            <span class="cs-int-title">Project Two Gallery</span>
+            <span class="cs-int-title">À Propos</span>
             <div class="cs-breadcrumbs">
-                <a href="/" class="cs-link">Home</a>
-                <a href="/project-two/" class="cs-link cs-active">Project Two Gallery</a>
+                <a href="/" class="cs-link">Accueil</a>
+                <a href="/about/" class="cs-link cs-active">À Propos</a>
             </div>
         </div>
         <!--Background Image-->
-
         <picture class="cs-background">
             <!--Mobile Image-->
             <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
@@ -42,79 +41,212 @@ permalink: "/coiffure-homme/"
             <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
         </picture>
     </div>
-
-    <!-- ============================================ -->
-    <!--                   Gallery                    -->
-    <!-- ============================================ -->
-
-    <section id="gallery-48">
-        <div class="cs-container">
-            <div class="cs-content">
-                <span class="cs-topper">Our Portfolio</span>
-                <h2 class="cs-title">Et orci volutpat, back up generator installations</h2>
+  
+  
+      <!-- ============================================ -->
+      <!--                PRICE LISTING                 -->
+      <!-- ============================================ -->
+  
+    <section class="pricing-section">
+      <div class="pricing-container">
+    
+        <!-- Block 1 -->
+        <div class="pricing-block">
+          <div class="pricing-left">
+            <h2>Homme</h2>
+            <span class="pricing-category">[Homme]</span>
+          </div>
+    
+          <div class="pricing-right">
+            <div class="pricing-item">
+              <div class="item-top">
+                <span class="item-title">Dégradé à blanc</span>
+                <span class="item-line"></span>
+                <span class="item-price">€36</span>
+              </div>
             </div>
-            <div class="cs-image-group">
-                <div class="cs-row cs-row-1">
-                    <!-- Row 1-->
-                    <picture class="cs-picture cs-picture-1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port1.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port1.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port1.jpg" alt="new hallway" width="420" height="567">
-                    </picture>
-                    <picture class="cs-picture cs-picture-2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port4.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port4.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port4.jpg" alt="new home construction" width="420" height="630">
-                    </picture>
-                    <picture class="cs-picture cs-picture-3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port7.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port7.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port7.jpg" alt="building a new wall" width="420" height="512">
-                    </picture>
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                </div>
-                <!-- Row 2 -->
-                <div class="cs-row cs-row-2">
-                    <picture class="cs-picture cs-picture-1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port2.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port2.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port2.jpg" alt="new kitchen" width="420" height="492">
-                    </picture>
-                    <picture class="cs-picture cs-picture-2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port5.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port5.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port5.jpg" alt="apartment addition" width="420" height="517">
-                    </picture>
-                    <picture class="cs-picture cs-picture-3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port8.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port8.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port8.jpg" alt="kew kitchen cabinets" width="420" height="629">
-                    </picture>
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                </div>
-                <!-- Row 3 -->
-                <div class="cs-row cs-row-3">
-                    <picture class="cs-picture cs-picture-1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port3.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port3.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port3.jpg" alt="new black window structure" width="420" height="625">
-                    </picture>
-                    <picture class="cs-picture cs-picture-2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port6.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port6.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port6.jpg" alt="kitchen rebovation" width="420" height="452">
-                    </picture>
-                    <picture class="cs-picture cs-picture-3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port9.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port9.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port9.jpg" alt="bathroom renovation" width="420" height="629">
-                    </picture>
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                </div>
+    
+            <div class="pricing-item">
+              <div class="item-top">
+                <span class="item-title">Coupe Classique</span>
+                <span class="item-line"></span>
+                <span class="item-price">€31</span>
+              </div>
             </div>
-            <a href="/contact/" class="cs-button-solid">Get Started</a>
+    
+            <div class="pricing-item">
+              <div class="item-top">
+                <span class="item-title">Coupe uniforme</span>
+                <span class="item-line"></span>
+                <span class="item-price">€26</span>
+              </div>
+            </div>
+          </div>
         </div>
+    
+        <!-- Block 2 -->
+        <div class="pricing-block">
+          <div class="pricing-left">
+            <h2>Barbermonday</h2>
+            <span class="pricing-category">[Homme]</span>
+          </div>
+    
+          <div class="pricing-right">
+            <div class="pricing-item">
+              <div class="item-top">
+                <span class="item-title">Coupe homme + taille de barbe et rasage</span>
+                <span class="item-line"></span>
+                <span class="item-price">€49</span>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+         <!-- Block 3 -->
+         <div class="pricing-block">
+          <div class="pricing-left">
+            <h2>Barbe</h2>
+            <span class="pricing-category">[Homme]</span>
+          </div>
+    
+          <div class="pricing-right">
+            <div class="pricing-item">
+              <div class="item-top">
+                <span class="item-title">Barbe</span>
+                <span class="item-line"></span>
+                <span class="item-price">€16</span>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+            <!-- Block Students -->
+            <div class="pricing-block">
+              <div class="pricing-left">
+                <h2>Enfant & Étudiante</h2>
+                <span class="pricing-category">[Enfants]</span>
+              </div>
+        
+              <div class="pricing-right">
+                <div class="pricing-item">
+                  <div class="item-top">
+                    <span class="item-title">Coupe Enfant 0-5 Ans</span>
+                    <span class="item-line"></span>
+                    <span class="item-price">€20</span>
+                  </div>
+                </div>
+        
+                <div class="pricing-item">
+                  <div class="item-top">
+                    <span class="item-title">Coupe + Coiffage Garçon 6-11 ans</span>
+                    <span class="item-line"></span>
+                    <span class="item-price">€24</span>
+                  </div>
+                </div>
+        
+                <div class="pricing-item">
+                  <div class="item-top">
+                    <span class="item-title">Coupe Étudiant (M +12 ans)</span>
+                    <span class="item-line"></span>
+                    <span class="item-price">€28</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+      </div>
     </section>
+  
+    <section id="cta-banner-1">
+      <div class="cta-container">
+        <p class="cta-kicker">What are you waiting for?</p>
+        <h2 class="cta-title">Book a treatment</h2>
+        <a class="cta-btn" href="https://salonkee.lu/salon/studio-3">Book now</a>
+      </div>
+    </section>
+  
+  
+  <!-- ============================================ -->
+  <!--                   Gallery                    -->
+  <!-- ============================================ -->
+  
+  <section id="gallery-1446">
+    <div class="cs-container">
+        <!--Gallery-->
+        <div class="cs-gallery">
+            <!--Picture 1-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign.jpeg">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign.jpeg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign.jpeg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 2-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/melting-ice.jpeg">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/melting-ice.jpeg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/melting-ice.jpeg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 3-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/windmills.jpeg">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/windmills.jpeg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/windmills.jpeg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 4-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign2.jpeg">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign2.jpeg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign2.jpeg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 5-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/falling-rocks.jpeg">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/falling-rocks.jpeg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/falling-rocks.jpeg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 6-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign4.jpeg">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign4.jpeg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign4.jpeg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 7-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign3.jpeg">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign3.jpeg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign3.jpeg" alt="gallery" width="305" height="400">
+            </picture>
+            <!--Picture 8-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/desert-tree.jpeg">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/desert-tree.jpeg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/desert-tree.jpeg" alt="gallery" width="305" height="400">
+            </picture>
+        </div>
+    </div>
+  </section>
+                      
+  
+      <script>
+          const nav = document.querySelector("#cs-navigation");
+          const banner = document.querySelector("#banner-310");
+        
+          if (nav && banner) {
+            const observer = new IntersectionObserver(
+              ([entry]) => {
+                nav.classList.toggle("cs-scrolled", !entry.isIntersecting);
+              },
+              {
+                threshold: 0,
+                rootMargin: "-800px 0px 0px 0px" 
+                // déclenche 100px avant la fin du banner
+              }
+            );
+        
+            observer.observe(banner);
+          }
+        </script>
+  
 
     {% include 'sections/cta.html' %}
 
