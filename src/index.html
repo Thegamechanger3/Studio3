@@ -33,267 +33,289 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
 
 {% block body %}
 
-    <!-- ============================================ -->
-    <!--                    Hero                      -->
-    <!-- ============================================ -->
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-img"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Salon de Coiffure — Esch-sur-Alzette, Luxembourg</p>
+      <h1 class="hero-title">L'art de la<br/><em>coiffure</em><br/>d'exception.</h1>
+      <p class="hero-subtitle">Chez Studio 3, chaque coupe est une signature. Un univers où élégance et modernité se rencontrent pour révéler votre beauté naturelle.</p>
+      <div class="hero-actions">
+        <a href="#booking" class="btn-primary">Prendre rendez-vous</a>
+        <a href="#services" class="btn-ghost">Nos services</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Défiler</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
-    <section id="hero-143">
-        <div class="cs-container">
-            <h1 class="cs-title">
-                L'expérience coiffure unique 
-            </h1>
-            <p class="cs-text">
-                Salon de coiffure à Luxembourg où créativité et bien-être prennent de la hauteur
-            </p>
-            <a href="https://salonkee.lu/salon/studio-3" class="cs-button-solid">Réserver en Ligne</a>
+  <!-- INTRO BAR -->
+  <div class="intro-bar">
+    <div class="intro-bar-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+      <p>10 Rue de l'Alzette, Esch-sur-Alzette</p>
+    </div>
+    <div class="intro-bar-divider"></div>
+    <div class="intro-bar-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <p>Mar – Sam : 9h00 – 19h00</p>
+    </div>
+    <div class="intro-bar-divider"></div>
+    <div class="intro-bar-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 11.5 19.79 19.79 0 011.02 2.82 2 2 0 013 .64h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.5a16 16 0 006.29 6.29l1.22-1.22a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      <p>+352 123 456 789</p>
+    </div>
+    <div class="intro-bar-divider"></div>
+    <div class="intro-bar-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      <p>Expertise &amp; Excellence depuis 2010</p>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-media reveal">
+      <img class="about-img-main" src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800&q=85&auto=format&fit=crop" alt="Coiffeur au travail" />
+      <img class="about-img-accent" src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=500&q=85&auto=format&fit=crop" alt="Détail coiffure" />
+    </div>
+    <div class="about-text reveal">
+      <span class="section-label">Notre histoire</span>
+      <h2 class="section-title">Un salon conçu pour <em>vous sublimer</em></h2>
+      <p class="about-body">Studio 3 est né d'une passion commune pour la beauté authentique et le savoir-faire artisanal. Installé au cœur d'Esch-sur-Alzette, notre salon est un espace de bien-être où chaque détail a été pensé pour vous offrir une expérience unique.</p>
+      <p class="about-body">Nos coiffeurs, formés aux meilleures techniques internationales, allient créativité et précision pour des résultats qui reflètent votre personnalité.</p>
+      <a href="#booking" class="btn-primary">Découvrir nos services</a>
+      <div class="about-stats">
+        <div>
+          <span class="stat-num">14+</span>
+          <span class="stat-label">Années d'expérience</span>
         </div>
-
-        <!-- Background Image -->
-        <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/test_home.webp" | resize({ width: 640, height: 1490 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/test_home.webp" | resize({ width: 640, height: 1490 }) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/test_home.webp" | resize({ width: 640, height: 1490 }) | jpeg %}" type="image/jpeg">
-            <!--Tablet Image-->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/test_home.webp" | resize({ width: 2048, height: 1922 }) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/test_home.webp" | resize({ width: 2048, height: 1922 }) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/test_home.webp" | resize({ width: 2048, height: 1922 }) | jpeg %}" type="image/jpeg">
-            <!--Large Tablet Image-->
-            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/test_home.webp" | resize({ width: 2048, height: 1922 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/test_home.webp" | resize({ width: 2048, height: 1922 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/test_home.webp" | resize({ width: 2048, height: 1922 }) | jpeg %}" type="image/jpeg">
-            <!--Desktop Image-->
-            <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/test_home.webp" | resize({ width: 1, height: 1 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/test_home.webp" | resize({ width: 1, height: 1 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/test_home.webp" | resize({ width: 1, height: 1 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/test_home.webp" | resize({ width: 1, height: 1 }) | jpeg %}" alt="kitchen" width="1" height="1" loading="eager" decoding="async">
-        </picture>
-    </section>
-
-
-   <!-- ============================================ -->
-    <!--                   Carousel                  -->
-    <!-- ============================================-->
-
-
-    <section class="logo-carousel" aria-label="Partner logos">
-        <div class="logo-carousel__viewport">
-          <div class="logo-carousel__track">
-            <!-- Set A (your 3 logos) -->
-            <img src="/assets/svgs/BaByliss-Logo.png" alt="Logo 1" class="logo-carousel__logo">
-            <img src="/assets/svgs/BaByliss-Logo.png" alt="Logo 2" class="logo-carousel__logo">
-            <img src="/assets/svgs/BaByliss-Logo.png" alt="Logo 3" class="logo-carousel__logo">
-      
-            <!-- Set B (duplicate for seamless loop) -->
-            <img src="/assets/svgs/BaByliss-Logo.png" alt="" aria-hidden="true" class="logo-carousel__logo">
-            <img src="/assets/svgs/BaByliss-Logo.png" alt="" aria-hidden="true" class="logo-carousel__logo">
-            <img src="/assets/svgs/BaByliss-Logo.png" alt="" aria-hidden="true" class="logo-carousel__logo">
-
-            <img src="/assets/svgs/BaByliss-Logo.png" alt="" aria-hidden="true" class="logo-carousel__logo">
-            <img src="/assets/svgs/BaByliss-Logo.png" alt="" aria-hidden="true" class="logo-carousel__logo">
-            <img src="/assets/svgs/BaByliss-Logo.png" alt="" aria-hidden="true" class="logo-carousel__logo">
-
-            <img src="/assets/svgs/BaByliss-Logo.png" alt="" aria-hidden="true" class="logo-carousel__logo">
-            <img src="/assets/svgs/BaByliss-Logo.png" alt="" aria-hidden="true" class="logo-carousel__logo">
-            <img src="/assets/svgs/BaByliss-Logo.png" alt="" aria-hidden="true" class="logo-carousel__logo">
-
-            <img src="/assets/svgs/BaByliss-Logo.png" alt="" aria-hidden="true" class="logo-carousel__logo">
-            <img src="/assets/svgs/BaByliss-Logo.png" alt="" aria-hidden="true" class="logo-carousel__logo">
-            <img src="/assets/svgs/BaByliss-Logo.png" alt="" aria-hidden="true" class="logo-carousel__logo">
-          </div>
+        <div>
+          <span class="stat-num">3k+</span>
+          <span class="stat-label">Clients satisfaits</span>
         </div>
-      </section>
-      <section class="splitFull">
-        
-
-   <!-- ============================================-->
-   <!--                   SplitFull                 -->
-   <!-- ============================================-->
-
-        <article class="splitFull__row">
-          <div class="splitFull__media">
-            <img src="/assets/images/studio3-salon1.webp" alt="Describe the image" loading="lazy" decoding="async">
-          </div>
-      
-          <div class="splitFull__content">
-            <h2 class="splitFull__title">First section headline</h2>
-            <div class="splitFull__text">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis, aenean lacinia bibendum nulla sed consectetur elit. Praesent commodo cursus magna vel scelerisque nisl.
-                </p>
-              
-                <p>
-                  Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet, donec ullamcorper nulla non metus auctor fringilla.
-                </p>
-              
-                <p>
-                  Curabitur blandit tempus porttitor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor, nullam id dolor id nibh ultricies vehicula ut id elit.
-                </p>
-              </div>
-            <a class="splitFull__btn" href="/a-propos/">à propos</a>
-          </div>
-        </article>
-      
-        <!-- Row 2 (reversed on desktop) -->
-        <article class="splitFull__row splitFull__row--reverse">
-          <div class="splitFull__media">
-            <img src="/assets/images/studio3-salon2.webp" alt="Describe the image" loading="lazy" decoding="async">
-          </div>
-      
-          <div class="splitFull__content">
-            <h2 class="splitFull__title">Second section headline</h2>
-            <div class="splitFull__text">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis, aenean lacinia bibendum nulla sed consectetur elit. Praesent commodo cursus magna vel scelerisque nisl.
-                </p>
-              
-                <p>
-                  Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet, donec ullamcorper nulla non metus auctor fringilla.
-                </p>
-              
-                <p>
-                  Curabitur blandit tempus porttitor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor, nullam id dolor id nibh ultricies vehicula ut id elit.
-                </p>
-              </div>
-            <a class="splitFull__btn" href="/coiffure-femme/">Nos prestations</a>
-          </div>
-        </article>
-      </section>
-
-   <!-- ============================================-->
-   <!--                Benefit Banner               -->
-   <!-- ============================================-->
-
-   <section class="benefitBanner" aria-label="Vos avantages permanents">
-    <div class="benefitBanner__inner">
-      <h2 class="benefitBanner__title">Vos Avantages Permanents</h2>
-  
-      <div class="benefitBanner__grid">
-        <div class="benefitBanner__item">
-          <div class="benefitBanner__icon" aria-hidden="true">
-            <img src="/assets/svgs/expert.svg" alt="" loading="lazy" decoding="async">
-          </div>
-          <p class="benefitBanner__text">
-            Coiffeurs formés aux dernières tendances
-          </p>
-        </div>
-  
-        <div class="benefitBanner__item">
-          <div class="benefitBanner__icon" aria-hidden="true">
-            <img src="/assets/svgs/quality.svg" alt="" loading="lazy" decoding="async">
-          </div>
-          <p class="benefitBanner__text">
-            Révélez votre style avec précision absolue
-          </p>
-        </div>
-  
-        <div class="benefitBanner__item">
-          <div class="benefitBanner__icon" aria-hidden="true">
-            <img src="/assets/svgs/creativity.svg" alt="" loading="lazy" decoding="async">
-          </div>
-          <p class="benefitBanner__text">
-            Accompagnement personnalisé, résultat unique 
-          </p>
-        </div>
-  
-        <div class="benefitBanner__item">
-          <div class="benefitBanner__icon" aria-hidden="true">
-            <img src="/assets/svgs/trust.svg" alt="" loading="lazy" decoding="async">
-          </div>
-          <p class="benefitBanner__text">
-            Soins experts, produits haut de gamme exclusifs
-          </p>
+        <div>
+          <span class="stat-num">6</span>
+          <span class="stat-label">Artistes coiffeurs</span>
         </div>
       </div>
     </div>
   </section>
 
-   <!-- ============================================-->
-   <!--                3 Images Link                -->
-   <!-- ============================================-->
-      
-   <section class="tripleTiles" aria-label="Quick links">
-    <div class="tripleTiles__grid">
-      <a class="tripleTiles__tile" href="/coiffure-femme/" aria-label="Nos Salons">
-        <img src="/assets/images/insta2.jpg" alt="Nos salons" loading="lazy" decoding="async">
-        <span class="tripleTiles__label">FEMME</span>
-      </a>
-  
-      <a class="tripleTiles__tile" href="/coiffure-homme/" aria-label="Team">
-        <img src="/assets/images/coupehomme.jpeg" alt="Notre équipe" loading="lazy" decoding="async">
-        <span class="tripleTiles__label">HOMME</span>
-      </a>
-  
-      <a class="tripleTiles__tile" href="https://salonkee.lu/salon/studio-3" aria-label="Réservations">
-        <img src="/assets/images/reservation.jpg" alt="Réservations" loading="lazy" decoding="async">
-        <span class="tripleTiles__label">RÉSERVATIONS</span>
-      </a>
+  <!-- SERVICES -->
+  <section class="services-section" id="services">
+    <div class="services-header reveal">
+      <div>
+        <span class="section-label">Ce que nous faisons</span>
+        <h2 class="section-title">Nos <em>prestations</em></h2>
+      </div>
+      <a href="#booking" class="btn-ghost" style="color:var(--warm-light)">Voir tous les services</a>
+    </div>
+    <div class="services-grid reveal">
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80&auto=format&fit=crop" alt="Coupe femme" />
+        <div class="service-card-overlay"></div>
+        <div class="service-arrow">→</div>
+        <div class="service-card-body">
+          <span class="service-num">01</span>
+          <div class="service-name">Coupe Femme</div>
+          <p class="service-desc">Coupe personnalisée selon votre morphologie et vos envies, pour un résultat naturel et élégant.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80&auto=format&fit=crop" alt="Coloration" />
+        <div class="service-card-overlay"></div>
+        <div class="service-arrow">→</div>
+        <div class="service-card-body">
+          <span class="service-num">02</span>
+          <div class="service-name">Coloration</div>
+          <p class="service-desc">Balayages, ombrés, couleurs tendance — nos coloristes maîtrisent toutes les techniques modernes.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80&auto=format&fit=crop" alt="Soin & Traitement" />
+        <div class="service-card-overlay"></div>
+        <div class="service-arrow">→</div>
+        <div class="service-card-body">
+          <span class="service-num">03</span>
+          <div class="service-name">Coupe Homme</div>
+          <p class="service-desc">Dégradés précis, barbe et finitions soignées pour un look moderne et raffiné.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-    <!-- ============================================ -->
-    <!--               Instagram Feed                 -->
-    <!-- ============================================ -->
+  <!-- GALLERY STRIP -->
+  <div class="gallery-strip">
+    <div class="gallery-strip-item">
+      <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=500&q=80&auto=format&fit=crop" alt="" />
+      <span class="gallery-caption">L'ambiance Studio 3</span>
+    </div>
+    <div class="gallery-strip-item">
+      <img src="https://images.unsplash.com/photo-1571646034647-52e6ea84b28c?w=500&q=80&auto=format&fit=crop" alt="" />
+      <span class="gallery-caption">Soins premium</span>
+    </div>
+    <div class="gallery-strip-item">
+      <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=500&q=80&auto=format&fit=crop" alt="" />
+      <span class="gallery-caption">Beauté naturelle</span>
+    </div>
+    <div class="gallery-strip-item">
+      <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=500&q=80&auto=format&fit=crop" alt="" />
+      <span class="gallery-caption">Finitions parfaites</span>
+    </div>
+    <div class="gallery-strip-item">
+      <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=500&q=80&auto=format&fit=crop" alt="" />
+      <span class="gallery-caption">Expertise & passion</span>
+    </div>
+  </div>
 
-    <section class="igFollow" aria-label="Suivez-nous sur Instagram">
-        <div class="igFollow__top">
-          <h2 class="igFollow__title">Suivez-nous</h2>
-      
-          <a class="igFollow__btn" href="https://www.instagram.com/studio3.lu/" target="_blank" rel="noopener noreferrer">
-            Voir sur Instagram
-            <span class="igFollow__btnIcon" aria-hidden="true">⦿</span>
-          </a>
+  <!-- TEAM -->
+  <section class="team-section" id="equipe">
+    <div class="team-intro reveal">
+      <span class="section-label">Notre équipe</span>
+      <h2 class="section-title">Des artistes <em>passionnés</em></h2>
+      <p>Nos coiffeurs sont bien plus que des techniciens — ce sont des créateurs dédiés à révéler votre personnalité à travers chaque coupe, couleur et soin.</p>
+    </div>
+    <div class="team-grid reveal">
+      <div class="team-card">
+        <img class="team-card-img" src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=400&q=80&auto=format&fit=crop&face" alt="Sophie" />
+        <div class="team-card-info">
+          <div class="team-name">Sophie Lambert</div>
+          <div class="team-role">Directrice artistique</div>
+          <div class="team-line"></div>
         </div>
-      
-        <div class="igFollow__carousel" aria-label="Instagram posts">
-          <!-- Each tile links to a post -->
-          <a class="igFollow__card" href="https://www.instagram.com/p/DT0j6VXjJhS/" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir le post Instagram 1">
-            <img src="/assets/images/insta1.jpg" alt="Instagram post 1" loading="lazy" decoding="async">
-          </a>
-      
-          <a class="igFollow__card" href="https://www.instagram.com/p/DNIRkPOswTP/" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir le post Instagram 2">
-            <img src="/assets/images/insta3.jpg" alt="Instagram post 2" loading="lazy" decoding="async">
-          </a>
-      
-          <a class="igFollow__card" href="https://www.instagram.com/p/DUGjzRsDC8L/" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir le post Instagram 3">
-            <img src="/assets/images/insta5.jpg" alt="Instagram post 3" loading="lazy" decoding="async">
-          </a>
-      
-          <a class="igFollow__card" href="https://www.instagram.com/p/DMR_HoRsuRf/?img_index=2" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir le post Instagram 4">
-            <img src="/assets/images/insta4.jpg" alt="Instagram post 4" loading="lazy" decoding="async">
-          </a>
-      
-          <a class="igFollow__card" href="https://www.instagram.com/p/DPMRLlgDA7t/" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir le post Instagram 5">
-            <img src="/assets/images/insta6.jpg" alt="Instagram post 5" loading="lazy" decoding="async">
-          </a>
+      </div>
+      <div class="team-card">
+        <img class="team-card-img" src="https://images.unsplash.com/photo-1598346762291-aee88549193f?w=400&q=80&auto=format&fit=crop" alt="Marc" />
+        <div class="team-card-info">
+          <div class="team-name">Marc Thill</div>
+          <div class="team-role">Coloriste expert</div>
+          <div class="team-line"></div>
         </div>
-      
-        <!-- Mobile-only placement: button centered underneath -->
-        <div class="igFollow__bottom">
-          <a class="igFollow__btn igFollow__btn--center" href="https://www.instagram.com/studio3.lu" target="_blank" rel="noopener noreferrer">
-            Voir sur Instagram
-            <span class="igFollow__btnIcon" aria-hidden="true">⦿</span>
-          </a>
+      </div>
+      <div class="team-card">
+        <img class="team-card-img" src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=400&q=80&auto=format&fit=crop" alt="Léa" />
+        <div class="team-card-info">
+          <div class="team-name">Léa Muller</div>
+          <div class="team-role">Styliste cheveux</div>
+          <div class="team-line"></div>
         </div>
-      </section>
-      <script>
-        const nav = document.querySelector("#cs-navigation");
-        const hero = document.querySelector("#hero-143");
-      
-        if (nav && hero) {
-          const observer = new IntersectionObserver(
-            ([entry]) => {
-              nav.classList.toggle("cs-scrolled", !entry.isIntersecting);
-            },
-            {
-              threshold: 0,
-              rootMargin: "-850px 0px 0px 0px" // activates 100px earlier
-            }
-          );
-      
-          observer.observe(hero);
+      </div>
+      <div class="team-card">
+        <img class="team-card-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80&auto=format&fit=crop" alt="Alex" />
+        <div class="team-card-info">
+          <div class="team-name">Alex Reuter</div>
+          <div class="team-role">Barbier & coiffeur homme</div>
+          <div class="team-line"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="testimonial-section">
+    <span class="section-label">Avis clients</span>
+    <blockquote class="testimonial-quote" id="testimonial-text">
+      « Studio 3, c'est bien plus qu'un salon — c'est une expérience. Je repars toujours avec exactement ce que je voulais, ou encore mieux. »
+    </blockquote>
+    <p class="testimonial-author" id="testimonial-author">— Marie-Claire B., Cliente depuis 2018</p>
+    <div class="testimonial-dots">
+      <div class="dot active" onclick="setTestimonial(0)"></div>
+      <div class="dot" onclick="setTestimonial(1)"></div>
+      <div class="dot" onclick="setTestimonial(2)"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="nav-logo">Studio <span>3</span></span>
+        <p class="footer-tagline">Un salon de coiffure d'exception au cœur d'Esch-sur-Alzette, Luxembourg. L'art de vous sublimer, chaque jour.</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Navigation</p>
+        <ul>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#equipe">Notre équipe</a></li>
+          <li><a href="#booking">Réserver</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Horaires</p>
+        <ul>
+          <li><a>Mardi : 9h – 19h</a></li>
+          <li><a>Mercredi : 9h – 19h</a></li>
+          <li><a>Jeudi : 9h – 19h</a></li>
+          <li><a>Vendredi : 9h – 20h</a></li>
+          <li><a>Samedi : 9h – 17h</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Contact</p>
+        <ul>
+          <li><a href="tel:+352123456789">+352 123 456 789</a></li>
+          <li><a href="mailto:contact@studio3.lu">contact@studio3.lu</a></li>
+          <li><a>10 Rue de l'Alzette</a></li>
+          <li><a>4011 Esch-sur-Alzette</a></li>
+          <li><a>Luxembourg</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Studio 3 — Tous droits réservés</p>
+      <div class="footer-social">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">TikTok</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Nav scroll effect
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Cursor glow
+    const glow = document.getElementById('glow');
+    document.addEventListener('mousemove', e => {
+      glow.style.left = e.clientX + 'px';
+      glow.style.top  = e.clientY + 'px';
+    });
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), 80);
+          observer.unobserve(entry.target);
         }
-      </script>
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
+
+    // Testimonials
+    const testimonials = [
+      { text: '« Studio 3, c\'est bien plus qu\'un salon — c\'est une expérience. Je repars toujours avec exactement ce que je voulais, ou encore mieux. »', author: '— Marie-Claire B., Cliente depuis 2018' },
+      { text: '« Une équipe incroyablement talentueuse. Sophie a transformé ma coloration et j\'ai reçu des compliments toute la semaine ! »', author: '— Isabelle M., Cliente depuis 2021' },
+      { text: '« Le meilleur salon d\'Esch sans hésiter. Accueil chaleureux, technique impeccable, résultat parfait à chaque fois. »', author: '— Thomas R., Client depuis 2019' },
+    ];
+    let current = 0;
+    function setTestimonial(index) {
+      current = index;
+      document.getElementById('testimonial-text').textContent = testimonials[index].text;
+      document.getElementById('testimonial-author').textContent = testimonials[index].author;
+      document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === index));
+    }
+    setInterval(() => setTestimonial((current + 1) % testimonials.length), 5000);
+  </script>
 
    
 {% endblock %}

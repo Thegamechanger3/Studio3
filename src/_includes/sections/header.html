@@ -1,67 +1,68 @@
+
 <!-- ============================================ -->
 <!--                 Navigation                   -->
 <!-- ============================================ -->
 
-<header id="cs-navigation">
+<nav id="navbar">
     <div class="cs-container">
-        <!--Nav Logo-->
-        <a href="/" class="cs-logo" aria-label="Company Name Home page">
-            <img src="/assets/svgs/logo-studio3.svg" alt="" width="210" height="29" aria-hidden="true" decoding="async">
+        <!-- Nav Logo -->
+        <a href="/" class="nav-logo" aria-label="Studio 3 Home page">
+            Studio <span>3</span>
         </a>
-        <!--Navigation List-->
-        <nav class="cs-nav" aria-label="main navigation">
-            <!--Mobile Nav Toggle-->
-            <button class="cs-toggle" id="cs-toggle" aria-expanded="false" aria-controls="cs-ul-wrapper" aria-label="mobile menu toggle" aria-haspopup="menu">
-                <span class="cs-box" aria-hidden="true">
-                    <span class="cs-line cs-line1" aria-hidden="true"></span>
-                    <span class="cs-line cs-line2" aria-hidden="true"></span>
-                    <span class="cs-line cs-line3" aria-hidden="true"></span>
-                </span>
-            </button>
-            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how many there are-->
-            <div class="cs-ul-wrapper" id="cs-ul-wrapper" inert>
-                <ul id="cs-expanded" class="cs-ul">
-                    <li class="cs-li">
-                        <a href="/" class="cs-li-link {% if page.url == "/" %} cs-active {% endif %}" {% if page.url == "/" %} aria-current="page" {% endif %}>
-                            Accueil
-                        </a>
-                    </li>
-                    <li class="cs-li">
-                        <a href="/a-propos/" class="cs-li-link {% if page.url == "/a-propos/" %} cs-active {% endif %}" {% if page.url == "/about/" %} aria-current="page" {% endif %}>
-                            À Propos
-                        </a>
-                    </li>
-                    <!-- Note: When copying this dropdown, update the id attribute with an appropriate name (e.g., "services-dropdown-toggle", "products-dropdown-toggle") and ensure the aria-labelledby attribute on the ul matches the button's id -->
-                    <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
-                    <li class="cs-li cs-dropdown">
-                        <button class="cs-li-link cs-dropdown-toggle {% if page.url == "/coiffure-femme/" or page.url == "/coiffure-femme/" %} cs-active {% endif %}" aria-haspopup="menu" aria-expanded="false" id="projects-dropdown-toggle">
-                            Prestations
-                            <img class="cs-drop-icon" src="/assets/svgs/dropdown.svg" alt="" width="15" height="15" decoding="async" aria-hidden="true">
-                        </button>
-                        <ul class="cs-drop-ul" aria-labelledby="projects-dropdown-toggle">
-                            <li class="cs-drop-li">
-                                <a href="/coiffure-femme/" class="cs-li-link cs-drop-link">Coiffure Femme</a>
-                            </li>
-                            <li class="cs-drop-li">
-                                <a href="/coiffure-homme/" class="cs-li-link cs-drop-link">Coiffure Homme</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="cs-li">
-                        <a href="/contact/" class="cs-li-link {% if page.url == "/contact/" %} cs-active {% endif %}" {% if page.url == "/reviews/" %} aria-current="page" {% endif %}>
-                            Contact
-                        </a>
-                    </li>
-                    <li class="cs-li cs-hide-on-desktop">
-                        <a href="/contact/" class="cs-li-link {% if page.url == "/contact/" %} cs-active {% endif %}" {% if page.url == "/contact/" %} aria-current="page" {% endif %}>
-                            Contact
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <a href="https://salonkee.lu/salon/studio-3" class="cs-button-solid cs-nav-button">Réserver</a>
-        <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
+        
+        <!-- Mobile Nav Toggle -->
+        <button class="cs-toggle" id="cs-toggle" aria-expanded="false" aria-controls="cs-ul-wrapper" aria-label="mobile menu toggle" aria-haspopup="menu">
+            <span class="cs-box" aria-hidden="true">
+                <span class="cs-line cs-line1" aria-hidden="true"></span>
+                <span class="cs-line cs-line2" aria-hidden="true"></span>
+                <span class="cs-line cs-line3" aria-hidden="true"></span>
+            </span>
+        </button>
+        
+        <!-- Navigation List Wrapper -->
+        <div class="cs-ul-wrapper" id="cs-ul-wrapper" inert>
+            <ul class="nav-links">
+                <!-- About Link -->
+                <li class="cs-li">
+                    <a href="/a-propos/" class="cs-li-link">
+                        À propos
+                    </a>
+                </li>
+                
+                <!-- Services Dropdown -->
+                <li class="cs-li cs-dropdown">
+                    <button class="cs-li-link cs-dropdown-toggle" aria-haspopup="menu" aria-expanded="false" id="services-dropdown-toggle">
+                        Services
+                        <img class="cs-drop-icon" src="/assets/svgs/dropdown.svg" alt="" width="15" height="15" decoding="async" aria-hidden="true">
+                    </button>
+                    <ul class="cs-drop-ul" aria-labelledby="services-dropdown-toggle">
+                        <li class="cs-drop-li">
+                            <a href="/coiffure-femme/" class="cs-li-link cs-drop-link">Coiffure Femme</a>
+                        </li>
+                        <li class="cs-drop-li">
+                            <a href="/coiffure-homme/" class="cs-li-link cs-drop-link">Coiffure Homme</a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <!-- Équipe Link -->
+                <li class="cs-li">
+                    <a href="#equipe" class="cs-li-link">
+                        Équipe
+                    </a>
+                </li>
+                
+                <!-- Booking CTA (visible in mobile menu) -->
+                <li class="cs-li">
+                    <a href="#booking" class="nav-cta">
+                        Réserver
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Desktop CTA Button (visible only on desktop) -->
+        <a href="#booking" class="nav-cta desktop-cta">Réserver</a>
     </div>
-</header>
+</nav>
 

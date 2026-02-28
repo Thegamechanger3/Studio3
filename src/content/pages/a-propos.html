@@ -14,390 +14,280 @@ permalink: "/a-propos/"
 
 {% block body %}
 
- <!-- ============================================ -->
-    <!--                    Hero                      -->
-    <!-- ============================================ -->
 
-    <section id="hero-143">
-        <div class="cs-container">
-            <h1 class="cs-title">
-                L'expérience coiffure unique 
-            </h1>
-            <p class="cs-text">
-                Salon de coiffure à Luxembourg où créativité et bien-être prennent de la hauteur
-            </p>
-            <a href="https://salonkee.lu/salon/studio-3" class="cs-button-solid">Réserver en Ligne</a>
-        </div>
-
-        <!-- Background Image -->
-        <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about_background.webp" | resize({ width: 640, height: 1490 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about_background.webp" | resize({ width: 640, height: 1490 }) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about_background.webp" | resize({ width: 640, height: 1490 }) | jpeg %}" type="image/jpeg">
-            <!--Tablet Image-->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/about_background.webp" | resize({ width: 2048, height: 1922 }) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/about_background.webp" | resize({ width: 2048, height: 1922 }) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/about_background.webp" | resize({ width: 2048, height: 1922 }) | jpeg %}" type="image/jpeg">
-            <!--Large Tablet Image-->
-            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/about_background.webp" | resize({ width: 2048, height: 1922 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/about_background.webp" | resize({ width: 2048, height: 1922 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/about_background.webp" | resize({ width: 2048, height: 1922 }) | jpeg %}" type="image/jpeg">
-            <!--Desktop Image-->
-            <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/about_background.webp" | resize({ width: 1, height: 1 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/about_background.webp" | resize({ width: 1, height: 1 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/about_background.webp" | resize({ width: 1, height: 1 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/about_background.webp" | resize({ width: 1, height: 1 }) | jpeg %}" alt="kitchen" width="1" height="1" loading="eager" decoding="async">
-        </picture>
-    </section>
-
-<!-- ============================================ -->
-<!--                Side By Side                  -->
-<!-- ============================================ -->
-
-<section id="sbs-2201">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">Welcome to Stitchography</span>
-            <h2 class="cs-title">Capture the Perfect Moments that will Make Memories</h2>
-            <p class="cs-text">
-                Our expert instructors give you the skills and knowledge to manage process risks and show you how to continuously make your facilities and operations more safe and reliable. PSRG training courses are available online. We have courses on-demand and live instructors for workshops and support. We also provide LIVE instructor-led training courses and onsite training.
-            </p>
-            <span class="cs-weekdays">Mon - Fri: 09:00 - 19:00</span>
-            <span class="cs-weekends">Saturday: 09:00 - 15:00</span>
-            <a href="" class="cs-button-solid">Learn More</a>
-        </div>
-        <div class="cs-image-group">
-            <!-- Main Image -->
-            <picture class="cs-picture cs-picture1">
-                <!-- Mobile -->
-                <source media="(max-width: 600px)" srcset="/assets/images/reservation.jpg">
-                <!-- Tablet and above -->
-                <source media="(min-width: 601px)" srcset="/assets/images/reservation.jpg">
-                <img 
-                    loading="lazy" 
-                    decoding="async" 
-                    src="/src/assets/images/reservation.jpg" 
-                    alt="reservation"
-                    width="272" 
-                    height="337">
-            </picture>
-        
-            <!-- Small Image -->
-            <picture class="cs-picture cs-picture2">
-                <!-- Mobile -->
-                <source media="(max-width: 600px)" srcset="/assets/images/reservation.jpg">
-                <!-- Tablet and above -->
-                <source media="(min-width: 601px)" srcset="/assets/images/reservation.jpg">
-                <img 
-                    loading="lazy" 
-                    decoding="async" 
-                    src="/assets/images/reservation.jpg" 
-                    alt="reservation"
-                    width="243" 
-                    height="367">
-            </picture>
-        </div>
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-img"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <p class="breadcrumb"><a href="index.html">Accueil</a> &nbsp;/&nbsp; À propos</p>
+      <h1 class="page-title">Notre <em>histoire</em>,<br/>notre passion.</h1>
     </div>
-</section>
+  </div>
 
-<!-- ============================================ -->
-<!--                Meet The Team                 -->
-<!-- ============================================ -->
+  <!-- STORY -->
+  <div class="story-section">
+    <div class="story-text reveal">
+      <span class="section-label">Qui sommes-nous</span>
+      <h2 class="section-title">Un salon né d'une <em>vision</em></h2>
+      <div class="divider"></div>
+      <p class="body-text" style="margin-bottom:22px;">
+        Studio 3 a ouvert ses portes en 2010 avec une idée simple : créer un espace où la coiffure devient un art de vivre. Installé au cœur d'Esch-sur-Alzette, notre salon a été conçu pour que chaque client reparte transformé, confiant, et surtout lui-même.
+      </p>
+      <p class="body-text" style="margin-bottom:40px;">
+        Pendant plus de quatorze ans, nous avons cultivé une approche fondée sur l'écoute, la créativité et la précision. Chaque coupe, chaque couleur, chaque soin est pensé comme un geste unique, adapté à votre morphologie, votre style de vie et vos envies.
+      </p>
+      <a href="index.html#booking" class="btn-primary">Prendre rendez-vous</a>
+    </div>
+    <div class="story-img reveal">
+      <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=900&q=85&auto=format&fit=crop" alt="Studio 3 atelier" />
+      <div class="story-year-badge">
+        <span class="year">2010</span>
+        <span class="year-label">Fondation du salon</span>
+      </div>
+    </div>
+  </div>
 
-<section id="meet-us-347">
-    <div class="cs-container">
-        <div class="cs-content">
-            <div class="cs-flex-group">
-                <span class="cs-topper">Meet Us</span>
-                <h2 class="cs-title">Our Team Members</h2>
-            </div>
+  <!-- VALUES -->
+  <section class="values-section">
+    <div class="values-header reveal">
+      <span class="section-label">Ce qui nous guide</span>
+      <h2 class="section-title">Nos <em>valeurs</em></h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card reveal">
+        <span class="value-num">01</span>
+        <div class="value-title">L'écoute</div>
+        <p class="value-desc">Chaque client est unique. Avant tout geste technique, nous prenons le temps de comprendre votre personnalité, votre quotidien et vos désirs pour des résultats parfaitement adaptés.</p>
+      </div>
+      <div class="value-card reveal">
+        <span class="value-num">02</span>
+        <div class="value-title">L'excellence</div>
+        <p class="value-desc">Nous nous formons continuellement aux dernières techniques internationales. La précision, le soin du détail et la régularité sont au cœur de chacune de nos prestations.</p>
+      </div>
+      <div class="value-card reveal">
+        <span class="value-num">03</span>
+        <div class="value-title">L'authenticité</div>
+        <p class="value-desc">Pas de tendances imposées. Chez Studio 3, nous valorisons ce qui vous ressemble — notre rôle est de révéler votre beauté naturelle, pas de la modeler sur un standard.</p>
+      </div>
+      <div class="value-card reveal">
+        <span class="value-num">04</span>
+        <div class="value-title">La durabilité</div>
+        <p class="value-desc">Nous utilisons des produits professionnels sélectionnés pour leur qualité et leur respect de la santé capillaire et de l'environnement. Beauté responsable, sans compromis.</p>
+      </div>
+      <div class="value-card reveal">
+        <span class="value-num">05</span>
+        <div class="value-title">La créativité</div>
+        <p class="value-desc">Chaque séance est une invitation à se réinventer. Nos coiffeurs sont des artistes qui allient savoir-faire technique et sensibilité esthétique pour des résultats uniques.</p>
+      </div>
+      <div class="value-card reveal">
+        <span class="value-num">06</span>
+        <div class="value-title">L'accueil</div>
+        <p class="value-desc">Dès que vous franchissez nos portes, vous êtes chez vous. Ambiance chaleureuse, équipe bienveillante et attention portée à chaque instant de votre passage chez nous.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAND -->
+  <div class="stats-band reveal">
+    <div class="stat-item">
+      <span class="stat-num">14+</span>
+      <span class="stat-label">Années d'expérience</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">6</span>
+      <span class="stat-label">Artistes coiffeurs</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">3k+</span>
+      <span class="stat-label">Clients fidèles</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">100%</span>
+      <span class="stat-label">Satisfaction garantie</span>
+    </div>
+  </div>
+
+  <!-- TEAM -->
+  <section class="team-section">
+    <div class="team-header reveal">
+      <div>
+        <span class="section-label">L'équipe</span>
+        <h2 class="section-title">Des visages <em>derrière l'art</em></h2>
+      </div>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <div class="team-card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=600&q=80&auto=format&fit=crop" alt="Sophie Lambert" />
+          <span class="team-card-badge">Fondatrice</span>
         </div>
-        <ul class="cs-card-group">
-            <li class="cs-item">
-                <!--Background Image-->
-                <picture class="cs-background">
-                    <source media="(max-width: 767px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/cleaner1.png">
-                    <source media="(min-width: 768px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/cleaner1.png">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/cleaner1.png" alt="cleaner" width="305" height="335">
-                    </picture>
-                <div class="cs-info">
-                    <span class="cs-name">Cindy Anicento</span>
-                    <span class="cs-job">CEO</span>
-                </div>
-            </li>
-            <li class="cs-item">
-                <!--Background Image-->
-                <picture class="cs-background">
-                    <source media="(max-width: 767px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/cleaner2.png">
-                    <source media="(min-width: 768px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/cleaner2.png">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/cleaner2.png" alt="cleaner" width="305" height="335">
-                    </picture>
-                <div class="cs-info">
-                    <span class="cs-name">Gwendy Guyomarc'h</span>
-                    <span class="cs-job">Project Manager</span>
-                </div>
-            </li>
-            <li class="cs-item">
-                <!--Background Image-->
-                <picture class="cs-background">
-                    <source media="(max-width: 767px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/cleaner3.png">
-                    <source media="(min-width: 768px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/cleaner3.png">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/cleaner3.png" alt="cleaner" width="305" height="335">
-                    </picture>
-                <div class="cs-info">
-                    <span class="cs-name">Korinna Anne-Marie</span>
-                    <span class="cs-job">Cleaner</span>
-                </div>
-            </li>
-            <li class="cs-item">
-                <!--Background Image-->
-                <picture class="cs-background">
-                    <source media="(max-width: 767px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/cleaner4.png">
-                    <source media="(min-width: 768px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/cleaner4.png">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Meet-Team/cleaner4.png" alt="cleaner" width="305" height="335">
-                    </picture>
-                <div class="cs-info">
-                    <span class="cs-name">Alex Mendes</span>
-                    <span class="cs-job">CEO</span>
-                </div>
-            </li>
+        <div class="team-card-info">
+          <div class="team-name">Sophie Lambert</div>
+          <div class="team-role">Directrice artistique</div>
+          <div class="team-line"></div>
+          <p class="team-bio">Formée à Paris et Milan, Sophie est la fondatrice de Studio 3. Sa vision : faire de chaque coupe un acte créatif au service de la personnalité de chaque client.</p>
+        </div>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1598346762291-aee88549193f?w=600&q=80&auto=format&fit=crop" alt="Marc Thill" />
+          <span class="team-card-badge">Coloriste</span>
+        </div>
+        <div class="team-card-info">
+          <div class="team-name">Marc Thill</div>
+          <div class="team-role">Expert en colorimétrie</div>
+          <div class="team-line"></div>
+          <p class="team-bio">Marc maîtrise toutes les techniques de coloration modernes : balayage, ombré, couleur fantaisie. Son œil pour les nuances est inégalé dans la région.</p>
+        </div>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=600&q=80&auto=format&fit=crop" alt="Léa Muller" />
+          <span class="team-card-badge">Styliste</span>
+        </div>
+        <div class="team-card-info">
+          <div class="team-name">Léa Muller</div>
+          <div class="team-role">Styliste & coiffure de mariée</div>
+          <div class="team-line"></div>
+          <p class="team-bio">Spécialiste des coiffures événementielles, Léa transforme chaque détail en magie. Ses créations mariages sont reconnues à l'échelle du Grand-Duché.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ATELIER / ESPACE -->
+  <section class="atelier-section">
+    <div class="atelier-header reveal">
+      <div>
+        <span class="section-label">Notre espace</span>
+        <h2 class="section-title">Un cadre <em>pensé pour vous</em></h2>
+      </div>
+      <p class="body-text">Notre salon a été aménagé avec soin pour créer une atmosphère à la fois raffinée et apaisante. Chaque matière, chaque lumière a été choisie pour vous offrir un moment de déconnexion totale.</p>
+    </div>
+    <div class="atelier-grid reveal">
+      <div class="atelier-img tall">
+        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80&auto=format&fit=crop" alt="Salon principal" />
+      </div>
+      <div class="atelier-img">
+        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80&auto=format&fit=crop" alt="Espace styling" />
+      </div>
+      <div class="atelier-img">
+        <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80&auto=format&fit=crop" alt="Coloration" />
+      </div>
+      <div class="atelier-img">
+        <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80&auto=format&fit=crop" alt="Détail finition" />
+      </div>
+      <div class="atelier-img">
+        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80&auto=format&fit=crop" alt="Espace homme" />
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-left reveal">
+      <span class="section-label">Venez nous voir</span>
+      <h2 class="section-title">Prêt à vivre <em>l'expérience</em> Studio 3 ?</h2>
+      <div class="divider"></div>
+      <p class="body-text" style="margin-bottom:36px;">Réservez dès maintenant et laissez nos artistes révéler le meilleur de vous-même. Votre première visite commence ici.</p>
+      <a href="index.html#booking" class="btn-primary">Réserver ma séance</a>
+    </div>
+    <div class="cta-right reveal">
+      <div class="cta-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        <div>
+          <span class="cta-info-label">Adresse</span>
+          <span class="cta-info-val">10 Rue de l'Alzette, 4011 Esch-sur-Alzette</span>
+        </div>
+      </div>
+      <div class="cta-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div>
+          <span class="cta-info-label">Horaires</span>
+          <span class="cta-info-val">Mardi – Vendredi : 9h – 19h · Samedi : 9h – 17h</span>
+        </div>
+      </div>
+      <div class="cta-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 11.5 19.79 19.79 0 011.02 2.82 2 2 0 013 .64h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.5a16 16 0 006.29 6.29l1.22-1.22a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <div>
+          <span class="cta-info-label">Téléphone</span>
+          <span class="cta-info-val">+352 123 456 789</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">Studio <span>3</span></a>
+        <p class="footer-tagline">Un salon de coiffure d'exception au cœur d'Esch-sur-Alzette, Luxembourg.</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Navigation</p>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#booking">Réserver</a></li>
         </ul>
-        <div class="cs-bubbles cs-bubbles-small" aria-hidden="true"></div>
-        <div class="cs-bubbles cs-bubbles-big" aria-hidden="true">
-            <span class="cs-bubbles-big2"></span>
-        </div>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Horaires</p>
+        <ul>
+          <li><a>Mardi : 9h – 19h</a></li>
+          <li><a>Mercredi : 9h – 19h</a></li>
+          <li><a>Jeudi : 9h – 19h</a></li>
+          <li><a>Vendredi : 9h – 20h</a></li>
+          <li><a>Samedi : 9h – 17h</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Contact</p>
+        <ul>
+          <li><a href="tel:+352123456789">+352 123 456 789</a></li>
+          <li><a href="mailto:contact@studio3.lu">contact@studio3.lu</a></li>
+          <li><a>10 Rue de l'Alzette</a></li>
+          <li><a>4011 Esch-sur-Alzette</a></li>
+        </ul>
+      </div>
     </div>
-</section>
-
-<!-- ============================================ -->
-<!--                Testimonials                   -->
-<!-- ============================================ -->
-
-<section id="testimonials-1612">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">Témoignages</span>
-            <h2 class="cs-title">Ce Que Nos Clients Disent</h2>
-        </div>
-        <div class="cs-card-group">
-            <div class="cs-item">
-                <div class="cs-stars">★★★★★</div>
-                <p class="cs-text">"J'ai trouvé mon coiffeur idéal ! Marie comprend exactement ce que je veux et le résultat dépasse toujours mes attentes. L'ambiance du salon est tellement accueillante."</p>
-                <div class="cs-author">
-                    <span class="cs-name">Ludivine Verlaine</span>
-                </div>
-            </div>
-
-            <div class="cs-item">
-                <div class="cs-stars">★★★★★</div>
-                <p class="cs-text">"Mon mariage était parfait et je dois remercier l'équipe pour la coiffure magnifique et les soins avant le grand jour. Professionnalisme à son meilleur !"</p>
-                <div class="cs-author">
-                    <span class="cs-name">Sophie Beaumont</span>
-
-                </div>
-            </div>
-
-            <div class="cs-item">
-                <div class="cs-stars">★★★★★</div>
-                <p class="cs-text">"J'ai toujours eu des cheveux difficiles, mais l'équipe a trouvé la solution parfaite. Les produits utilisés sont de qualité et mes cheveux n'ont jamais été aussi beaux."</p>
-                <div class="cs-author">
-                    <span class="cs-name">Marie Keller</span>
-                </div>
-            </div>
-
-            <div class="cs-item">
-                <div class="cs-stars">★★★★★</div>
-                <p class="cs-text">"Je suis venu pour la première fois timide, mais l'accueil de l'équipe était chaleureux. On m'a donné des conseils précieux et le résultat ? Impeccable !"</p>
-                <div class="cs-author">
-                    <span class="cs-name">Antoine Rousseau</span>
-                </div>
-            </div>
-        </div>
-        <div class="cs-button-wrapper">
-            <a href="/reservation" class="cs-button">
-                Prendre Rendez-vous
-            </a>
-        </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Studio 3 — Tous droits réservés</p>
+      <div class="footer-social">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">TikTok</a>
+      </div>
     </div>
-</section>
-<!-- ============================================ -->
-<!--             Side by Side Reverse             -->
-<!-- ============================================ -->
+  </footer>
 
-<section id="sbs-r-1892">
-    <div class="cs-container">
-        <div class="cs-image-group">
-            <picture class="cs-picture">
-                <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/derma-sbs-1.jpg">
-                <!--Tablet and above Image-->
-                <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/derma-sbs-1.jpg">
-                <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/derma-sbs-1.jpg" alt="dermatologist" width="324" height="467">
-            </picture>
-           
-            <div class="cs-info">
-                <p class="cs-info-text">
-                    <span class="cs-bold">Elected Secretary</span>
-                    of Orange County Dermatology Society 2022-2024
-                </p>
-            </div>
-        </div>
-        <div class="cs-content">
-            <div class="cs-flex">
-                <span class="cs-topper">About us</span>
-                <h2 class="cs-title">Welcome to Our Stitch Skin Dermatology</h2>
-            </div>
-            <p class="cs-text-large">
-                Stitch Skin Dermatology & Aesthetics is a California-based professional corp start-up that is redefining the way dermatology and medical aesthetics is practiced and delivered.
-            </p>
-            <p class="cs-text">
-                We are seeing a new crop of medical practices emerge that are reimagining the patient's experience with traditional healthcare (e.g. One Medical for Primary Care, Forward for Preventative Care, KindBody for Fertility, Tia for Women's Health), however we can't say the same for Dermatology and Medical Aesthetics.
-            </p>
-            <p class="cs-text">
-                Our objective with Stitch Skin is to build a truly patient-centric dermatology experience, from initial awareness to patient check-in to consultation to billing and post-visit (and everything in between), building lasting relationships and leveraging seamless technology to maximize patient satisfaction.
-            </p>
-            <a href="https://salonkee.lu/salon/studio-3" class="cs-button-solid">Book an Appointment</a>
-        </div>
-    </div>
-</section>
-                                
-<!-- ============================================ -->
-<!--                    FAQ                        -->
-<!-- ============================================ -->
-
-<section id="faq-1246">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">FAQ</span>
-            <h2 class="cs-title">Questions Fréquemment Posées</h2>
-        </div>
-        <div class="cs-flex-group">
-            <ul class="cs-faq-group">
-                <!-- Active class on click -->
-                <li class="cs-faq-item">
-                    <button class="cs-button">
-                        <span class="cs-button-text">
-                            Dois-je prendre rendez-vous ou acceptez-vous les clients walk-in ?
-                        </span>
-                        <span class="cs-plus">+</span>
-                    </button>
-                    <div class="cs-item-p">
-                        <p class="cs-item-text">
-                            Nous acceptons les deux ! Les rendez-vous sont fortement recommandés pour garantir un service sans attente. Vous pouvez réserver en ligne ou par téléphone. Les clients walk-in sont les bienvenus selon la disponibilité, mais l'attente peut être plus longue en heures de pointe.
-                        </p>
-                    </div>
-                </li>
-                <li class="cs-faq-item">
-                    <button class="cs-button">
-                        <span class="cs-button-text">
-                            Quels moyens de paiement acceptez-vous ?
-                        </span>
-                        <span class="cs-plus">+</span>
-                    </button>
-                    <div class="cs-item-p">
-                        <p class="cs-item-text">
-                            Nous acceptons les espèces, les cartes de crédit (Visa, Mastercard, American Express), les virements bancaires et les portefeuilles numériques comme Apple Pay et Google Pay.
-                        </p>
-                    </div>
-                </li>
-                <li class="cs-faq-item">
-                    <button class="cs-button">
-                        <span class="cs-button-text">
-                            Avez-vous une politique d'annulation ?
-                        </span>
-                        <span class="cs-plus">+</span>
-                    </button>
-                    <div class="cs-item-p">
-                        <p class="cs-item-text">
-                            Nous demandons une annulation ou un report au moins 24 heures avant votre rendez-vous. Les annulations de dernière minute peuvent entraîner des frais de 50% du service. Ce délai nous permet d'offrir votre créneau à un autre client.
-                        </p>
-                    </div>
-                </li>
-                <li class="cs-faq-item">
-                    <button class="cs-button">
-                        <span class="cs-button-text">
-                            Proposez-vous des services à domicile ?
-                        </span>
-                        <span class="cs-plus">+</span>
-                    </button>
-                    <div class="cs-item-p">
-                        <p class="cs-item-text">
-                            Oui, pour les événements spéciaux (mariages, anniversaires, etc.), nous proposons des services à domicile. Contactez-nous directement pour discuter des détails et obtenir un devis personnalisé.
-                        </p>
-                    </div>
-                </li>
-                <li class="cs-faq-item">
-                    <button class="cs-button">
-                        <span class="cs-button-text">
-                            Utilisez-vous des produits naturels ou biologiques ?
-                        </span>
-                        <span class="cs-plus">+</span>
-                    </button>
-                    <div class="cs-item-p">
-                        <p class="cs-item-text">
-                            Nous utilisons principalement des produits premium de marques reconnues. Pour les cheveux sensibles, nous proposons des options naturelles et biologiques. N'hésitez pas à nous en parler lors de votre consultation.
-                        </p>
-                    </div>
-                </li>
-                <li class="cs-faq-item">
-                    <button class="cs-button">
-                        <span class="cs-button-text">
-                            Combien de temps dure une coupe de cheveux typique ?
-                        </span>
-                        <span class="cs-plus">+</span>
-                    </button>
-                    <div class="cs-item-p">
-                        <p class="cs-item-text">
-                            Une coupe simple prend environ 30-45 minutes. Un traitement de couleur peut prendre 45 minutes à 2 heures selon la technique. Une transformation complète peut nécessiter 2-3 heures. Notre équipe vous donnera une estimation précise lors de la réservation.
-                        </p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<script>
-  const nav = document.querySelector("#cs-navigation");
-  const hero = document.querySelector("#hero-143");
-
-  if (nav && hero) {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        nav.classList.toggle("cs-scrolled", !entry.isIntersecting);
-      },
-      {
-        threshold: 0,
-        rootMargin: "-850px 0px 0px 0px" // activates 100px earlier
-      }
-    );
-
-    observer.observe(hero);
-  }
-
-    // FAQ Accordion
-    const faqItems = document.querySelectorAll('#faq-1246 .cs-faq-item');
-    
-    faqItems.forEach((item) => {
-        const button = item.querySelector('.cs-button');
-        
-        button.addEventListener('click', () => {
-            // Check if this item is already active
-            const isActive = item.classList.contains('active');
-            
-            // Close all items
-            faqItems.forEach((faq) => {
-                faq.classList.remove('active');
-            });
-            
-            // If it wasn't active, open this one
-            if (!isActive) {
-                item.classList.add('active');
-            }
-        });
+  <script>
+        // Nav scroll effect
+        const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
     });
-</script>
+    
+    // Cursor glow
+    const glow = document.getElementById('glow');
+    document.addEventListener('mousemove', e => {
+      glow.style.left = e.clientX + 'px';
+      glow.style.top  = e.clientY + 'px';
+    });
 
+    // Scroll reveal
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
 
 {% endblock %}

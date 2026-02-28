@@ -12,275 +12,335 @@ permalink: "/coiffure-femme/"
 
 {% block body %}
 
-      <!-- ============================================ -->
-    <!--                   Banner                     -->
-    <!-- ============================================ -->
-
-    <div id="banner-310">
-      <div class="cs-container">
-          <span class="cs-int-title">NOS PRESTATIONS <br>& PRIX</span>
-      </div>
-      <!--Background Image-->
-      <picture class="cs-background">
-          <!--Mobile Image-->
-          <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
-          <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
-          <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
-          <!--Tablet Image-->
-          <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
-          <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
-          <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
-          <!--Desktop Image-->
-          <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
-          <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
-          <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
-          <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
-      </picture>
+     <!-- HERO -->
+  <div class="page-hero">
+    <div class="page-hero-img"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <p class="breadcrumb"><a href="index.html">Accueil</a> &nbsp;/&nbsp; Services &amp; Prix</p>
+      <h1 class="page-title">Services<br/><em>Femme</em></h1>
+      <p class="page-subtitle">Des prestations pensées pour révéler votre beauté. Chaque service est réalisé avec soin, précision et les meilleurs produits du marché.</p>
+    </div>
   </div>
 
-
-    <!-- ============================================ -->
-    <!--                PRICE LISTING                 -->
-    <!-- ============================================ -->
-
-  <section class="pricing-section">
-    <div class="pricing-container">
-  
-      <!-- Block 1 -->
-      <div class="pricing-block">
-        <div class="pricing-left">
-          <h2>Balayage</h2>
-          <span class="pricing-category">[Femme]</span>
-        </div>
-  
-        <div class="pricing-right">
-          <div class="pricing-item">
-            <div class="item-top">
-              <span class="item-title">Coup d'Éclat</span>
-              <span class="item-line"></span>
-              <span class="item-price">€249</span>
-            </div>
-            <span class="item-sub">[À partir de]</span>
-          </div>
-  
-          <div class="pricing-item">
-            <div class="item-top">
-              <span class="item-title">Inversé</span>
-              <span class="item-line"></span>
-              <span class="item-price">€219</span>
-            </div>
-            <span class="item-sub">[À partir de]</span>
-          </div>
-  
-          <div class="pricing-item">
-            <div class="item-top">
-              <span class="item-title">Coup de Soleil</span>
-              <span class="item-line"></span>
-              <span class="item-price">€199</span>
-            </div>
-            <span class="item-sub">[À partir de]</span>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Block 2 -->
-      <div class="pricing-block">
-        <div class="pricing-left">
-          <h2>Coupe & Coiffage Femme</h2>
-          <span class="pricing-category">[Femme]</span>
-        </div>
-  
-        <div class="pricing-right">
-          <div class="pricing-item">
-            <div class="item-top">
-              <span class="item-title">Sh. + Coupe + Brushing</span>
-              <span class="item-line"></span>
-              <span class="item-price">€64</span>
-            </div>
-            <span class="item-sub">[À partir de]</span>
-          </div>
-  
-          <div class="pricing-item">
-            <div class="item-top">
-              <span class="item-title">Sh. + Brushing</span>
-              <span class="item-line"></span>
-              <span class="item-price">€34</span>
-            </div>
-            <span class="item-sub">[À partir de]</span>
-          </div>
-  
-          <div class="pricing-item">
-            <div class="item-top">
-              <span class="item-title">Chignon</span>
-              <span class="item-line"></span>
-              <span class="item-price">€71</span>
-            </div>
-            <span class="item-sub">[À partir de]</span>
-          </div>
-        </div>
-      </div>
-
-       <!-- Block 3 -->
-       <div class="pricing-block">
-        <div class="pricing-left">
-          <h2>Coloration</h2>
-          <span class="pricing-category">[Femme]</span>
-        </div>
-  
-        <div class="pricing-right">
-          <div class="pricing-item">
-            <div class="item-top">
-              <span class="item-title">Coloration complète</span>
-              <span class="item-line"></span>
-              <span class="item-price">€88</span>
-            </div>
-   
-          </div>
-  
-          <div class="pricing-item">
-            <div class="item-top">
-              <span class="item-title">Coloration racines</span>
-              <span class="item-line"></span>
-              <span class="item-price">€54</span>
-            </div>
-          </div>
-  
-          <div class="pricing-item">
-            <div class="item-top">
-              <span class="item-title">Gloss (Patine)</span>
-              <span class="item-line"></span>
-              <span class="item-price">€40</span>
-            </div>
-          </div>
-        </div>
-      </div>
-  
-          <!-- Block Students -->
-          <div class="pricing-block">
-            <div class="pricing-left">
-              <h2>Enfant & Étudiante</h2>
-              <span class="pricing-category">[Enfants]</span>
-            </div>
-      
-            <div class="pricing-right">
-              <div class="pricing-item">
-                <div class="item-top">
-                  <span class="item-title">Coupe Enfant 0-5 Ans</span>
-                  <span class="item-line"></span>
-                  <span class="item-price">€20</span>
-                </div>
-              </div>
-      
-              <div class="pricing-item">
-                <div class="item-top">
-                  <span class="item-title">Coupe + Coiffage Fille 6-11 ans</span>
-                  <span class="item-line"></span>
-                  <span class="item-price">€35</span>
-                </div>
-              </div>
-      
-              <div class="pricing-item">
-                <div class="item-top">
-                  <span class="item-title">Sh. + Coupe + Coiffage Étudiante</span>
-                  <span class="item-line"></span>
-                  <span class="item-price">€49</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-    </div>
-  </section>
-
-  <section id="cta-banner-1">
-    <div class="cta-container">
-      <p class="cta-kicker">What are you waiting for?</p>
-      <h2 class="cta-title">Book a treatment</h2>
-      <a class="cta-btn" href="https://salonkee.lu/salon/studio-3">Book now</a>
-    </div>
-  </section>
-
-
-<!-- ============================================ -->
-<!--                   Gallery                    -->
-<!-- ============================================ -->
-
-<section id="gallery-1446">
-  <div class="cs-container">
-      <!--Gallery-->
-      <div class="cs-gallery">
-          <!--Picture 1-->
-          <picture class="cs-image">
-              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign.jpeg">
-              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign.jpeg">
-              <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign.jpeg" alt="gallery" width="305" height="400">
-          </picture>
-          <!--Picture 2-->
-          <picture class="cs-image">
-              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/melting-ice.jpeg">
-              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/melting-ice.jpeg">
-              <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/melting-ice.jpeg" alt="gallery" width="305" height="400">
-          </picture>
-          <!--Picture 3-->
-          <picture class="cs-image">
-              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/windmills.jpeg">
-              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/windmills.jpeg">
-              <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/windmills.jpeg" alt="gallery" width="305" height="400">
-          </picture>
-          <!--Picture 4-->
-          <picture class="cs-image">
-              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign2.jpeg">
-              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign2.jpeg">
-              <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign2.jpeg" alt="gallery" width="305" height="400">
-          </picture>
-          <!--Picture 5-->
-          <picture class="cs-image">
-              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/falling-rocks.jpeg">
-              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/falling-rocks.jpeg">
-              <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/falling-rocks.jpeg" alt="gallery" width="305" height="400">
-          </picture>
-          <!--Picture 6-->
-          <picture class="cs-image">
-              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign4.jpeg">
-              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign4.jpeg">
-              <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign4.jpeg" alt="gallery" width="305" height="400">
-          </picture>
-          <!--Picture 7-->
-          <picture class="cs-image">
-              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign3.jpeg">
-              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign3.jpeg">
-              <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/MISC/protest-sign3.jpeg" alt="gallery" width="305" height="400">
-          </picture>
-          <!--Picture 8-->
-          <picture class="cs-image">
-              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/desert-tree.jpeg">
-              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/desert-tree.jpeg">
-              <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/desert-tree.jpeg" alt="gallery" width="305" height="400">
-          </picture>
-      </div>
+  <!-- FILTER BAR -->
+  <div class="filter-bar">
+    <div class="filter-tab active" onclick="filterCat('all', this)">Tous les services</div>
+    <div class="filter-tab" onclick="filterCat('balayage', this)">Balayage</div>
+    <div class="filter-tab" onclick="filterCat('coupe', this)">Coupe & Coiffage</div>
+    <div class="filter-tab" onclick="filterCat('coloration', this)">Coloration</div>
+    <div class="filter-tab" onclick="filterCat('enfant', this)">Enfant & Étudiante</div>
   </div>
-</section>
-                    
 
-    <script>
-        const nav = document.querySelector("#cs-navigation");
-        const banner = document.querySelector("#banner-310");
-      
-        if (nav && banner) {
-          const observer = new IntersectionObserver(
-            ([entry]) => {
-              nav.classList.toggle("cs-scrolled", !entry.isIntersecting);
-            },
-            {
-              threshold: 0,
-              rootMargin: "-800px 0px 0px 0px" 
-              // déclenche 100px avant la fin du banner
-            }
-          );
-      
-          observer.observe(banner);
+  <!-- CONTENT -->
+  <div class="content-wrap">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <img class="sidebar-img" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=700&q=85&auto=format&fit=crop" alt="Studio 3" />
+      <div class="sidebar-overlay"></div>
+      <div class="sidebar-quote">
+        « La beauté commence au moment où vous décidez d'être vous-même. »
+        <cite>— Studio 3, Esch-sur-Alzette</cite>
+      </div>
+    </div>
+
+    <!-- PRICE CONTENT -->
+    <div class="price-content">
+
+      <!-- BALAYAGE -->
+      <div class="category-block reveal" data-cat="balayage">
+        <div class="category-header">
+          <div class="category-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="category-label">Femme — Mise en valeur</span>
+            <div class="category-name">Balayage <em>&amp; Lumière</em></div>
+          </div>
+        </div>
+        <div class="price-list">
+          <div class="price-row featured">
+            <div>
+              <div class="price-service-name">Coup d'Éclat</div>
+              <span class="price-service-sub">Balayage lumineux haut de gamme, effet naturel et raffiné</span>
+            </div>
+            <div class="price-right">
+              <span class="price-from">À partir de</span>
+              <span class="price-amount"><span class="currency">€</span>249</span>
+            </div>
+          </div>
+          <div class="price-row">
+            <div>
+              <div class="price-service-name">Inversé</div>
+              <span class="price-service-sub">Balayage inversé, racines claires et pointes foncées</span>
+            </div>
+            <div class="price-right">
+              <span class="price-from">À partir de</span>
+              <span class="price-amount"><span class="currency">€</span>219</span>
+            </div>
+          </div>
+          <div class="price-row">
+            <div>
+              <div class="price-service-name">Coup de Soleil</div>
+              <span class="price-service-sub">Balayage solaire, dégradé naturel inspiré des blondes méditerranéennes</span>
+            </div>
+            <div class="price-right">
+              <span class="price-from">À partir de</span>
+              <span class="price-amount"><span class="currency">€</span>199</span>
+            </div>
+          </div>
+        </div>
+        <p class="price-note">
+          <strong>Note :</strong> Les tarifs de balayage sont indiqués à partir de et varient selon la longueur, la densité des cheveux et la technique choisie. Un devis personnalisé est réalisé lors de la consultation.
+        </p>
+      </div>
+
+      <!-- COUPE & COIFFAGE -->
+      <div class="category-block reveal" data-cat="coupe">
+        <div class="category-header">
+          <div class="category-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/>
+              <line x1="20" y1="4" x2="8.12" y2="15.88"/>
+              <line x1="14.47" y1="14.48" x2="20" y2="20"/>
+              <line x1="8.12" y1="8.12" x2="12" y2="12"/>
+            </svg>
+          </div>
+          <div>
+            <span class="category-label">Femme — Essentiel</span>
+            <div class="category-name">Coupe <em>&amp; Coiffage</em></div>
+          </div>
+        </div>
+        <div class="price-list">
+          <div class="price-row featured">
+            <div>
+              <div class="price-service-name">Shampooing + Coupe + Brushing</div>
+              <span class="price-service-sub">Lavage, coupe personnalisée et brushing professionnel</span>
+            </div>
+            <div class="price-right">
+              <span class="price-from">À partir de</span>
+              <span class="price-amount"><span class="currency">€</span>64</span>
+            </div>
+          </div>
+          <div class="price-row">
+            <div>
+              <div class="price-service-name">Shampooing + Brushing</div>
+              <span class="price-service-sub">Lavage et mise en forme brushing, sans coupe</span>
+            </div>
+            <div class="price-right">
+              <span class="price-from">À partir de</span>
+              <span class="price-amount"><span class="currency">€</span>34</span>
+            </div>
+          </div>
+          <div class="price-row">
+            <div>
+              <div class="price-service-name">Chignon</div>
+              <span class="price-service-sub">Chignon élaboré pour occasions spéciales, mariages et événements</span>
+            </div>
+            <div class="price-right">
+              <span class="price-from">À partir de</span>
+              <span class="price-amount"><span class="currency">€</span>71</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLORATION -->
+      <div class="category-block reveal" data-cat="coloration">
+        <div class="category-header">
+          <div class="category-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="category-label">Femme — Couleur</span>
+            <div class="category-name">Coloration <em>&amp; Gloss</em></div>
+          </div>
+        </div>
+        <div class="price-list">
+          <div class="price-row featured">
+            <div>
+              <div class="price-service-name">Coloration complète</div>
+              <span class="price-service-sub">Couleur uniforme sur toute la longueur des cheveux</span>
+            </div>
+            <div class="price-right">
+              <span class="price-amount"><span class="currency">€</span>88</span>
+            </div>
+          </div>
+          <div class="price-row">
+            <div>
+              <div class="price-service-name">Coloration racines</div>
+              <span class="price-service-sub">Reprise de couleur ciblée sur les racines uniquement</span>
+            </div>
+            <div class="price-right">
+              <span class="price-amount"><span class="currency">€</span>54</span>
+            </div>
+          </div>
+          <div class="price-row">
+            <div>
+              <div class="price-service-name">Gloss (Patine)</div>
+              <span class="price-service-sub">Soin colorant transparent, illumine et prolonge la couleur</span>
+            </div>
+            <div class="price-right">
+              <span class="price-amount"><span class="currency">€</span>40</span>
+            </div>
+          </div>
+        </div>
+        <p class="price-note">
+          <strong>Produits utilisés :</strong> Nous travaillons exclusivement avec des colorations professionnelles respectueuses de la fibre capillaire, sans ammoniaque sur demande.
+        </p>
+      </div>
+
+      <!-- ENFANT & ÉTUDIANTE -->
+      <div class="category-block reveal" data-cat="enfant">
+        <div class="category-header">
+          <div class="category-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <div>
+            <span class="category-label">Tarifs préférentiels</span>
+            <div class="category-name">Enfant <em>&amp; Étudiante</em></div>
+          </div>
+        </div>
+        <div class="price-list">
+          <div class="price-row">
+            <div>
+              <div class="price-service-name">Coupe Enfant — 0 à 5 ans</div>
+              <span class="price-service-sub">Coupe douce et adaptée aux plus petits</span>
+            </div>
+            <div class="price-right">
+              <span class="price-amount"><span class="currency">€</span>20</span>
+            </div>
+          </div>
+          <div class="price-row featured">
+            <div>
+              <div class="price-service-name">Coupe + Coiffage Fille — 6 à 11 ans</div>
+              <span class="price-service-sub">Coupe et mise en forme pour les filles de 6 à 11 ans</span>
+            </div>
+            <div class="price-right">
+              <span class="price-amount"><span class="currency">€</span>35</span>
+            </div>
+          </div>
+          <div class="price-row">
+            <div>
+              <div class="price-service-name">Sh. + Coupe + Coiffage Étudiante</div>
+              <span class="price-service-sub">Tarif étudiant sur présentation de carte — shampooing, coupe et coiffage</span>
+            </div>
+            <div class="price-right">
+              <span class="price-from">À partir de</span>
+              <span class="price-amount"><span class="currency">€</span>49</span>
+            </div>
+          </div>
+        </div>
+        <p class="price-note">
+          <strong>Carte étudiante requise</strong> pour bénéficier du tarif étudiante. Valable du mardi au jeudi uniquement.
+        </p>
+      </div>
+
+      <!-- BOOKING CTA -->
+      <div class="booking-cta reveal">
+        <div class="booking-cta-text">
+          <span class="cta-label">Réservation</span>
+          <h3>Prête à vous <em>faire chouchouter ?</em></h3>
+          <p>Réservez votre séance en ligne ou appelez-nous directement. Nos équipes sont disponibles du mardi au samedi.</p>
+        </div>
+        <a href="index.html#booking" class="btn-primary">Réserver ma séance</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">Studio <span>3</span></a>
+        <p class="footer-tagline">Un salon de coiffure d'exception au cœur d'Esch-sur-Alzette, Luxembourg.</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Navigation</p>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="services-femme.html">Services</a></li>
+          <li><a href="index.html#booking">Réserver</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Horaires</p>
+        <ul>
+          <li><a>Mardi : 9h – 19h</a></li>
+          <li><a>Mercredi : 9h – 19h</a></li>
+          <li><a>Jeudi : 9h – 19h</a></li>
+          <li><a>Vendredi : 9h – 20h</a></li>
+          <li><a>Samedi : 9h – 17h</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Contact</p>
+        <ul>
+          <li><a href="tel:+352123456789">+352 123 456 789</a></li>
+          <li><a href="mailto:contact@studio3.lu">contact@studio3.lu</a></li>
+          <li><a>10 Rue de l'Alzette</a></li>
+          <li><a>4011 Esch-sur-Alzette</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Studio 3 — Tous droits réservés</p>
+      <div class="footer-social">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">TikTok</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+
+    // Nav scroll effect
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Cursor glow
+    const glow = document.getElementById('glow');
+    document.addEventListener('mousemove', e => {
+      glow.style.left = e.clientX + 'px';
+      glow.style.top  = e.clientY + 'px';
+    });
+
+    // Scroll reveal
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
         }
-      </script>
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Filter tabs
+    function filterCat(cat, tabEl) {
+      document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+      tabEl.classList.add('active');
+      document.querySelectorAll('.category-block').forEach(block => {
+        const show = cat === 'all' || block.dataset.cat === cat;
+        block.style.display = show ? 'block' : 'none';
+      });
+    }
+  </script>
 
 
 {% endblock %}

@@ -5,337 +5,310 @@
 // should go into root.scss
 // ─────────────────────────────────────────────────────────────────────────────
 
+    /* ─── PAGE HERO ─── */
+    .page-hero {
+      position: relative; height: 62vh; min-height: 480px;
+      overflow: hidden; display: flex; align-items: flex-end;
+    }
+    .page-hero-img {
+      position: absolute; inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1562322140-8baeececf3df?w=1800&q=85&auto=format&fit=crop');
+      background-size: cover; background-position: center 25%;
+      animation: heroZoom 14s ease-out forwards;
+    }
+    @keyframes heroZoom {
+      from { transform: scale(1.07); }
+      to   { transform: scale(1); }
+    }
+    .page-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(120deg, rgba(28,28,28,0.80) 0%, rgba(28,28,28,0.35) 60%, rgba(143,133,124,0.15) 100%);
+    }
+    .page-hero-content {
+      position: relative; z-index: 2;
+      padding: 0 60px 80px; max-width: 800px;
+    }
+    .breadcrumb {
+      font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--warm); margin-bottom: 18px;
+      opacity: 0; animation: fadeUp 0.9s 0.3s ease forwards;
+    }
+    .breadcrumb a { color: var(--warm-light); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--warm); }
+    .page-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 7vw, 6rem);
+      font-weight: 300; line-height: 0.95; letter-spacing: -0.01em;
+      opacity: 0; animation: fadeUp 0.9s 0.6s ease forwards;
+    }
+    .page-title em { font-style: italic; color: var(--warm-light); }
+    .page-subtitle {
+      margin-top: 22px; font-size: 0.88rem;
+      color: var(--warm-light); line-height: 1.9; max-width: 420px;
+      opacity: 0; animation: fadeUp 0.9s 0.9s ease forwards;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(26px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
 
-/*-- -------------------------- -->
-<---          Banner            -->
-<--- -------------------------- -*/
+    /* ─── REVEAL ─── */
+    .reveal {
+      opacity: 0; transform: translateY(36px);
+      transition: opacity 0.85s ease, transform 0.85s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
 
-/* Mobile - 360px */
-  @media only screen and (min-width: 0px) {
-    #banner-310 {
-      /* Give the banner a consistent height instead of relying only on padding */
-      min-height: clamp(12rem, 24vw, 18rem);
-      padding: clamp(3.5rem, 10vw, 5rem) 1rem;
-  
-      position: relative;
-      z-index: 1;
-  
-      /* easiest vertical + horizontal centering */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+    /* ─── FILTER TABS ─── */
+    .filter-bar {
+      background: #141414;
+      border-bottom: 1px solid rgba(143,133,124,0.1);
+      padding: 0 60px;
+      display: flex; align-items: center; gap: 0;
+      position: sticky; top: 78px; z-index: 50;
     }
-  
-    #banner-310 .cs-container {
-      width: 100%;
-      max-width: calc(1280 / 16 * 1rem);
-      margin: 0 auto;
-    }
-  
-    #banner-310 .cs-int-title {
-      font-size: clamp(2.4375rem, 4.5vw, 3.0625rem);
-      font-weight: 900;
-      line-height: 1.2;
-      max-width: calc(700 / 16 * 1rem);
-      margin: 0;                 /* remove auto centering */
-      text-align: left;          /* ensure text is left aligned */
-      color: var(--bodyTextColorWhite);
-      position: relative;
-      z-index: 2;
-    }
-  
-    #banner-310 .cs-background {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      inset: 0;
-      display: block;
-      z-index: -1;
-    }
-  
-    #banner-310 .cs-background::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: #000;
-      opacity: 0.72;
-      z-index: 1;
-    }
-  
-    #banner-310 .cs-background img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-
-
-/* Mobile - 0rem */
-@media only screen and (min-width: 0rem) {
-    #cta-banner-1 {
-      background: #1C1C1C;
-      padding: 3.5rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-  
-    #cta-banner-1 .cta-container {
-      width: 100%;
-      max-width: 70rem;
-      margin: 0 auto;
-    }
-  
-    #cta-banner-1 .cta-kicker {
-      margin: 0 0 0.75rem 0;
-      font-size: 1rem;
-      line-height: 1.2;
-      color: #F5F2EE;
-    }
-  
-    #cta-banner-1 .cta-title {
-      margin: 0 0 1.5rem 0;
-      font-size: clamp(2.2rem, 7vw, 3.2rem);
-      line-height: 1.05;
-      font-weight: 700;
-      color:#F5F2EE;
-    }
-  
-    #cta-banner-1 .cta-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.9rem 1.35rem;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      border: 1px solid rgba(0, 0, 0, 0.75);
-      color: #F5F2EE;
-      background: #8F857C;
-      transition: transform 0.15s ease, background 0.15s ease;
-    }
-  
-    #cta-banner-1 .cta-btn:hover {
-      transform: translateY(-1px);
-      background: rgba(255, 255, 255, 0.35);
-    }
-  }
-  
-  /* Tablet - 48rem */
-  @media only screen and (min-width: 48rem) {
-    #cta-banner-1 {
-      padding: 4.5rem 2rem;
-    }
-  
-    #cta-banner-1 .cta-kicker {
-      font-size: 1.05rem;
-    }
-  
-    #cta-banner-1 .cta-title {
-      font-size: clamp(3rem, 5vw, 4.25rem);
-      margin-bottom: 1.75rem;
-    }
-  
-    #cta-banner-1 .cta-btn {
-      font-size: 1.05rem;
-      padding: 1rem 1.6rem;
-    }
-  }
-  
-  /* Desktop - 64rem */
-  @media only screen and (min-width: 64rem) {
-    #cta-banner-1 {
-      height: 330px;          /* required */
-      padding: 0 2rem;        /* keep height exact */
-    }
-  
-    #cta-banner-1 .cta-title {
-      font-size: 4.5rem;
-    }
-  }
-
-/*-- -------------------------- -->
-<---        Pricing List         -->
-<--- -------------------------- -*/
-
-/* Mobile - 0rem */
-@media only screen and (min-width: 0rem) {
-
-    .pricing-section {
-      padding: 4rem 1.5rem;
-    }
-  
-    .pricing-container {
-      width: 100%;
-      max-width: 80rem;
-      margin: auto;
-    }
-  
-    .pricing-block {
-      display: flex;
-      flex-direction: column;
-      gap: 3rem;
-      padding: 3rem 0;
-      border-bottom: 1.5px solid #1C1C1C;
-    }
-  
-    .pricing-left h2 {
-      font-size: 2.5rem;
-      font-weight: 600;
-      line-height: 1.1;
-      margin: 0 0 1rem 0;
-      color:#1C1C1C;
-    }
-  
-    .pricing-category {
-      color: #1C1C1C;
-      font-size: 1rem;
-    }
-  
-    .pricing-item {
-      margin-bottom: 2rem;
-      color:#1C1C1C;
-    }
-  
-    .item-top {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-  
-    .item-title {
-      font-size: 1.25rem;
-      font-weight: 500;
+    .filter-tab {
+      padding: 22px 32px;
+      font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--warm-light); cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: color 0.3s, border-color 0.3s;
       white-space: nowrap;
     }
-  
-    .item-line {
-      flex: 1;
-      height: 1px;
-      background: #1C1C1C;
+    .filter-tab:hover { color: var(--light); }
+    .filter-tab.active { color: var(--light); border-bottom-color: var(--warm); }
+
+    /* ─── CONTENT LAYOUT ─── */
+    .content-wrap {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 0;
+      min-height: 100vh;
     }
-  
-    .item-price {
-      font-size: 1.25rem;
-      font-weight: 500;
-      white-space: nowrap;
+
+    /* ─── SIDEBAR IMAGE ─── */
+    .sidebar {
+      position: sticky; top: 135px;
+      height: calc(100vh - 135px);
+      overflow: hidden;
     }
-  
-    .item-sub {
+    .sidebar-img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+      filter: brightness(0.7);
+      transition: filter 0.6s;
+    }
+    .sidebar-img:hover { filter: brightness(0.9); }
+    .sidebar-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to right, transparent 60%, var(--dark) 100%);
+    }
+    .sidebar-quote {
+      position: absolute; bottom: 50px; left: 0; right: 0;
+      padding: 0 30px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem; font-style: italic; font-weight: 300;
+      color: var(--light); line-height: 1.5;
+    }
+    .sidebar-quote cite {
+      display: block; margin-top: 10px;
+      font-style: normal; font-family: 'Jost', sans-serif;
+      font-size: 0.62rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--warm);
+    }
+
+    /* ─── PRICE CONTENT ─── */
+    .price-content {
+      padding: 80px 70px 100px;
+    }
+
+    /* ─── CATEGORY BLOCK ─── */
+    .category-block {
+      margin-bottom: 80px;
+    }
+    .category-header {
+      display: flex; align-items: center; gap: 24px;
+      margin-bottom: 36px; padding-bottom: 20px;
+      border-bottom: 1px solid rgba(143,133,124,0.15);
+    }
+    .category-icon {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--warm-dim); border: 1px solid rgba(143,133,124,0.25);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .category-icon svg { color: var(--warm); }
+    .category-label {
+      font-size: 0.6rem; letter-spacing: 0.35em;
+      text-transform: uppercase; color: var(--warm); display: block; margin-bottom: 4px;
+    }
+    .category-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem; font-weight: 300; color: var(--light);
+    }
+    .category-name em { font-style: italic; color: var(--warm-light); }
+
+    /* ─── PRICE ROWS ─── */
+    .price-list { display: flex; flex-direction: column; gap: 0; }
+
+    .price-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      padding: 22px 28px;
+      border: 1px solid rgba(143,133,124,0.08);
+      border-top: none;
+      position: relative;
+      cursor: default;
+      transition: background 0.3s;
+      overflow: hidden;
+    }
+    .price-row:first-child { border-top: 1px solid rgba(143,133,124,0.08); border-radius: 0; }
+    .price-row::before {
+      content: '';
+      position: absolute; left: 0; top: 0; bottom: 0;
+      width: 3px; background: var(--warm);
+      transform: scaleY(0); transform-origin: bottom;
+      transition: transform 0.35s ease;
+    }
+    .price-row:hover { background: rgba(143,133,124,0.04); }
+    .price-row:hover::before { transform: scaleY(1); }
+
+    .price-row.featured {
+      background: rgba(143,133,124,0.07);
+      border-color: rgba(143,133,124,0.2);
+    }
+    .price-row.featured::after {
+      content: 'Populaire';
+      position: absolute; top: 12px; right: 130px;
+      font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--dark); background: var(--warm);
+      padding: 3px 10px;
+    }
+
+    .price-service-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem; font-weight: 400; color: var(--light);
+    }
+    .price-service-sub {
+      font-size: 0.72rem; color: var(--warm-light);
+      letter-spacing: 0.04em; margin-top: 3px;
       display: block;
-      margin-top: .5rem;
-      color: #1C1C1C;
-      font-size: .95rem;
     }
-  }
+    .price-right {
+      display: flex; flex-direction: column; align-items: flex-end; gap: 4px;
+    }
+    .price-from {
+      font-size: 0.58rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--warm);
+    }
+    .price-amount {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem; font-weight: 300; color: var(--light);
+      line-height: 1;
+    }
+    .price-amount .currency {
+      font-size: 1rem; vertical-align: top;
+      margin-top: 4px; display: inline-block;
+      color: var(--warm);
+    }
 
-  /* Tablet - 48rem */
-@media only screen and (min-width: 48rem) {
+    /* ─── DOTTED LINE ─── */
+    .price-dots {
+      flex: 1; height: 1px; margin: 0 20px;
+      background: repeating-linear-gradient(
+        to right,
+        rgba(143,133,124,0.25) 0px, rgba(143,133,124,0.25) 3px,
+        transparent 3px, transparent 10px
+      );
+    }
 
-    .pricing-block {
-      flex-direction: row;
-      justify-content: space-between;
-      gap: 4rem;
+    /* ─── NOTE ─── */
+    .price-note {
+      margin-top: 16px; padding: 16px 20px;
+      background: rgba(143,133,124,0.06);
+      border-left: 2px solid var(--warm);
+      font-size: 0.75rem; color: var(--warm-light); line-height: 1.8;
     }
-  
-    .pricing-left {
-      width: 40%;
-    }
-  
-    .pricing-right {
-      width: 60%;
-    }
-  
-    .pricing-left h2 {
-      font-size: 3rem;
-    }
-  }
+    .price-note strong { color: var(--warm); font-weight: 400; }
 
-  /* Desktop - 64rem */
-@media only screen and (min-width: 64rem) {
+    /* ─── BOOKING CTA ─── */
+    .booking-cta {
+      margin-top: 70px; padding: 54px;
+      background: rgba(143,133,124,0.06);
+      border: 1px solid rgba(143,133,124,0.18);
+      display: flex; justify-content: space-between; align-items: center; gap: 40px;
+    }
+    .booking-cta-text .cta-label {
+      font-size: 0.65rem; letter-spacing: 0.3em;
+      text-transform: uppercase; color: var(--warm); display: block; margin-bottom: 10px;
+    }
+    .booking-cta-text h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem; font-weight: 300; color: var(--light);
+    }
+    .booking-cta-text h3 em { font-style: italic; color: var(--warm-light); }
+    .booking-cta-text p {
+      margin-top: 10px; font-size: 0.82rem; color: var(--warm-light); line-height: 1.8;
+    }
+    .btn-primary {
+      display: inline-block; background: var(--warm); color: var(--dark);
+      text-decoration: none; padding: 18px 44px;
+      font-size: 0.72rem; letter-spacing: 0.22em;
+      text-transform: uppercase; font-weight: 400; white-space: nowrap;
+      transition: background 0.3s, transform 0.3s; flex-shrink: 0;
+    }
+    .btn-primary:hover { background: var(--warm-light); transform: translateY(-2px); }
 
-    .pricing-section {
-      padding: 6rem 2rem;
+    /* ─── FOOTER ─── */
+    footer {
+      background: #111;
+      border-top: 1px solid rgba(143,133,124,0.12);
+      padding: 60px 60px 36px;
     }
-  
-    .pricing-left h2 {
-      font-size: 3.5rem;
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 60px; margin-bottom: 50px;
     }
-  
-    .item-title,
-    .item-price {
-      font-size: 1.35rem;
+    .footer-brand .nav-logo { display: block; margin-bottom: 16px; }
+    .footer-tagline { font-size: 0.82rem; color: var(--warm-light); line-height: 1.9; max-width: 250px; }
+    .footer-col-title {
+      font-size: 0.65rem; letter-spacing: 0.25em;
+      text-transform: uppercase; color: var(--warm); margin-bottom: 20px;
     }
-  
-    .item-sub {
-      font-size: 1rem;
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col a { color: var(--warm-light); text-decoration: none; font-size: 0.8rem; transition: color 0.3s; }
+    .footer-col a:hover { color: var(--light); }
+    .footer-bottom {
+      border-top: 1px solid rgba(143,133,124,0.1); padding-top: 28px;
+      display: flex; justify-content: space-between; align-items: center;
     }
-  }
+    .footer-copy { font-size: 0.7rem; color: rgba(143,133,124,0.45); letter-spacing: 0.08em; }
+    .footer-social { display: flex; gap: 20px; }
+    .footer-social a {
+      color: var(--warm-light); text-decoration: none;
+      font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; transition: color 0.3s;
+    }
+    .footer-social a:hover { color: var(--light); }
 
-  /*-- -------------------------- -->
-<---          Gallery           -->
-<--- -------------------------- -*/
+    /* ─── CURSOR ─── */
+    .cursor-glow {
+      width: 280px; height: 280px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(143,133,124,0.07) 0%, transparent 70%);
+      position: fixed; pointer-events: none; z-index: 9999;
+      transform: translate(-50%, -50%);
+    }
 
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    #gallery-1446 {
-        padding: var(--sectionPadding);
+    /* ─── MOBILE ─── */
+    @media (max-width: 900px) {
+      nav { padding: 20px 24px; }
+      .nav-links { display: none; }
+      .page-hero-content { padding: 0 24px 60px; }
+      .filter-bar { padding: 0 24px; overflow-x: auto; }
+      .content-wrap { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+      .price-content { padding: 50px 24px 80px; }
+      .booking-cta { flex-direction: column; padding: 36px 28px; }
+      footer { padding: 50px 24px 30px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
     }
-    #gallery-1446 .cs-container {
-        width: 100%;
-        max-width: 80rem;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* 48px - 64px */
-        gap: clamp(3rem, 6vw, 4rem);
-        position: relative;
-    }
-    #gallery-1446 .cs-content {
-        text-align: left;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-end;
-        gap: 1.5rem;
-    }
-    #gallery-1446 .cs-title {
-        margin: 0;
-    }
-    #gallery-1446 .cs-gallery {
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(19.0625rem, 1fr));
-        /* 16px - 20px */
-        gap: clamp(1rem, 1.5vw, 1.25rem);
-        position: relative;
-    }
-    #gallery-1446 .cs-image {
-        /* 260px - 360px */
-        min-height: clamp(16.25rem, 60vw, 20rem);
-        border-radius: 1rem;
-        /* clips the image corners */
-        overflow: hidden;
-        display: block;
-        position: relative;
-    }
-    #gallery-1446 .cs-image img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        /* makes it act like a background image */
-        object-fit: cover;
-    }
-}
-                                
