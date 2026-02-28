@@ -11,182 +11,329 @@ permalink: "/galerie/"
 {% endblock %}
 
 {% block body %}
+<!-- HERO -->
+<div class="page-hero">
+    <div class="page-hero-img"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <p class="breadcrumb"><a href="index.html">Accueil</a> &nbsp;/&nbsp; Galerie</p>
+      <h1 class="page-title">Nos <em>créations</em></h1>
+      <p class="page-subtitle">Chaque photo raconte une histoire, celle d'un client transformé, d'un geste maîtrisé, d'une beauté révélée. Bienvenue dans l'univers Studio 3.</p>
+    </div>
+  </div>
 
-    <!-- ============================================ -->
-    <!--                   Banner                     -->
-    <!-- ============================================ -->
+  <!-- FILTER BAR -->
+  <div class="filter-bar">
+    <div class="filter-tab active" onclick="filterGallery('all', this)">Tout <span class="filter-count">18</span></div>
+    <div class="filter-tab" onclick="filterGallery('coupe', this)">Coupes <span class="filter-count">5</span></div>
+    <div class="filter-tab" onclick="filterGallery('couleur', this)">Balayage <span class="filter-count">5</span></div>
+    <div class="filter-tab" onclick="filterGallery('soin', this)">Coloration <span class="filter-count">4</span></div>
+    <div class="filter-tab" onclick="filterGallery('salon', this)">Le salon <span class="filter-count">4</span></div>
+  </div>
 
-    <div id="banner-310">
-        <div class="cs-container">
-            <span class="cs-int-title">Reviews</span>
-            <div class="cs-breadcrumbs">
-                <a href="/" class="cs-link">Home</a>
-                <a href="/reviews/" class="cs-link cs-active">Reviews</a>
-            </div>
+  <!-- GALLERY -->
+  <div class="gallery-section">
+
+    <!-- FEATURED TOP ROW -->
+    <div class="featured-row reveal" id="featured-row">
+      <div class="masonry-item" data-cat="coupe" data-index="0" onclick="openLightbox(0)">
+        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=85&auto=format&fit=crop" alt="Coupe femme" style="height:520px; object-fit:cover;" />
+        <div class="masonry-item-overlay">
+          <span class="masonry-item-tag">Coupe</span>
+          <div class="masonry-item-title">Coupe signature</div>
         </div>
-        <!--Background Image-->
-        <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
-            <!--Tablet Image-->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
-            <!--Desktop Image-->
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
-        </picture>
+        <div class="masonry-item-zoom">↗</div>
+      </div>
+      <div class="masonry-item" data-cat="couleur" data-index="1" onclick="openLightbox(1)">
+        <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80&auto=format&fit=crop" alt="Balayage" style="height:254px; object-fit:cover;" />
+        <div class="masonry-item-overlay">
+          <span class="masonry-item-tag">Couleur</span>
+          <div class="masonry-item-title">Balayage doré</div>
+        </div>
+        <div class="masonry-item-zoom">↗</div>
+      </div>
+      <div class="masonry-item" data-cat="salon" data-index="2" onclick="openLightbox(2)">
+        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80&auto=format&fit=crop" alt="Salon" style="height:254px; object-fit:cover;" />
+        <div class="masonry-item-overlay">
+          <span class="masonry-item-tag">Le salon</span>
+          <div class="masonry-item-title">Notre espace</div>
+        </div>
+        <div class="masonry-item-zoom">↗</div>
+      </div>
+      <div class="masonry-item" data-cat="soin" data-index="3" onclick="openLightbox(3)">
+        <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80&auto=format&fit=crop" alt="Soin" style="height:254px; object-fit:cover;" />
+        <div class="masonry-item-overlay">
+          <span class="masonry-item-tag">Soin</span>
+          <div class="masonry-item-title">Soin kératine</div>
+        </div>
+        <div class="masonry-item-zoom">↗</div>
+      </div>
+      <div class="masonry-item" data-cat="coupe" data-index="4" onclick="openLightbox(4)">
+        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80&auto=format&fit=crop" alt="Coupe homme" style="height:254px; object-fit:cover;" />
+        <div class="masonry-item-overlay">
+          <span class="masonry-item-tag">Coupe</span>
+          <div class="masonry-item-title">Coupe homme</div>
+        </div>
+        <div class="masonry-item-zoom">↗</div>
+      </div>
     </div>
 
-    <!-- ============================================ -->
-    <!--                   Reviews                    -->
-    <!-- ============================================ -->
+    <!-- MASONRY GRID -->
+    <div class="masonry" id="masonryGrid">
 
-    <section id="reviews-67">
-        <div class="cs-container">
-            <div class="cs-content">
-                <span class="cs-topper">Our Reviews</span>
-                <h2 class="cs-title">Words From Our Customers</h2>
-                <p class="cs-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit dolor volutpat porttitor sagittis nunc nisl. Sagittis sit pellentesque gravida viverra. Leo ut sed euismod tortor risus et. Ornare non neque, leo, ornare. Lorem ipsum dolor sit amet.
-                </p>
-            </div>
-            <ul class="cs-card-group">
-                <!-- Review 1 -->
-                <li class="cs-item">
-                    <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="profile picture" width="80" height="80">
-                    <p class="cs-item-text">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, debitis!
-                    </p>
-                    <div class="cs-info">
-                        <div class="cs-flex-group">
-                            <span class="cs-name">Jon Doe</span>
-                            <span class="cs-desc">Homeowner</span>
-                        </div>
-                        <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="96" height="16">
-                    </div>
-                </li>
-                <!-- Review 2 -->
-                <li class="cs-item">
-                    <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="profile picture" width="80" height="80">
-                    <p class="cs-item-text">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <div class="cs-info">
-                        <div class="cs-flex-group">
-                            <span class="cs-name">Jon Doe</span>
-                            <span class="cs-desc">Homeowner</span>
-                        </div>
-                        <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="96" height="16">
-                    </div>
-                </li>
-                <!-- Review 3 -->
-                <li class="cs-item">
-                    <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="profile picture" width="80" height="80">
-                    <p class="cs-item-text">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <div class="cs-info">
-                        <div class="cs-flex-group">
-                            <span class="cs-name">Jon Doe</span>
-                            <span class="cs-desc">Homeowner</span>
-                        </div>
-                        <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="96" height="16">
-                    </div>
-                </li>
-                <!-- Review 1 -->
-                <li class="cs-item">
-                    <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="profile picture" width="80" height="80">
-                    <p class="cs-item-text">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, debitis!
-                    </p>
-                    <div class="cs-info">
-                        <div class="cs-flex-group">
-                            <span class="cs-name">Jon Doe</span>
-                            <span class="cs-desc">Homeowner</span>
-                        </div>
-                        <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="96" height="16">
-                    </div>
-                </li>
-                <!-- Review 2 -->
-                <li class="cs-item">
-                    <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="profile picture" width="80" height="80">
-                    <p class="cs-item-text">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <div class="cs-info">
-                        <div class="cs-flex-group">
-                            <span class="cs-name">Jon Doe</span>
-                            <span class="cs-desc">Homeowner</span>
-                        </div>
-                        <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="96" height="16">
-                    </div>
-                </li>
-                <!-- Review 3 -->
-                <li class="cs-item">
-                    <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="profile picture" width="80" height="80">
-                    <p class="cs-item-text">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <div class="cs-info">
-                        <div class="cs-flex-group">
-                            <span class="cs-name">Jon Doe</span>
-                            <span class="cs-desc">Homeowner</span>
-                        </div>
-                        <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="96" height="16">
-                    </div>
-                </li>
-                <!-- Review 1 -->
-                <li class="cs-item">
-                    <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="profile picture" width="80" height="80">
-                    <p class="cs-item-text">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, debitis!
-                    </p>
-                    <div class="cs-info">
-                        <div class="cs-flex-group">
-                            <span class="cs-name">Jon Doe</span>
-                            <span class="cs-desc">Homeowner</span>
-                        </div>
-                        <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="96" height="16">
-                    </div>
-                </li>
-                <!-- Review 2 -->
-                <li class="cs-item">
-                    <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="profile picture" width="80" height="80">
-                    <p class="cs-item-text">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <div class="cs-info">
-                        <div class="cs-flex-group">
-                            <span class="cs-name">Jon Doe</span>
-                            <span class="cs-desc">Homeowner</span>
-                        </div>
-                        <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="96" height="16">
-                    </div>
-                </li>
-                <!-- Review 3 -->
-                <li class="cs-item">
-                    <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="profile picture" width="80" height="80">
-                    <p class="cs-item-text">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <div class="cs-info">
-                        <div class="cs-flex-group">
-                            <span class="cs-name">Jon Doe</span>
-                            <span class="cs-desc">Homeowner</span>
-                        </div>
-                        <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="96" height="16">
-                    </div>
-                </li>
-            </ul>
-            <a href="/contact/" class="cs-button-solid">Get in Touch</a>
+      <div class="masonry-item reveal" data-cat="couleur" data-index="5" onclick="openLightbox(5)">
+        <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&q=80&auto=format&fit=crop" alt="Coloration" />
+        <div class="masonry-item-overlay">
+          <span class="masonry-item-tag">Couleur</span>
+          <div class="masonry-item-title">Ombré naturel</div>
         </div>
-    </section>
+        <div class="masonry-item-zoom">↗</div>
+      </div>
 
-    {% include 'sections/cta.html' %}
+      <div class="masonry-item reveal" data-cat="salon" data-index="6" onclick="openLightbox(6)">
+        <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=600&q=80&auto=format&fit=crop" alt="Salon" />
+        <div class="masonry-item-overlay">
+          <span class="masonry-item-tag">Le salon</span>
+          <div class="masonry-item-title">L'atelier</div>
+        </div>
+        <div class="masonry-item-zoom">↗</div>
+      </div>
+
+      <div class="masonry-item reveal" data-cat="coupe" data-index="7" onclick="openLightbox(7)">
+        <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=600&q=80&auto=format&fit=crop" alt="Brushing" />
+        <div class="masonry-item-overlay">
+          <span class="masonry-item-tag">Coupe</span>
+          <div class="masonry-item-title">Brushing parfait</div>
+        </div>
+        <div class="masonry-item-zoom">↗</div>
+      </div>
+
+      <div class="masonry-item reveal" data-cat="soin" data-index="8" onclick="openLightbox(8)">
+        <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=600&q=80&auto=format&fit=crop" alt="Soin capillaire" />
+        <div class="masonry-item-overlay">
+          <span class="masonry-item-tag">Soin</span>
+          <div class="masonry-item-title">Soin capillaire</div>
+        </div>
+        <div class="masonry-item-zoom">↗</div>
+      </div>
+
+      <div class="masonry-item reveal" data-cat="couleur" data-index="9" onclick="openLightbox(9)">
+        <img src="https://images.unsplash.com/photo-1598346762291-aee88549193f?w=600&q=80&auto=format&fit=crop" alt="Coloration" />
+        <div class="masonry-item-overlay">
+          <span class="masonry-item-tag">Couleur</span>
+          <div class="masonry-item-title">Coloration cuivrée</div>
+        </div>
+        <div class="masonry-item-zoom">↗</div>
+      </div>
+
+      <div class="masonry-item reveal" data-cat="coupe" data-index="10" onclick="openLightbox(10)">
+        <img src="https://images.unsplash.com/photo-1571646034647-52e6ea84b28c?w=600&q=80&auto=format&fit=crop" alt="Coupe" />
+        <div class="masonry-item-overlay">
+          <span class="masonry-item-tag">Coupe</span>
+          <div class="masonry-item-title">Carré précis</div>
+        </div>
+        <div class="masonry-item-zoom">↗</div>
+      </div>
+
+      <div class="masonry-item reveal" data-cat="salon" data-index="11" onclick="openLightbox(11)">
+        <img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?w=600&q=80&auto=format&fit=crop" alt="Salon" />
+        <div class="masonry-item-overlay">
+          <span class="masonry-item-tag">Le salon</span>
+          <div class="masonry-item-title">Ambiance Studio 3</div>
+        </div>
+        <div class="masonry-item-zoom">↗</div>
+      </div>
+
+      <div class="masonry-item reveal" data-cat="soin" data-index="12" onclick="openLightbox(12)">
+        <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?w=600&q=80&auto=format&fit=crop" alt="Masque" />
+        <div class="masonry-item-overlay">
+          <span class="masonry-item-tag">Soin</span>
+          <div class="masonry-item-title">Masque nourrissant</div>
+        </div>
+        <div class="masonry-item-zoom">↗</div>
+      </div>
+
+      <div class="masonry-item reveal" data-cat="couleur" data-index="13" onclick="openLightbox(13)">
+        <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&q=80&auto=format&fit=crop" alt="Coloration" />
+        <div class="masonry-item-overlay">
+          <span class="masonry-item-tag">Couleur</span>
+          <div class="masonry-item-title">Balayage blond</div>
+        </div>
+        <div class="masonry-item-zoom">↗</div>
+      </div>
+
+      <div class="masonry-item reveal" data-cat="coupe" data-index="14" onclick="openLightbox(14)">
+        <img src="https://images.unsplash.com/photo-1588161618885-b9d7f8cfeb90?w=600&q=80&auto=format&fit=crop" alt="Coupe homme" />
+        <div class="masonry-item-overlay">
+          <span class="masonry-item-tag">Coupe</span>
+          <div class="masonry-item-title">Dégradé homme</div>
+        </div>
+        <div class="masonry-item-zoom">↗</div>
+      </div>
+
+      <div class="masonry-item reveal" data-cat="salon" data-index="15" onclick="openLightbox(15)">
+        <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80&auto=format&fit=crop&crop=top" alt="Salon detail" />
+        <div class="masonry-item-overlay">
+          <span class="masonry-item-tag">Le salon</span>
+          <div class="masonry-item-title">Détail produits</div>
+        </div>
+        <div class="masonry-item-zoom">↗</div>
+      </div>
+
+      <div class="masonry-item reveal" data-cat="soin" data-index="16" onclick="openLightbox(16)">
+        <img src="https://images.unsplash.com/photo-1522337094846-8a818192de1f?w=600&q=80&auto=format&fit=crop" alt="Soin" />
+        <div class="masonry-item-overlay">
+          <span class="masonry-item-tag">Soin</span>
+          <div class="masonry-item-title">Lissage brésilien</div>
+        </div>
+        <div class="masonry-item-zoom">↗</div>
+      </div>
+
+      <div class="masonry-item reveal" data-cat="couleur" data-index="17" onclick="openLightbox(17)">
+        <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=600&q=80&auto=format&fit=crop" alt="Couleur" />
+        <div class="masonry-item-overlay">
+          <span class="masonry-item-tag">Couleur</span>
+          <div class="masonry-item-title">Gloss lumineux</div>
+        </div>
+        <div class="masonry-item-zoom">↗</div>
+      </div>
+
+    </div>
+
+    <!-- LOAD MORE -->
+    <div class="load-more-wrap reveal">
+      <button class="btn-outline" onclick="loadMore(this)">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg>
+        Voir plus de créations
+      </button>
+    </div>
+
+  </div>
+
+  <!-- INSTAGRAM CTA -->
+  <div class="insta-cta reveal">
+    <span class="section-label">Suivez-nous</span>
+    <h2>Retrouvez-nous sur <em>Instagram</em></h2>
+    <p>Nouvelles créations, coulisses du salon et inspirations capillaires. Suivez Studio 3 pour ne rien manquer.</p>
+    <a href="https://www.instagram.com/studio3.lu/" target="_blank" class="btn-primary">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      @studio3.lu
+    </a>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" onclick="closeLightboxOnBg(event)">
+    <div class="lightbox-counter" id="lightboxCounter">1 / 18</div>
+    <div class="lightbox-inner">
+      <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+    </div>
+    <div class="lightbox-close" onclick="closeLightbox()">✕</div>
+    <div class="lightbox-prev" onclick="lightboxNav(-1)">←</div>
+    <div class="lightbox-next" onclick="lightboxNav(1)">→</div>
+    <div class="lightbox-caption">
+      <span class="lightbox-caption-tag" id="lightboxTag"></span>
+      <span class="lightbox-caption-title" id="lightboxTitle"></span>
+    </div>
+  </div>
+
+  <script>
+
+  // Nav scroll effect
+  const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Cursor glow
+    const glow = document.getElementById('glow');
+    document.addEventListener('mousemove', e => {
+      glow.style.left = e.clientX + 'px';
+      glow.style.top  = e.clientY + 'px';
+    });
+
+    // Scroll reveal
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.06 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // ─── FILTER ───
+    function filterGallery(cat, tabEl) {
+      document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+      tabEl.classList.add('active');
+
+      const featuredRow = document.getElementById('featured-row');
+      featuredRow.style.display = (cat === 'all') ? 'grid' : 'none';
+
+      document.querySelectorAll('#masonryGrid .masonry-item').forEach(item => {
+        if (cat === 'all' || item.dataset.cat === cat) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    }
+
+    // ─── LIGHTBOX ───
+    const allItems = document.querySelectorAll('.masonry-item[data-index]');
+    const totalItems = allItems.length;
+    let currentIndex = 0;
+
+    function openLightbox(idx) {
+      currentIndex = idx;
+      updateLightbox();
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function closeLightboxOnBg(e) {
+      if (e.target === document.getElementById('lightbox')) closeLightbox();
+    }
+
+    function lightboxNav(dir) {
+      currentIndex = (currentIndex + dir + totalItems) % totalItems;
+      updateLightbox();
+    }
+
+    function updateLightbox() {
+      const item = document.querySelector(`.masonry-item[data-index="${currentIndex}"]`);
+      if (!item) return;
+      const img = item.querySelector('img');
+      const tag = item.querySelector('.masonry-item-tag');
+      const title = item.querySelector('.masonry-item-title');
+      document.getElementById('lightboxImg').src = img.src.replace(/w=\d+/, 'w=1200');
+      document.getElementById('lightboxTag').textContent = tag ? tag.textContent : '';
+      document.getElementById('lightboxTitle').textContent = title ? title.textContent : '';
+      document.getElementById('lightboxCounter').textContent = `${currentIndex + 1} / ${totalItems}`;
+    }
+
+    // Keyboard nav
+    document.addEventListener('keydown', e => {
+      if (!document.getElementById('lightbox').classList.contains('open')) return;
+      if (e.key === 'ArrowRight') lightboxNav(1);
+      if (e.key === 'ArrowLeft')  lightboxNav(-1);
+      if (e.key === 'Escape')     closeLightbox();
+    });
+
+    // ─── LOAD MORE (simulate) ───
+    function loadMore(btn) {
+      btn.textContent = 'Toutes les photos sont affichées';
+      btn.disabled = true;
+      btn.style.opacity = '0.4';
+      btn.style.cursor = 'default';
+    }
+  </script>
+
+
 
 {% endblock %}
