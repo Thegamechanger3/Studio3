@@ -72,3 +72,40 @@
     </div>
 </nav>
 
+<script>// ─── MOBILE NAV ──────────────────────────────────────────────────────────────
+    const nav       = document.getElementById('navbar');
+    const toggle    = document.getElementById('cs-toggle');
+    const ulWrapper = document.getElementById('cs-ul-wrapper');
+    
+    // Hamburger open/close
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('cs-active');
+      toggle.setAttribute('aria-expanded', isOpen);
+      document.body.classList.toggle('cs-open', isOpen);
+    
+      // inert prevents tab-focus when menu is closed
+      if (isOpen) {
+        ulWrapper.removeAttribute('inert');
+      } else {
+        ulWrapper.setAttribute('inert', '');
+      }
+    });
+    
+    // Close menu when a non-dropdown link is clicked
+    ulWrapper.querySelectorAll('.cs-li-link:not(.cs-dropdown-toggle)').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('cs-active');
+        toggle.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('cs-open');
+        ulWrapper.setAttribute('inert', '');
+      });
+    });
+    
+    // Mobile dropdown toggle
+    document.querySelectorAll('.cs-dropdown-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const dropdown = btn.closest('.cs-dropdown');
+        const isOpen   = dropdown.classList.toggle('cs-active');
+        btn.setAttribute('aria-expanded', isOpen);
+      });
+    });</script>
