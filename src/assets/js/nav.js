@@ -31,6 +31,11 @@
 		darkModeToggle: document.querySelector(CONFIG.SELECTORS.darkModeToggle),
 	};
 
+	const nav = document.getElementById('cs-navigation');
+	window.addEventListener('scroll', () => {
+	  nav.classList.toggle('scrolled', window.scrollY > 60);
+	});
+	
 	// Utilities
 	const isMobile = () => window.matchMedia(`(max-width: ${CONFIG.BREAKPOINTS.MOBILE}px)`).matches;
 
