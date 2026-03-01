@@ -202,3 +202,94 @@
       color: var(--light);
     }
     .section-title em { font-style: italic; color: var(--warm-light); }
+
+    /* ─────────────────────────────────────────────────────────────────────────────
+   RESPONSIVE — TABLET  (≤ 1024px)
+───────────────────────────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+
+  .hero {
+    min-height: 600px;
+  }
+  .hero-content {
+    padding: 0 40px 70px;
+    max-width: 100%;
+  }
+  .hero-scroll {
+    right: 40px;
+    bottom: 30px;
+  }
+
+  .intro-bar {
+    padding: 18px 40px;
+    gap: 24px;
+  }
+
+  section { padding: 90px 40px; }
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   RESPONSIVE — MOBILE  (≤ 767px)
+───────────────────────────────────────────────────────────────────────────── */
+@media (max-width: 767px) {
+
+  /* Hero */
+  .hero {
+    min-height: 100svh; /* svh = safe viewport height, avoids browser chrome overlap */
+  }
+  .hero-content {
+    padding: 0 24px 56px;
+    max-width: 100%;
+  }
+  .hero-eyebrow {
+    font-size: 0.62rem;
+    margin-bottom: 14px;
+  }
+  .hero-title {
+    font-size: clamp(2.8rem, 11vw, 4rem);
+    margin-bottom: 20px;
+    line-height: 0.95;
+  }
+  .hero-subtitle {
+    font-size: 0.8rem;
+    max-width: 100%;
+    margin-bottom: 32px;
+  }
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .btn-primary {
+    width: 100%;
+    text-align: center;
+    padding: 15px 24px;
+  }
+
+  /* Hide scroll indicator on mobile — not useful on touch */
+  .hero-scroll {
+    display: none;
+  }
+
+  /* Intro bar */
+  .intro-bar {
+    padding: 20px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .intro-bar-divider {
+    display: none;
+  }
+  .intro-bar-item p {
+    font-size: 0.68rem;
+  }
+
+  /* Section wrapper */
+  section { padding: 56px 24px; }
+
+  .section-title {
+    font-size: clamp(1.9rem, 8vw, 2.8rem);
+  }
+}

@@ -12,7 +12,7 @@
     }
     .page-hero-img {
       position: absolute; inset: 0;
-      background-image: url('https://images.unsplash.com/photo-1562322140-8baeececf3df?w=1800&q=85&auto=format&fit=crop');
+      background-image: var(--hero-img);
       background-size: cover; background-position: center 25%;
       animation: heroZoom 14s ease-out forwards;
     }

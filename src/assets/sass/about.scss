@@ -265,8 +265,8 @@
     }
     .team-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
     }
     .team-card { position: relative; }
     .team-card-img-wrap {
@@ -320,7 +320,7 @@
       color: var(--warm-light);
       line-height: 1.85;
       margin-top: 14px;
-      max-width: 320px;
+      max-width: 100%; /* was 320px — too wide for 4 columns */
     }
     .team-line {
       width: 32px;
@@ -452,3 +452,228 @@
       position: fixed; pointer-events: none; z-index: 9999;
       transform: translate(-50%, -50%); transition: opacity 0.3s;
     }
+
+
+// ─────────────────────────────────────────────────────────────────────────────
+// RESPONSIVE — TABLET  (≤ 1024px)
+// ─────────────────────────────────────────────────────────────────────────────
+@media (max-width: 1024px) {
+
+  .page-hero {
+    height: 60vh;
+    min-height: 440px;
+  }
+  .page-hero-content {
+    padding: 0 40px 60px;
+  }
+
+  /* Story */
+  .story-section {
+    grid-template-columns: 1fr 1fr;
+    min-height: 480px;
+  }
+  .story-text {
+    padding: 70px 44px;
+  }
+  .story-year-badge {
+    left: -10px;
+  }
+
+  /* Values */
+  .values-section {
+    padding: 80px 40px;
+  }
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .value-card {
+    padding: 40px 32px;
+  }
+
+  /* Stats */
+  .stats-band {
+    padding: 50px 40px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+  }
+
+  /* Team */
+  .team-section {
+    padding: 80px 40px;
+  }
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .team-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+
+  /* Atelier */
+  .atelier-section {
+    padding: 80px 40px;
+  }
+  .atelier-header {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .atelier-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    height: auto;
+  }
+  .atelier-img.tall {
+    grid-row: span 1;
+    aspect-ratio: 4/3;
+  }
+  .atelier-img {
+    aspect-ratio: 4/3;
+  }
+
+  /* CTA */
+  .cta-section {
+    padding: 80px 40px;
+    gap: 50px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 50px 40px 30px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+
+// ─────────────────────────────────────────────────────────────────────────────
+// RESPONSIVE — MOBILE  (≤ 767px)
+// ─────────────────────────────────────────────────────────────────────────────
+@media (max-width: 767px) {
+
+  /* Hero */
+  .page-hero {
+    height: 55vh;
+    min-height: 360px;
+  }
+  .page-hero-content {
+    padding: 0 24px 44px;
+  }
+  .breadcrumb {
+    margin-bottom: 14px;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    padding: 14px 28px;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Story */
+  .story-section {
+    grid-template-columns: 1fr;
+    min-height: unset;
+  }
+  .story-text {
+    padding: 56px 24px;
+    order: 2;
+  }
+  .story-img {
+    order: 1;
+    aspect-ratio: 4/3;
+  }
+  .story-year-badge {
+    left: 20px;
+    bottom: 20px;
+  }
+
+  /* Values */
+  .values-section {
+    padding: 56px 24px;
+  }
+  .values-header {
+    margin-bottom: 40px;
+  }
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+  .value-card {
+    padding: 36px 28px;
+  }
+
+  /* Stats */
+  .stats-band {
+    padding: 40px 24px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stat-num {
+    font-size: 3rem;
+  }
+
+  /* Team */
+  .team-section {
+    padding: 56px 24px;
+  }
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .team-header {
+    margin-bottom: 36px;
+  }
+  .team-bio {
+    max-width: 100%;
+  }
+
+  /* Atelier */
+  .atelier-section {
+    padding: 56px 24px;
+  }
+  .atelier-grid {
+    grid-template-columns: 1fr;
+    height: auto;
+    gap: 4px;
+  }
+  .atelier-img,
+  .atelier-img.tall {
+    grid-row: span 1;
+    aspect-ratio: 16/9;
+  }
+
+  /* CTA */
+  .cta-section {
+    padding: 56px 24px;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .cta-info-item {
+    padding: 18px 20px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 44px 24px 28px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+  .footer-social {
+    justify-content: center;
+  }
+
+  /* Hide cursor glow on touch devices */
+  .cursor-glow {
+    display: none;
+  }
+}

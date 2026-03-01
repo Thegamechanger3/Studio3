@@ -11,12 +11,12 @@ permalink: "/coiffure-homme/"
 {% endblock %}
 
 {% block body %}
-<!-- HERO -->
-<div class="page-hero">
-  <div class="page-hero-img"></div>
+ <!-- HERO -->
+ <div class="page-hero">
+  <div class="page-hero-img" style="--hero-img: url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1800&q=85&auto=format&fit=crop')"></div>
   <div class="page-hero-overlay"></div>
   <div class="page-hero-content">
-    <p class="breadcrumb"><a href="index.html">Accueil</a> &nbsp;/&nbsp; Services &amp; Prix</p>
+    <p class="breadcrumb"><a href="/index/">Accueil</a> &nbsp;/&nbsp; Services &amp; Prix</p>
     <h1 class="page-title">Services<br/><em>Homme</em></h1>
     <p class="page-subtitle">Des prestations pensées pour révéler votre beauté. Chaque service est réalisé avec soin, précision et les meilleurs produits du marché.</p>
   </div>
@@ -25,10 +25,9 @@ permalink: "/coiffure-homme/"
 <!-- FILTER BAR -->
 <div class="filter-bar">
   <div class="filter-tab active" onclick="filterCat('all', this)">Tous les services</div>
-  <div class="filter-tab" onclick="filterCat('balayage', this)">Balayage</div>
-  <div class="filter-tab" onclick="filterCat('coupe', this)">Coupe & Coiffage</div>
-  <div class="filter-tab" onclick="filterCat('coloration', this)">Coloration</div>
-  <div class="filter-tab" onclick="filterCat('enfant', this)">Enfant & Étudiante</div>
+  <div class="filter-tab" onclick="filterCat('balayage', this)">Coupes & Dégradés</div>
+  <div class="filter-tab" onclick="filterCat('coupe', this)">Barbe & Rasage</div>
+  <div class="filter-tab" onclick="filterCat('coloration', this)">Enfant & Étudiant</div>
 </div>
 
 <!-- CONTENT -->
@@ -36,7 +35,7 @@ permalink: "/coiffure-homme/"
 
   <!-- SIDEBAR -->
   <div class="sidebar">
-    <img class="sidebar-img" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=700&q=85&auto=format&fit=crop" alt="Studio 3" />
+    <img class="sidebar-img" src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1800&q=85&auto=format&fit=crop" alt="Studio 3" />
     <div class="sidebar-overlay"></div>
     <div class="sidebar-quote">
       « La beauté commence au moment où vous décidez d'être vous-même. »
@@ -47,7 +46,7 @@ permalink: "/coiffure-homme/"
   <!-- PRICE CONTENT -->
   <div class="price-content">
 
-    <!-- BALAYAGE -->
+    <!-- Coupes Dégradés -->
     <div class="category-block reveal" data-cat="balayage">
       <div class="category-header">
         <div class="category-icon">
@@ -56,98 +55,83 @@ permalink: "/coiffure-homme/"
           </svg>
         </div>
         <div>
-          <span class="category-label">Femme — Mise en valeur</span>
-          <div class="category-name">Balayage <em>&amp; Lumière</em></div>
+          <span class="category-label">Homme — Essentiel</span>
+          <div class="category-name">Coupes <em>&amp; Dégradés</em></div>
         </div>
       </div>
       <div class="price-list">
         <div class="price-row featured">
           <div>
-            <div class="price-service-name">Coup d'Éclat</div>
-            <span class="price-service-sub">Balayage lumineux haut de gamme, effet naturel et raffiné</span>
+            <div class="price-service-name">Fade</div>
+            <span class="price-service-sub">Dégradé à blanc, finition rasoir nette et précise</span>
           </div>
           <div class="price-right">
-            <span class="price-from">À partir de</span>
-            <span class="price-amount"><span class="currency">€</span>249</span>
+            <span class="price-amount"><span class="currency">€</span>36</span>
           </div>
         </div>
         <div class="price-row">
           <div>
-            <div class="price-service-name">Inversé</div>
-            <span class="price-service-sub">Balayage inversé, racines claires et pointes foncées</span>
+            <div class="price-service-name">Classic Cut</div>
+            <span class="price-service-sub">Coupe classique personnalisée selon votre morphologie</span>
           </div>
           <div class="price-right">
-            <span class="price-from">À partir de</span>
-            <span class="price-amount"><span class="currency">€</span>219</span>
+            <span class="price-amount"><span class="currency">€</span>31</span>
           </div>
         </div>
         <div class="price-row">
           <div>
-            <div class="price-service-name">Coup de Soleil</div>
-            <span class="price-service-sub">Balayage solaire, dégradé naturel inspiré des blondes méditerranéennes</span>
+            <div class="price-service-name">One Length Cut</div>
+            <span class="price-service-sub">Coupe uniforme, longueur homogène sur toute la tête</span>
           </div>
           <div class="price-right">
-            <span class="price-from">À partir de</span>
-            <span class="price-amount"><span class="currency">€</span>199</span>
-          </div>
-        </div>
-      </div>
-      <p class="price-note">
-        <strong>Note :</strong> Les tarifs de balayage sont indiqués à partir de et varient selon la longueur, la densité des cheveux et la technique choisie. Un devis personnalisé est réalisé lors de la consultation.
-      </p>
-    </div>
-
-    <!-- COUPE & COIFFAGE -->
-    <div class="category-block reveal" data-cat="coupe">
-      <div class="category-header">
-        <div class="category-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/>
-            <line x1="20" y1="4" x2="8.12" y2="15.88"/>
-            <line x1="14.47" y1="14.48" x2="20" y2="20"/>
-            <line x1="8.12" y1="8.12" x2="12" y2="12"/>
-          </svg>
-        </div>
-        <div>
-          <span class="category-label">Femme — Essentiel</span>
-          <div class="category-name">Coupe <em>&amp; Coiffage</em></div>
-        </div>
-      </div>
-      <div class="price-list">
-        <div class="price-row featured">
-          <div>
-            <div class="price-service-name">Shampooing + Coupe + Brushing</div>
-            <span class="price-service-sub">Lavage, coupe personnalisée et brushing professionnel</span>
-          </div>
-          <div class="price-right">
-            <span class="price-from">À partir de</span>
-            <span class="price-amount"><span class="currency">€</span>64</span>
-          </div>
-        </div>
-        <div class="price-row">
-          <div>
-            <div class="price-service-name">Shampooing + Brushing</div>
-            <span class="price-service-sub">Lavage et mise en forme brushing, sans coupe</span>
-          </div>
-          <div class="price-right">
-            <span class="price-from">À partir de</span>
-            <span class="price-amount"><span class="currency">€</span>34</span>
-          </div>
-        </div>
-        <div class="price-row">
-          <div>
-            <div class="price-service-name">Chignon</div>
-            <span class="price-service-sub">Chignon élaboré pour occasions spéciales, mariages et événements</span>
-          </div>
-          <div class="price-right">
-            <span class="price-from">À partir de</span>
-            <span class="price-amount"><span class="currency">€</span>71</span>
+            <span class="price-amount"><span class="currency">€</span>26</span>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- COLORATION -->
+<!-- Barbe & Rasage -->
+<div class="category-block reveal" data-cat="coupe">
+  <div class="category-header">
+    <div class="category-icon">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/>
+        <line x1="20" y1="4" x2="8.12" y2="15.88"/>
+        <line x1="14.47" y1="14.48" x2="20" y2="20"/>
+        <line x1="8.12" y1="8.12" x2="12" y2="12"/>
+      </svg>
+    </div>
+    <div>
+      <span class="category-label">Homme — GROOMING</span>
+      <div class="category-name">Barbe <em>&amp; Rasage</em></div>
+    </div>
+  </div>
+  <div class="price-list">
+    <div class="price-row featured">
+      <div>
+        <div class="price-service-name">Taille de barbe</div>
+        <span class="price-service-sub">Mise en forme et taille précise de la barbe</span>
+      </div>
+      <div class="price-right">
+        <span class="price-amount"><span class="currency">€</span>16</span>
+      </div>
+    </div>
+    <div class="price-row">
+      <div>
+        <div class="price-service-name">Barber Monday</div>
+        <span class="price-service-sub">Coupe homme + taille de barbe et rasage — offre exclusive du lundi</span>
+      </div>
+      <div class="price-right">
+        <span class="price-amount"><span class="currency">€</span>34</span>
+      </div>
+    </div>
+  </div>
+  <p class="price-note">
+    <strong>Barber Monday :</strong>Profitez de notre offre combinée coupe + barbe tous les lundis à tarif préférentiel.
+  </p>
+</div>
+
+    <!-- Enfant,Étudiant  -->
     <div class="category-block reveal" data-cat="coloration">
       <div class="category-header">
         <div class="category-icon">
@@ -156,62 +140,12 @@ permalink: "/coiffure-homme/"
           </svg>
         </div>
         <div>
-          <span class="category-label">Femme — Couleur</span>
-          <div class="category-name">Coloration <em>&amp; Gloss</em></div>
+          <span class="category-label">TARIFS PRÉFÉRENTIELS</span>
+          <div class="category-name">Enfant <em>&amp; Étudiant</em></div>
         </div>
       </div>
       <div class="price-list">
         <div class="price-row featured">
-          <div>
-            <div class="price-service-name">Coloration complète</div>
-            <span class="price-service-sub">Couleur uniforme sur toute la longueur des cheveux</span>
-          </div>
-          <div class="price-right">
-            <span class="price-amount"><span class="currency">€</span>88</span>
-          </div>
-        </div>
-        <div class="price-row">
-          <div>
-            <div class="price-service-name">Coloration racines</div>
-            <span class="price-service-sub">Reprise de couleur ciblée sur les racines uniquement</span>
-          </div>
-          <div class="price-right">
-            <span class="price-amount"><span class="currency">€</span>54</span>
-          </div>
-        </div>
-        <div class="price-row">
-          <div>
-            <div class="price-service-name">Gloss (Patine)</div>
-            <span class="price-service-sub">Soin colorant transparent, illumine et prolonge la couleur</span>
-          </div>
-          <div class="price-right">
-            <span class="price-amount"><span class="currency">€</span>40</span>
-          </div>
-        </div>
-      </div>
-      <p class="price-note">
-        <strong>Produits utilisés :</strong> Nous travaillons exclusivement avec des colorations professionnelles respectueuses de la fibre capillaire, sans ammoniaque sur demande.
-      </p>
-    </div>
-
-    <!-- ENFANT & ÉTUDIANTE -->
-    <div class="category-block reveal" data-cat="enfant">
-      <div class="category-header">
-        <div class="category-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-            <circle cx="9" cy="7" r="4"/>
-            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-          </svg>
-        </div>
-        <div>
-          <span class="category-label">Tarifs préférentiels</span>
-          <div class="category-name">Enfant <em>&amp; Étudiante</em></div>
-        </div>
-      </div>
-      <div class="price-list">
-        <div class="price-row">
           <div>
             <div class="price-service-name">Coupe Enfant — 0 à 5 ans</div>
             <span class="price-service-sub">Coupe douce et adaptée aux plus petits</span>
@@ -220,28 +154,27 @@ permalink: "/coiffure-homme/"
             <span class="price-amount"><span class="currency">€</span>20</span>
           </div>
         </div>
-        <div class="price-row featured">
+        <div class="price-row">
           <div>
-            <div class="price-service-name">Coupe + Coiffage Fille — 6 à 11 ans</div>
-            <span class="price-service-sub">Coupe et mise en forme pour les filles de 6 à 11 ans</span>
+            <div class="price-service-name">Coupe Garçon — 6 à 11 ans</div>
+            <span class="price-service-sub">Coupe et coiffage pour les garçons de 6 à 11 ans</span>
           </div>
           <div class="price-right">
-            <span class="price-amount"><span class="currency">€</span>35</span>
+            <span class="price-amount"><span class="currency">€</span>24</span>
           </div>
         </div>
         <div class="price-row">
           <div>
-            <div class="price-service-name">Sh. + Coupe + Coiffage Étudiante</div>
-            <span class="price-service-sub">Tarif étudiant sur présentation de carte — shampooing, coupe et coiffage</span>
+            <div class="price-service-name">Coupe Étudiant — M +12 ans</div>
+            <span class="price-service-sub">Tarif étudiant sur présentation de carte</span>
           </div>
           <div class="price-right">
-            <span class="price-from">À partir de</span>
-            <span class="price-amount"><span class="currency">€</span>49</span>
+            <span class="price-amount"><span class="currency">€</span>28</span>
           </div>
         </div>
       </div>
       <p class="price-note">
-        <strong>Carte étudiante requise</strong> pour bénéficier du tarif étudiante. Valable du mardi au jeudi uniquement.
+        <strong>Carte étudiante  :</strong>requise pour bénéficier du tarif étudiant. Valable du mardi au jeudi uniquement.
       </p>
     </div>
 
@@ -249,8 +182,8 @@ permalink: "/coiffure-homme/"
     <div class="booking-cta reveal">
       <div class="booking-cta-text">
         <span class="cta-label">Réservation</span>
-        <h3>Prêt à vous <em>faire chouchouter ?</em></h3>
-        <p>Réservez votre séance en ligne ou appelez-nous directement. Nos équipes sont disponibles du mardi au samedi.</p>
+        <h3>Prête à vous <em>faire chouchouter ?</em></h3>
+        <p>Réservez votre séance en ligne ou appelez-nous directement. Nos équipes sont disponibles du lundi au samedi.</p>
       </div>
       <a href="https://salonkee.lu/salon/studio-3" class="btn-primary">Réserver ma séance</a>
     </div>
@@ -259,12 +192,12 @@ permalink: "/coiffure-homme/"
 </div>
 
 <script>
-  
-    // Nav scroll effect
-    const nav = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 60);
-    });
+
+  // Nav scroll effect
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
 
   // Cursor glow
   const glow = document.getElementById('glow');
@@ -294,5 +227,6 @@ permalink: "/coiffure-homme/"
     });
   }
 </script>
+
 
 {% endblock %}
