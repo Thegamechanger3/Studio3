@@ -260,20 +260,6 @@ permalink: "/coiffure-femme/"
   </div>
 
   <script>
-
-    // Nav scroll effect
-    const nav = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 60);
-    });
-
-    // Cursor glow
-    const glow = document.getElementById('glow');
-    document.addEventListener('mousemove', e => {
-      glow.style.left = e.clientX + 'px';
-      glow.style.top  = e.clientY + 'px';
-    });
-
     // Scroll reveal
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
