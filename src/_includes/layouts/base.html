@@ -1,28 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
     <head>
         <!-- Standard meta tags -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="{{ description }}">
+        <meta name="robots" content="index, follow">
+        <meta property="og:locale" content="fr_LU">
         <link rel="canonical" href="{{ client.domain }}{{ page.url }}">
-        <meta name="generator" content="{{ eleventy.generator }}">
+
+                <!-- Twitter card (currently missing) -->
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:title" content="{{ title }}"/>
+        <meta name="twitter:description" content="{{ description }}"/>
+        <meta name="twitter:image" content="{{ image or '/assets/images/salon-view-og.jpg' }}"/>
+
+        <!-- Theme color (browser chrome on Android) -->
+        <meta name="theme-color" content="#1a1a18"/>
+
+        <!-- hreflang (future-proofing for FR/LB/PT) -->
+        <link rel="alternate" hreflang="fr" href="{{ client.domain }}{{ page.url }}"/>
+        <link rel="alternate" hreflang="x-default" href="{{ client.domain }}/"/>
 
         <!--Social Media Display-->
         <meta property="og:title" content="{{ title }}"/>
         <meta property="og:description" content="{{ description }}"/>
         <meta property="og:type" content="website"/>
         <meta property="og:url" content="{{ client.domain }}{{ page.url }}"/>
-        <meta property="og:image" content="{{ image or "/assets/images/logo-small.png" }}"/>
-        <meta property="og:image:secure_url" content="{{ image or "/assets/images/logo-small.png" }}"/>
+        <meta property="og:image" content="{{ image or '/assets/images/salon-view-og.jpg' }}"/>
+
+        <!-- OG image dimensions (WhatsApp needs these) -->
+        <meta property="og:image:width" content="1200"/>
+        <meta property="og:image:height" content="630"/>
 
         <!--Favicons-->
         <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96"/>
         <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg"/>
         <link rel="shortcut icon" href="/assets/favicons/favicon.ico"/>
         <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png"/>
-        <meta name="apple-mobile-web-app-title" content="Starter Kit"/>
+        <meta name="apple-mobile-web-app-title" content="Studio 3"/>
         <link rel="manifest" href="/assets/favicons/site.webmanifest"/>
 
         <!-- Page-specific styles load first -->
@@ -34,16 +52,112 @@
         <script defer src="/assets/js/nav.js"></script>
 
         <title>{{ title }}</title>
+
+        <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "HairSalon",
+              "name": "Studio 3 Coiffeur",
+              "image": "{{ client.domain }}/assets/images/salon-hero.jpg",
+              "@id": "{{ client.domain }}",
+              "url": "{{ client.domain }}",
+              "telephone": "+352621411909",
+              "priceRange": "€€",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "9 Rue de l'Alzette, 3ème étage"
+                "addressLocality": "Esch-sur-Alzette",
+                "postalCode": "4011",
+                "addressCountry": "LU"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 49.49582,
+                "longitude": 5.98154
+              },
+              "openingHoursSpecification": [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                  "opens": "09:00",
+                  "closes": "19:00"
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": "Saturday",
+                  "opens": "08:00",
+                  "closes": "15:00"
+                }
+              ],
+              "sameAs": [
+                "https://www.instagram.com/studio3_esch/",
+                "https://salonkee.lu/salon/studio-3"
+              ]
+            }
+            </script>
+
     </head>
     <body>
         <!--Screen reader skip main nav-->
-        <a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a>
+        <a class="skip" aria-label="Aller au contenu principal" href="#main">Aller au contenu principal</a>
 
         {% include "sections/header.html" %}
         <main id="main">
             {% block body %}{% endblock %}
         </main>
         {% include "sections/footer.html" %}
-
+<!-- Google Analytics — loads only after cookie consent -->
+<div id="gdpr-banner" style="display:none;">
+  <p>Nous utilisons des cookies pour analyser notre trafic. <a href="/politique-confidentialite">En savoir plus</a>.</p>
+  <div class="gdpr-buttons">
+    <button id="gdpr-accept">Accepter</button>
+    <button id="gdpr-decline">Refuser</button>
+  </div>
+</div>
+  
+  <script>
+    var GA_ID = 'G-59XH72JVJ2';
+  
+    function loadGA() {
+      var s = document.createElement('script');
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+      s.async = true;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', GA_ID);
+    }
+  
+    function getCookie(name) {
+      var match = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+      return match ? match[1] : null;
+    }
+    function setCookie(name, value, days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      document.cookie = name + '=' + value + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
+    }
+  
+    var consent = getCookie('s3_consent');
+  
+    if (consent === 'accepted') {
+      loadGA();
+    } else if (!consent) {
+      document.getElementById('gdpr-banner').style.display = 'block';
+    }
+  
+    document.getElementById('gdpr-accept').addEventListener('click', function () {
+      setCookie('s3_consent', 'accepted', 365);
+      document.getElementById('gdpr-banner').style.display = 'none';
+      loadGA();
+    });
+  
+    document.getElementById('gdpr-decline').addEventListener('click', function () {
+      setCookie('s3_consent', 'declined', 365);
+      document.getElementById('gdpr-banner').style.display = 'none';
+    });
+  </script>
     </body>
 </html>
