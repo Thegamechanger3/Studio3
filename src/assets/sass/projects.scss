@@ -180,7 +180,7 @@
     }
     .price-row.featured::after {
       content: 'Populaire';
-      position: absolute; top: 12px; right: 12px;
+      position: absolute; top: 5px; right: 12px;
       font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase;
       color: var(--dark); background: var(--warm);
       padding: 3px 10px;
