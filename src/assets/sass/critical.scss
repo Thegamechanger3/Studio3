@@ -297,34 +297,20 @@
 
  /* Giveaway */
 
- .giveaway-backdrop {
+.giveaway-backdrop {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.75);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  z-index: 9999; // above nav
+  z-index: 999; // lower than nav
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  padding-top: 80px; // adjust to match your nav height
   opacity: 0;
   animation: backdropIn 0.5s 0.6s ease forwards;
-}
-
-@media screen and (max-width: 768px) {
-  .giveaway-modal {
-    max-height: 90dvh;
-    overflow-y: auto;
-  }
-
-  .giveaway-img-wrap {
-    aspect-ratio: 16/9; // shorter image on mobile so body is visible
-  }
-
-  .giveaway-body {
-    padding: 1.2rem 1.4rem 1.4rem;
-  }
 }
 @keyframes backdropIn {
   to { opacity: 1; }
