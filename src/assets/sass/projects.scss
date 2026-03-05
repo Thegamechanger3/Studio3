@@ -44,7 +44,7 @@
     .page-title em { font-style: italic; color: var(--warm-light); }
     .page-subtitle {
       margin-top: 22px; font-size: 0.88rem;
-      color: var(--warm-light); line-height: 1.9; max-width: 420px;
+      color: var(--light); line-height: 1.9; max-width: 420px;
       opacity: 0; animation: fadeUp 0.9s 0.9s ease forwards;
     }
     @keyframes fadeUp {
@@ -180,11 +180,12 @@
     }
     .price-row.featured::after {
       content: 'Populaire';
-      position: absolute; top: 12px; right: 130px;
+      position: absolute; top: 12px; right: 12px;
       font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase;
       color: var(--dark); background: var(--warm);
       padding: 3px 10px;
     }
+    
 
     .price-service-name {
       font-family: 'Cormorant Garamond', serif;
