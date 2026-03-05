@@ -78,25 +78,30 @@ permalink: "/contact/"
       <h2 class="section-title">Envoyez-nous<br/>un <em>message</em></h2>
       <p class="section-body">Que ce soit pour une question sur nos services, un renseignement tarifaire ou une demande spéciale — nous vous répondons rapidement.</p>
 
-      <form class="contact-form" id="contactForm" onsubmit="submitForm(event)">
+      <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact" />
+        <p class="hidden" style="display:none;">
+          <input name="bot-field" />
+        </p>
+      
         <div class="form-row">
           <div class="form-group">
             <label>Prénom *</label>
-            <input type="text" placeholder="Marie" required />
+            <input type="text" name="prenom" placeholder="Marie" required />
           </div>
           <div class="form-group">
             <label>Nom *</label>
-            <input type="text" placeholder="Dupont" required />
+            <input type="text" name="nom" placeholder="Dupont" required />
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
             <label>Email *</label>
-            <input type="email" placeholder="marie@email.com" required />
+            <input type="email" name="email" placeholder="marie@email.com" required />
           </div>
           <div class="form-group">
             <label>Téléphone</label>
-            <input type="tel" placeholder="+352 621 000 000" />
+            <input type="tel" name="telephone" placeholder="+352 621 000 000" />
           </div>
         </div>
         <div class="form-group">
@@ -119,7 +124,7 @@ permalink: "/contact/"
         <div class="form-group">
           <label>Service souhaité</label>
           <div class="select-wrap">
-            <select>
+            <select name="service">
               <option value="">— Sélectionnez un service</option>
               <option>Coupe femme</option>
               <option>Coupe homme</option>
@@ -133,7 +138,7 @@ permalink: "/contact/"
         </div>
         <div class="form-group">
           <label>Message</label>
-          <textarea rows="5" placeholder="Décrivez votre demande, vos attentes, la longueur de vos cheveux…"></textarea>
+          <textarea name="message" rows="5" placeholder="Décrivez votre demande, vos attentes, la longueur de vos cheveux…"></textarea>
         </div>
         <button type="submit" class="form-submit">
           Envoyer le message
