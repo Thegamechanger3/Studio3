@@ -330,20 +330,16 @@ nav.scrolled {
     align-items: center;
 }
 
-/* Logo Styles */
-.nav-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.55rem;
-    font-weight: 300;
-    letter-spacing: 0.25em;
-    color: var(--light);
-    text-transform: uppercase;
-    text-decoration: none;
-    z-index: 100;
+.nav-logo img {
+    height: 42px;
+    width: auto;
+    display: block;
 }
 
-.nav-logo span { 
-    color: var(--warm); 
+@media only screen and (max-width: 1023.5px) {
+    .nav-logo img {
+        height: 30px;
+    }
 }
 
 /* Desktop Navigation Links */
@@ -533,13 +529,6 @@ nav.scrolled {
         align-items: center;
     }
 
-    .nav-logo {
-        grid-column: 2;
-        justify-self: center;
-        margin: 0;
-        font-size: 1.3rem;
-    }
-
     /* Mobile Toggle Button */
     .cs-toggle {
         grid-column: 3;
@@ -555,6 +544,12 @@ nav.scrolled {
         cursor: pointer;
         z-index: 100;
         padding: 0;
+        grid-column: 3;
+        justify-self: end;
+    }
+    .nav-logo {
+        grid-column: 2;
+        justify-self: center;
     }
 
     .cs-box {
