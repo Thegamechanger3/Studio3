@@ -30,6 +30,16 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
 
 {% block body %}
 
+<form name="contact" netlify data-netlify="true" hidden>
+  <input type="text" name="prenom" />
+  <input type="text" name="nom" />
+  <input type="email" name="email" />
+  <input type="tel" name="telephone" />
+  <input type="radio" name="sujet" />
+  <select name="service"><option value="">service</option></select>
+  <textarea name="message"></textarea>
+</form>
+
   <!-- HERO -->
   <section class="hero">
     <div class="hero-img"></div>
@@ -317,7 +327,7 @@ document.querySelectorAll('.about-stats').forEach(el => aboutStatsObserver.obser
     </div>
     <div class="giveaway-body">
       <span class="giveaway-label">Concours en cours</span>
-      <h2 class="giveaway-title">Gagnez votre soin<br/><em>offert chez Studio 3</em></h2>
+      <h2 class="giveaway-title">365 jours à <br/><em>vos cotés</em></h2>
       <p class="giveaway-text">
         Tentez de gagner 2 bons Luxair de 500 €, 1 an de brushing offert, des balayages, kits Kevin Murphy, un sèche-cheveux Vanquish by Wahl, et bien plus encore.
       </p>
