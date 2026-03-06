@@ -192,33 +192,52 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
     <div class="team-grid reveal">
       <div class="team-card">
         <img class="team-card-img" src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=400&q=80&auto=format&fit=crop&face" alt="Cindy Aniceto" />
+        <div class="team-img-overlay">Fondatrice</div>
         <div class="team-card-info">
           <div class="team-name">Cindy Aniceto</div>
-          <div class="team-role">Directrice artistique</div>
+          <div class="team-langs">
+            <span class="lang-tag">LU</span>
+            <span class="lang-tag">FR</span>
+            <span class="lang-tag">DE</span>
+            <span class="lang-tag">EN</span>
+          </div>
           <div class="team-line"></div>
         </div>
       </div>
       <div class="team-card">
         <img class="team-card-img" src="/assets/images/gwendy.webp" alt="Gwendy Guyomarc'h" />
+        <div class="team-img-overlay">Coiffeuse</div>
         <div class="team-card-info">
           <div class="team-name">Gwendy Guyomarc'h</div>
-          <div class="team-role">Coloriste expert</div>
+          <div class="team-langs">
+            <span class="lang-tag">FR</span>
+          </div>
           <div class="team-line"></div>
         </div>
       </div>
       <div class="team-card">
         <img class="team-card-img" src="/assets/images/korinne.webp" alt="Korinna" />
+        <div class="team-img-overlay">Coiffeuse</div>
         <div class="team-card-info">
-          <div class="team-name">Korinna Anne-Marie</div>
-          <div class="team-role">Styliste cheveux</div>
+          <div class="team-name">Korinna Lucas</div>
+          <div class="team-langs">
+            <span class="lang-tag">LU</span>
+            <span class="lang-tag">FR</span>
+            <span class="lang-tag">DE</span>
+            <span class="lang-tag">EN</span>
+          </div>
           <div class="team-line"></div>
         </div>
       </div>
       <div class="team-card">
         <img class="team-card-img" src="/assets/images/alex.webp" alt="Alex Mendes" />
+        <div class="team-img-overlay">Barbier</div>
         <div class="team-card-info">
           <div class="team-name">Alex Mendes</div>
-          <div class="team-role">Barbier & coiffeur homme</div>
+          <div class="team-langs">
+            <span class="lang-tag">FR</span>
+            <span class="lang-tag">PT</span>
+          </div>
           <div class="team-line"></div>
         </div>
       </div>
@@ -284,10 +303,10 @@ document.querySelectorAll('.about-stats').forEach(el => aboutStatsObserver.obser
 
     // Testimonials
     const testimonials = [
-      { text: '« Studio 3, c\'est bien plus qu\'un salon — c\'est une expérience. Je repars toujours avec exactement ce que je voulais, ou encore mieux. »', author: '— Marie-Claire B., Cliente depuis 2026' },
-      { text: '« Une équipe incroyablement talentueuse. Cindy a transformé ma coloration et j\'ai reçu des compliments toute la semaine ! »', author: '— Isabelle M., Cliente depuis 2025' },
-      { text: '« Le meilleur salon d\'Esch sans hésiter. Accueil chaleureux, technique impeccable, résultat parfait à chaque fois. »', author: '— Thomas R., Client depuis 2025' },
-    ];
+  { text: '« Ce salon est excellent grâce au professionnalisme de Cindy, qui propose des coupes parfaites et une analyse capillaire personnalisée, notamment pour le post-partum. Le rapport qualité-prix est extraordinaire et l\'accueil est si chaleureux que j\'y retournerai sans hésiter. »', author: '— Valérie R.' },
+  { text: '« Cindy offre un accueil chaleureux et des conseils experts pour un résultat toujours impeccable depuis 5 ans. Je recommande à 100 % le Studio 3 pour ce vrai moment de détente et le talent d\'une coiffeuse passionnée. »', author: '— Marlène M.' },
+  { text: '« Le Studio 3 est un salon moderne et accueillant où l\'on se sent immédiatement à l\'aise. Alex est un coiffeur-barbier précis et à l\'écoute, qui livre un résultat impeccable dont je suis pleinement satisfait. »', author: '— Christian' },
+];
     let current = 0;
     function setTestimonial(index) {
       current = index;

@@ -16,7 +16,7 @@
     .page-hero-img {
       position: absolute;
       inset: 0;
-      background-image: url('https://images.unsplash.com/photo-1600948836101-f9ffda59d250?w=1800&q=85&auto=format&fit=crop');
+      background-image: url('/assets/images/studio3-salon1.webp');
       background-size: cover;
       background-position: center 30%;
       animation: heroZoom 14s ease-out forwards;
@@ -308,12 +308,20 @@
       font-weight: 400;
       color: var(--light);
     }
-    .team-role {
-      font-size: 0.68rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
+    .team-langs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 8px;
+    }
+    .lang-tag {
+      font-size: 0.58rem;
+      letter-spacing: 0.15em;
+      font-weight: 600;
       color: var(--warm);
-      margin-top: 6px;
+      border: 1px solid rgba(143,133,124,0.4);
+      padding: 3px 8px;
+      border-radius: 20px;
     }
     .team-bio {
       font-size: 0.8rem;

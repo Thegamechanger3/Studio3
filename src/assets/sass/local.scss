@@ -222,12 +222,34 @@
     font-weight: 400;
     color: var(--light);
   }
-  .team-role {
-    font-size: 0.68rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
+  .team-langs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 8px;
+  }
+  .lang-tag {
+    font-size: 0.60rem;
+    letter-spacing: 0.15em;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 600;
     color: var(--warm);
-    margin-top: 5px;
+    border: 1px solid var(--warm);
+    padding: 2px 8px;
+    border-radius: 20px;
+  }
+  .team-img-overlay {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    font-size: 0.60rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--light);
+    background: rgba(0,0,0,0.45);
+    padding: 4px 10px;
+    border-radius: 20px;
+    pointer-events: none;
   }
   .team-line {
     width: 30px;
