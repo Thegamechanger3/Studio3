@@ -26,8 +26,8 @@ permalink: "/galerie/"
 <div class="filter-bar">
   <div class="filter-tab active" onclick="filterGallery('all', this)">Tout</div>
   <div class="filter-tab" onclick="filterGallery('coupe', this)">Coupes</div>
-  <div class="filter-tab" onclick="filterGallery('couleur', this)">Balayage</div>
-  <div class="filter-tab" onclick="filterGallery('soin', this)">Coloration</div>
+  <div class="filter-tab" onclick="filterGallery('balayage', this)">Balayage</div>
+  <div class="filter-tab" onclick="filterGallery('coloration', this)">Coloration</div>
   <div class="filter-tab" onclick="filterGallery('salon', this)">Le salon</div>
 </div>
 
@@ -40,7 +40,7 @@ permalink: "/galerie/"
         <img src="/assets/images/galerie1.webp" alt="Coupe femme" style="height:520px; object-fit:cover;" />
         <div class="masonry-item-overlay">
           <span class="masonry-item-tag">Coupe</span>
-          <div class="masonry-item-title">Coupe signature</div>
+          <div class="masonry-item-title">Fade</div>
         </div>
         <div class="masonry-item-zoom">↗</div>
       </div>
@@ -52,23 +52,23 @@ permalink: "/galerie/"
         </div>
         <div class="masonry-item-zoom">↗</div>
       </div>
-      <div class="masonry-item" data-cat="salon" data-index="2" onclick="openLightbox(2)">
+      <div class="masonry-item" data-cat="balayage" data-index="2" onclick="openLightbox(2)">
         <img src="/assets/images/galerie3.webp" alt="Salon" style="height:254px; object-fit:cover;" />
         <div class="masonry-item-overlay">
-          <span class="masonry-item-tag">Le salon</span>
-          <div class="masonry-item-title">Notre espace</div>
+          <span class="masonry-item-tag">Balayage</span>
+          <div class="masonry-item-title">Coup d'éclat</div>
         </div>
         <div class="masonry-item-zoom">↗</div>
       </div>
-      <div class="masonry-item" data-cat="soin" data-index="3" onclick="openLightbox(3)">
+      <div class="masonry-item" data-cat="balayage" data-index="3" onclick="openLightbox(3)">
         <img src="/assets/images/galerie4.webp" alt="Soin" style="height:254px; object-fit:cover;" />
         <div class="masonry-item-overlay">
-          <span class="masonry-item-tag">Soin</span>
-          <div class="masonry-item-title">Soin kératine</div>
+          <span class="masonry-item-tag">Balayage</span>
+          <div class="masonry-item-title">Coup de soleil</div>
         </div>
         <div class="masonry-item-zoom">↗</div>
       </div>
-      <div class="masonry-item" data-cat="coupe" data-index="4" onclick="openLightbox(4)">
+      <div class="masonry-item" data-cat="coloration" data-index="4" onclick="openLightbox(4)">
         <img src="/assets/images/galerie5.webp" alt="Coupe homme" style="height:254px; object-fit:cover;" />
         <div class="masonry-item-overlay">
           <span class="masonry-item-tag">Coupe</span>
@@ -81,20 +81,20 @@ permalink: "/galerie/"
     <!-- MASONRY GRID -->
     <div class="masonry" id="masonryGrid">
 
-      <div class="masonry-item reveal" data-cat="couleur" data-index="5" onclick="openLightbox(5)">
+      <div class="masonry-item reveal" data-cat="coupe" data-index="5" onclick="openLightbox(5)">
         <img src="/assets/images/galerie6.webp" alt="Coloration" />
         <div class="masonry-item-overlay">
-          <span class="masonry-item-tag">Couleur</span>
-          <div class="masonry-item-title">Ombré naturel</div>
+          <span class="masonry-item-tag">Coupes</span>
+          <div class="masonry-item-title">Coupe Femme</div>
         </div>
         <div class="masonry-item-zoom">↗</div>
       </div>
 
-      <div class="masonry-item reveal" data-cat="salon" data-index="6" onclick="openLightbox(6)">
+      <div class="masonry-item reveal" data-cat="coupe" data-index="6" onclick="openLightbox(6)">
         <img src="/assets/images/galerie7.webp" alt="Salon" />
         <div class="masonry-item-overlay">
-          <span class="masonry-item-tag">Le salon</span>
-          <div class="masonry-item-title">L'atelier</div>
+          <span class="masonry-item-tag">Coupe</span>
+          <div class="masonry-item-title">Fade</div>
         </div>
         <div class="masonry-item-zoom">↗</div>
       </div>
@@ -103,25 +103,25 @@ permalink: "/galerie/"
         <img src="/assets/images/galerie8.webp" alt="Brushing" />
         <div class="masonry-item-overlay">
           <span class="masonry-item-tag">Coupe</span>
-          <div class="masonry-item-title">Brushing parfait</div>
+          <div class="masonry-item-title">Brushing</div>
         </div>
         <div class="masonry-item-zoom">↗</div>
       </div>
 
-      <div class="masonry-item reveal" data-cat="soin" data-index="8" onclick="openLightbox(8)">
+      <div class="masonry-item reveal" data-cat="salon" data-index="8" onclick="openLightbox(8)">
         <img src="/assets/images/galerie9.webp" alt="Soin capillaire" />
         <div class="masonry-item-overlay">
-          <span class="masonry-item-tag">Soin</span>
-          <div class="masonry-item-title">Soin capillaire</div>
+          <span class="masonry-item-tag">Salon</span>
+          <div class="masonry-item-title">Notre salon</div>
         </div>
         <div class="masonry-item-zoom">↗</div>
       </div>
 
-      <div class="masonry-item reveal" data-cat="couleur" data-index="9" onclick="openLightbox(9)">
+      <div class="masonry-item reveal" data-cat="salon" data-index="9" onclick="openLightbox(9)">
         <img src="/assets/images/galerie10.webp" alt="Coloration" />
         <div class="masonry-item-overlay">
-          <span class="masonry-item-tag">Couleur</span>
-          <div class="masonry-item-title">Coloration cuivrée</div>
+          <span class="masonry-item-tag">Salon</span>
+          <div class="masonry-item-title">Studio 3 Ambiance</div>
         </div>
         <div class="masonry-item-zoom">↗</div>
       </div>
@@ -135,11 +135,11 @@ permalink: "/galerie/"
         <div class="masonry-item-zoom">↗</div>
       </div>
 
-      <div class="masonry-item reveal" data-cat="salon" data-index="11" onclick="openLightbox(11)">
+      <div class="masonry-item reveal" data-cat="coupe" data-index="11" onclick="openLightbox(11)">
         <img src="/assets/images/galerie12.webp" alt="Salon" />
         <div class="masonry-item-overlay">
-          <span class="masonry-item-tag">Le salon</span>
-          <div class="masonry-item-title">Ambiance Studio 3</div>
+          <span class="masonry-item-tag">Coupe</span>
+          <div class="masonry-item-title">Fade</div>
         </div>
         <div class="masonry-item-zoom">↗</div>
       </div>
@@ -265,20 +265,33 @@ permalink: "/galerie/"
 
     // ─── FILTER ───
     function filterGallery(cat, tabEl) {
-      document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
-      tabEl.classList.add('active');
+  document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+  tabEl.classList.add('active');
 
-      const featuredRow = document.getElementById('featured-row');
-      featuredRow.style.display = (cat === 'all') ? 'grid' : 'none';
-
-      document.querySelectorAll('#masonryGrid .masonry-item').forEach(item => {
-        if (cat === 'all' || item.dataset.cat === cat) {
-          item.classList.remove('hidden');
-        } else {
-          item.classList.add('hidden');
-        }
-      });
+  // Filter featured row items individually
+  const featuredItems = document.querySelectorAll('#featured-row .masonry-item');
+  featuredItems.forEach(item => {
+    if (cat === 'all' || item.dataset.cat === cat) {
+      item.classList.remove('hidden');
+    } else {
+      item.classList.add('hidden');
     }
+  });
+
+  // Hide the featured row container only if no items match
+  const featuredRow = document.getElementById('featured-row');
+  const anyFeaturedVisible = [...featuredItems].some(i => !i.classList.contains('hidden'));
+  featuredRow.style.display = anyFeaturedVisible ? 'grid' : 'none';
+
+  // Filter masonry grid items (unchanged)
+  document.querySelectorAll('#masonryGrid .masonry-item').forEach(item => {
+    if (cat === 'all' || item.dataset.cat === cat) {
+      item.classList.remove('hidden');
+    } else {
+      item.classList.add('hidden');
+    }
+  });
+}
 
     // ─── LIGHTBOX ───
     const allItems = document.querySelectorAll('.masonry-item[data-index]');
