@@ -15,7 +15,7 @@ module.exports = {
         instagram: "https://www.instagram.com/studio3.lu/",
         tiktok: "https://www.tiktok.com/@studio3.lu",
     },
-    domain: "https://www.studio3.lu",
+    domain: "https://studio3.lu",
     // Passing the isProduction variable for use in HTML templates
     isProduction: process.env.ELEVENTY_ENV === "PROD",
 };
