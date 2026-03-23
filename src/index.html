@@ -48,7 +48,10 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
       <h1 class="hero-title">Une coiffure<br/><em>pensée pour</em><br/>vous.</h1>
       <p class="hero-subtitle">L'éclat de vos cheveux à Esch-sur-Alzette<br> Balayage, Coupe & Brushing. </p>
       <div class="hero-actions">
-        <a href="https://salonkee.lu/salon/studio-3" class="btn-primary">Prendre rendez-vous</a>
+        <a href="https://salonkee.lu/salon/studio-3" class="btn-primary"
+   onclick="if(window.gtag) gtag('event', 'book_click', { event_label: 'Prendre rendez-vous' });">
+  Prendre rendez-vous
+</a>
         <a href="/coiffure-femme/" class="btn-ghost">Nos services</a>
       </div>
     </div>

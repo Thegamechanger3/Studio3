@@ -60,15 +60,19 @@
                 
                 <!-- Booking CTA (visible in mobile menu) -->
                 <li class="cs-li">
-                    <a href="https://salonkee.lu/salon/studio-3" class="nav-cta">
-                        Réserver
+                    <a href="https://salonkee.lu/salon/studio-3" class="nav-cta"
+                       onclick="if(window.gtag) gtag('event', 'book_click', { event_label: 'Réserver - mobile nav' });">
+                      Réserver
                     </a>
-                </li>
+                  </li>
             </ul>
         </div>
         
         <!-- Desktop CTA Button (visible only on desktop) -->
-        <a href="https://salonkee.lu/salon/studio-3" class="nav-cta desktop-cta">Réserver</a>
+        <a href="https://salonkee.lu/salon/studio-3" class="nav-cta desktop-cta"
+        onclick="if(window.gtag) gtag('event', 'book_click', { event_label: 'Réserver - desktop nav' });">
+       Réserver
+     </a>
     </div>
 </nav>
 
