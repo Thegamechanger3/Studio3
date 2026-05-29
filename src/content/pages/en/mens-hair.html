@@ -1,0 +1,263 @@
+---
+title: Men's Hair & Barber in Esch-sur-Alzette | Studio 3 Hairdresser
+description: Men's cuts, fades and beard grooming in Esch-sur-Alzette. Clear pricing, walk-ins or appointment. Studio 3 Hairdresser.
+permalink: "/en/mens-hair.html"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/projects.css">
+{% endblock %}
+
+{% block body %}
+ <!-- HERO -->
+ <div class="page-hero">
+  <div class="page-hero-img" style="--hero-img: url('/assets/images/studio3-salon1.webp')"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <p class="breadcrumb"><a href="/en/">Home</a> &nbsp;/&nbsp; Services &amp; Prices</p>
+    <h1 class="page-title">Men's<br/><em>Hair</em></h1>
+    <p class="page-subtitle">Services designed to reveal your best self. Each service is performed with care, precision and the best products on the market.</p>
+  </div>
+</div>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <div class="filter-tab active" onclick="filterCat('all', this)">All services</div>
+  <div class="filter-tab" onclick="filterCat('balayage', this)">Cuts & Fades</div>
+  <div class="filter-tab" onclick="filterCat('coupe', this)">Beard & Shave</div>
+  <div class="filter-tab" onclick="filterCat('coloration', this)">Child & Student</div>
+</div>
+
+<!-- CONTENT -->
+<div class="content-wrap">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <img class="sidebar-img" src="/assets/images/service_homme.jpg" alt="Studio 3" />
+    <div class="sidebar-overlay"></div>
+    <div class="sidebar-quote">
+      « Beauty begins the moment you decide to be yourself. »
+      <cite>— Studio 3, Esch-sur-Alzette</cite>
+    </div>
+  </div>
+
+  <!-- PRICE CONTENT -->
+  <div class="price-content">
+
+    <!-- Cuts & Fades -->
+    <div class="category-block reveal" data-cat="balayage">
+      <div class="category-header">
+        <div class="category-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+          </svg>
+        </div>
+        <div>
+          <span class="category-label">Men — Essential</span>
+          <div class="category-name">Cuts <em>&amp; Fades</em></div>
+        </div>
+      </div>
+      <div class="price-list">
+        <div class="price-row featured">
+          <div>
+            <div class="price-service-name">Fade</div>
+            <span class="price-service-sub">Skin fade with clean, precise razor finish</span>
+          </div>
+          <div class="price-right">
+            <span class="price-amount"><span class="currency">€</span>36</span>
+          </div>
+        </div>
+        <div class="price-row">
+          <div>
+            <div class="price-service-name">Classic Cut</div>
+            <span class="price-service-sub">Personalized classic cut based on your face shape</span>
+          </div>
+          <div class="price-right">
+            <span class="price-amount"><span class="currency">€</span>31</span>
+          </div>
+        </div>
+        <div class="price-row">
+          <div>
+            <div class="price-service-name">One Length Cut</div>
+            <span class="price-service-sub">Uniform cut, even length throughout the head</span>
+          </div>
+          <div class="price-right">
+            <span class="price-amount"><span class="currency">€</span>26</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Beard & Shave -->
+    <div class="category-block reveal" data-cat="coupe">
+      <div class="category-header">
+        <div class="category-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/>
+            <line x1="20" y1="4" x2="8.12" y2="15.88"/>
+            <line x1="14.47" y1="14.48" x2="20" y2="20"/>
+            <line x1="8.12" y1="8.12" x2="12" y2="12"/>
+          </svg>
+        </div>
+        <div>
+          <span class="category-label">Men — GROOMING</span>
+          <div class="category-name">Beard <em>&amp; Shave</em></div>
+        </div>
+      </div>
+      <div class="price-list">
+        <div class="price-row">
+          <div>
+            <div class="price-service-name">Beard Trim</div>
+            <span class="price-service-sub">Beard shaping and precise trimming</span>
+          </div>
+          <div class="price-right">
+            <span class="price-amount"><span class="currency">€</span>16</span>
+          </div>
+        </div>
+        <div class="price-row">
+          <div>
+            <div class="price-service-name">Beard Trim + Line-up</div>
+            <span class="price-service-sub">Full beard trim with hot towel, line-up and razor finishing</span>
+          </div>
+          <div class="price-right">
+            <span class="price-amount"><span class="currency">€</span>23</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Barber Monday -->
+    <div class="category-block reveal" data-cat="coupe">
+      <div class="category-header">
+        <div class="category-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+        </div>
+        <div>
+          <span class="category-label">Offer — EVERY MONDAY</span>
+          <div class="category-name">Barber <em>Monday</em></div>
+        </div>
+      </div>
+      <div class="price-list">
+        <div class="price-row featured">
+          <div>
+            <div class="price-service-name">Cut + Full Beard</div>
+            <span class="price-service-sub">Men's cut of your choice + full beard trim with hot towel, line-up and razor finishing</span>
+          </div>
+          <div class="price-right">
+            <span class="price-amount"><span class="currency">€</span>49</span>
+          </div>
+        </div>
+      </div>
+      <p class="price-note">
+        Enjoy our combined cut + beard offer every Monday at a special rate.
+      </p>
+    </div>
+
+    <!-- Child & Student -->
+    <div class="category-block reveal" data-cat="coloration">
+      <div class="category-header">
+        <div class="category-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/>
+          </svg>
+        </div>
+        <div>
+          <span class="category-label">DISCOUNTED RATES</span>
+          <div class="category-name">Child <em>&amp; Student</em></div>
+        </div>
+      </div>
+      <div class="price-list">
+        <div class="price-row">
+          <div>
+            <div class="price-service-name">Child Cut — 0 to 5 years</div>
+            <span class="price-service-sub">Gentle cut adapted for little ones</span>
+          </div>
+          <div class="price-right">
+            <span class="price-amount"><span class="currency">€</span>20</span>
+          </div>
+        </div>
+        <div class="price-row">
+          <div>
+            <div class="price-service-name">Boy Cut — 6 to 11 years</div>
+            <span class="price-service-sub">Cut and styling for boys aged 6 to 11</span>
+          </div>
+          <div class="price-right">
+            <span class="price-amount"><span class="currency">€</span>24</span>
+          </div>
+        </div>
+        <div class="price-row">
+          <div>
+            <div class="price-service-name">Student Cut — M +12 years</div>
+            <span class="price-service-sub">Student rate upon presentation of student ID</span>
+          </div>
+          <div class="price-right">
+            <span class="price-amount"><span class="currency">€</span>28</span>
+          </div>
+        </div>
+      </div>
+      <p class="price-note">
+        <strong>Student ID required</strong> to benefit from student rate. Valid Tuesday through Thursday only.
+      </p>
+    </div>
+
+    <!-- BOOKING CTA -->
+    <div class="booking-cta reveal">
+      <div class="booking-cta-text">
+        <span class="cta-label">Booking</span>
+        <h3>Ready to <em>take care of your hair?</em></h3>
+        <p>Book your appointment online or contact us.</p>
+      </div>
+      <a href="https://salonkee.lu/salon/studio-3" class="btn-primary"
+      onclick="if(window.gtag) gtag('event', 'book_click', { event_label: 'Book my session' });">
+     Book my session
+   </a>
+    </div>
+
+  </div>
+</div>
+
+<script>
+
+  // Nav scroll effect
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Cursor glow
+  const glow = document.getElementById('glow');
+  document.addEventListener('mousemove', e => {
+    glow.style.left = e.clientX + 'px';
+    glow.style.top  = e.clientY + 'px';
+  });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Filter tabs
+  function filterCat(cat, tabEl) {
+    document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+    tabEl.classList.add('active');
+    document.querySelectorAll('.category-block').forEach(block => {
+      const show = cat === 'all' || block.dataset.cat === cat;
+      block.style.display = show ? 'block' : 'none';
+    });
+  }
+</script>
+
+{% endblock %}

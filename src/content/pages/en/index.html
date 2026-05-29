@@ -1,0 +1,309 @@
+---
+title: Studio 3 - Hairdresser in Esch-sur-Alzette | Balayage & Expert Coloration
+description: Studio 3, hairdresser in Esch-sur-Alzette, specializes in balayage, coloring and custom cuts for women and men. Personalized consultation and professional results.
+permalink: "/en/"
+tags: "sitemap"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/assets/css/critical.css" />
+
+    {% if client.isProduction %}
+        <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/assets/css/local.css">
+        </noscript>
+    {% else %}
+        <link rel="stylesheet" href="/assets/css/local.css" />
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+
+<form name="contact" netlify data-netlify="true" hidden>
+  <input type="text" name="firstname" />
+  <input type="text" name="lastname" />
+  <input type="email" name="email" />
+  <input type="tel" name="phone" />
+  <input type="radio" name="subject" />
+  <select name="service"><option value="">service</option></select>
+  <textarea name="message"></textarea>
+</form>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-img"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">A haircut<br/><em>designed for</em><br/>you.</h1>
+      <p class="hero-subtitle">Your hair's radiance in Esch-sur-Alzette<br> Balayage, Cut & Blow-dry.</p>
+      <div class="hero-actions">
+        <a href="https://salonkee.lu/salon/studio-3" class="btn-primary"
+   onclick="if(window.gtag) gtag('event', 'book_click', { event_label: 'Book appointment' });">
+  Book appointment
+</a>
+        <a href="/en/womens-hair/" class="btn-ghost">Our services</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- INTRO BAR -->
+  <div class="intro-bar">
+    <div class="intro-bar-item">
+      <a href="https://maps.app.goo.gl/dCup4so6xBd7WhRM9" target="_blank" rel="noopener noreferrer" style="display:flex; align-items:center; gap:14px; color:inherit; text-decoration:none;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        <p>9 Rue de l'Alzette, Esch-sur-Alzette</p>
+      </a>
+    </div>
+    <div class="intro-bar-divider"></div>
+    <div class="intro-bar-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <p>Mon–Fri: 9am–7pm &nbsp;·&nbsp; Sat: 8am–3pm</p>
+    </div>
+    <div class="intro-bar-divider"></div>
+  <div class="intro-bar-item">
+  <a href="tel:+352621411909" style="display:flex; align-items:center; gap:14px; color:inherit; text-decoration:none;">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 11.5 19.79 19.79 0 011.02 2.82 2 2 0 013 .64h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.5a16 16 0 006.29 6.29l1.22-1.22a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    <p>+352 621 411 909</p>
+  </a>
+</div>
+    <div class="intro-bar-divider"></div>
+    <div class="intro-bar-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      <p>Expertise and passion since 2025</p>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-media reveal">
+      <img class="about-img-main" src="/assets/images/salon4.jpg" alt="Hairdresser at work" />
+      <img class="about-img-accent" src="/assets/images/reservation.jpg" alt="Hair detail" />
+    </div>
+    <div class="about-text reveal">
+      <span class="section-label">Our story</span>
+      <h2 class="section-title">Much more than<em> just a salon</em></h2>
+      <p class="about-body">Studio 3 is a hair salon located in the heart of Esch-sur-Alzette, on the 3rd floor, offering a private, quiet and bright space.</p>
+      <p class="about-body">We've created a warm place where we take the time to welcome, listen and advise you.</p>
+      <p class="about-body">Our hairdressers, trained in the latest techniques, provide personalized cuts, balayage, coloring and hair care adapted to your hair and lifestyle.</p>
+      <a href="/en/womens-hair/" class="btn-primary">Discover our services</a>
+      <div class="about-stats">
+        <div>
+          <span class="stat-num">25+</span>
+          <span class="stat-label">Years of experience</span>
+        </div>
+        <div>
+          <span class="stat-num">1000+</span>
+          <span class="stat-label">Satisfied clients</span>
+        </div>
+        <div>
+          <span class="stat-num">4</span>
+          <span class="stat-label">Team members</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services-section" id="services">
+    <div class="services-header reveal">
+      <div>
+        <span class="section-label">What we do</span>
+        <h2 class="section-title">Our <em>services</em></h2>
+      </div>
+      <a href="https://salonkee.lu/salon/studio-3" class="btn-ghost" style="color:var(--warm-light)">View all services</a>
+    </div>
+    <div class="services-grid reveal">
+      <a href="/en/womens-hair/" class="service-card">
+        <img src="/assets/images/coupe.webp" alt="Women's cut" />
+        <div class="service-card-overlay"></div>
+        <div class="service-arrow">→</div>
+        <div class="service-card-body">
+          <span class="service-num">01</span>
+          <div class="service-name">Women's Cut</div>
+          <p class="service-desc">Personalized cut based on your face shape and desires, for a natural and elegant result.</p>
+        </div>
+      </a>
+      <a href="/en/womens-hair/" class="service-card">
+        <img src="/assets/images/coloration.webp" alt="Coloring" />
+        <div class="service-card-overlay"></div>
+        <div class="service-arrow">→</div>
+        <div class="service-card-body">
+          <span class="service-num">02</span>
+          <div class="service-name">Coloring</div>
+          <p class="service-desc">Balayage, ombré, trendy colors — our colorists master all modern techniques.</p>
+        </div>
+      </a>
+      <a href="/en/mens-hair/" class="service-card">
+        <img src="/assets/images/coupe2.jpeg" alt="Men's cut" />
+        <div class="service-card-overlay"></div>
+        <div class="service-arrow">→</div>
+        <div class="service-card-body">
+          <span class="service-num">03</span>
+          <div class="service-name">Men's Cut</div>
+          <p class="service-desc">Precise fades, beard and refined finishes for a modern, sophisticated look.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- GALLERY STRIP -->
+  <div class="gallery-strip">
+    <div class="gallery-strip-item">
+      <img src="/assets/images/salon3.jpg" alt="" />
+    </div>
+    <div class="gallery-strip-item">
+      <img src="/assets/images/balayage1.jpeg" alt="" />
+    </div>
+    <div class="gallery-strip-item">
+      <img src="/assets/images/coupe3.jpeg" alt="" />
+    </div>
+    <div class="gallery-strip-item">
+      <img src="/assets/images/insta2.jpg" alt="" />
+    </div>
+  </div>
+
+  <!-- TEAM -->
+  <section class="team-section" id="team">
+    <div class="team-intro reveal">
+      <span class="section-label">Our team</span>
+      <h2 class="section-title">Professionals who<em> listen to you</em></h2>
+      <p>Behind every cut, color or balayage are attentive hairdressers who take the time to understand your desires.</p>
+    </div>
+    <div class="team-grid reveal">
+      <div class="team-card">
+        <img class="team-card-img" src="/assets/images/cindy.jpg" alt="Cindy Aniceto" />
+        <div class="team-img-overlay">Founder</div>
+        <div class="team-card-info">
+          <div class="team-name">Cindy Aniceto</div>
+          <div class="team-langs">
+            <span class="lang-tag">LU</span>
+            <span class="lang-tag">FR</span>
+            <span class="lang-tag">DE</span>
+            <span class="lang-tag">EN</span>
+          </div>
+          <div class="team-line"></div>
+        </div>
+      </div>
+      <div class="team-card">
+        <img class="team-card-img" src="/assets/images/gwendy.webp" alt="Gwendy Guyomarc'h" />
+        <div class="team-img-overlay">Hairdresser</div>
+        <div class="team-card-info">
+          <div class="team-name">Gwendy Guyomarc'h</div>
+          <div class="team-langs">
+            <span class="lang-tag">FR</span>
+          </div>
+          <div class="team-line"></div>
+        </div>
+      </div>
+      <div class="team-card">
+        <img class="team-card-img" src="/assets/images/korinne.webp" alt="Korinna" />
+        <div class="team-img-overlay">Hairdresser</div>
+        <div class="team-card-info">
+          <div class="team-name">Korinna Lucas</div>
+          <div class="team-langs">
+            <span class="lang-tag">LU</span>
+            <span class="lang-tag">FR</span>
+            <span class="lang-tag">DE</span>
+            <span class="lang-tag">EN</span>
+          </div>
+          <div class="team-line"></div>
+        </div>
+      </div>
+      <div class="team-card">
+        <img class="team-card-img" src="/assets/images/alex.webp" alt="Alex Mendes" />
+        <div class="team-img-overlay">Barber</div>
+        <div class="team-card-info">
+          <div class="team-name">Alex Mendes</div>
+          <div class="team-langs">
+            <span class="lang-tag">FR</span>
+            <span class="lang-tag">PT</span>
+          </div>
+          <div class="team-line"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="testimonial-section">
+    <span class="section-label">Client reviews</span>
+    <blockquote class="testimonial-quote" id="testimonial-text">
+      « Studio 3 is much more than a salon — it's an experience. I always leave with exactly what I wanted, or even better. »
+    </blockquote>
+    <p class="testimonial-author" id="testimonial-author">— Marie-Claire B., Client since 2025</p>
+    <div class="testimonial-dots">
+      <div class="dot active" onclick="setTestimonial(0)"></div>
+      <div class="dot" onclick="setTestimonial(1)"></div>
+      <div class="dot" onclick="setTestimonial(2)"></div>
+    </div>
+  </section>
+
+  <script>
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
+
+// Countup animation
+function animateCountUp(el) {
+  const raw = el.textContent.trim();
+  const suffix = raw.replace(/[\d]/g, '');
+  const target = parseInt(raw.replace(/\D/g, ''), 10);
+  const duration = 1800;
+  const startTime = performance.now();
+
+  function update(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(eased * target) + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+  }
+
+  requestAnimationFrame(update);
+}
+
+const aboutStatsObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.querySelectorAll('.stat-num').forEach(animateCountUp);
+      aboutStatsObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+
+document.querySelectorAll('.about-stats').forEach(el => aboutStatsObserver.observe(el));
+
+    // Testimonials (English versions)
+    const testimonials = [
+  { text: '« This salon is excellent thanks to Cindy\'s professionalism, who offers perfect cuts and personalized hair analysis, especially for post-partum care. The value for money is extraordinary and the welcome is so warm that I will return without hesitation. »', author: '— Valérie R.' },
+  { text: '« Cindy offers a warm welcome and expert advice for impeccable results for 5 years. I 100% recommend Studio 3 for this true moment of relaxation and the talent of a passionate hairdresser. »', author: '— Marlène M.' },
+  { text: '« Studio 3 is a modern and welcoming salon where you immediately feel at ease. Alex is a precise and attentive hairdresser-barber who delivers impeccable results that I am completely satisfied with. »', author: '— Christian' },
+];
+    let current = 0;
+    function setTestimonial(index) {
+      current = index;
+      document.getElementById('testimonial-text').textContent = testimonials[index].text;
+      document.getElementById('testimonial-author').textContent = testimonials[index].author;
+      document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === index));
+    }
+    setInterval(() => setTestimonial((current + 1) % testimonials.length), 5000);
+  </script>
+
+{% endblock %}

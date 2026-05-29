@@ -1,0 +1,288 @@
+---
+title: Women's Hairdressing in Esch-sur-Alzette | Studio 3 Hairdresser
+description: Cuts, balayage, blow-dry and hair treatments for women. Transparent pricing and online booking. Studio 3 Hairdresser, 3rd floor, Esch-sur-Alzette.
+permalink: "/en/womens-hair.html"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/projects.css">
+{% endblock %}
+
+{% block body %}
+
+     <!-- HERO -->
+  <div class="page-hero">
+    <div class="page-hero-img" style="--hero-img: url('/assets/images/studio3-salon1.webp')"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <p class="breadcrumb"><a href="/en/">Home</a> &nbsp;/&nbsp; Services &amp; Prices</p>
+      <h1 class="page-title">Women's<br/><em>Hair</em></h1>
+      <p class="page-subtitle">Cuts, balayage and coloring done with care. A natural result thanks to the advice of our hairdressers.</p>
+    </div>
+  </div>
+
+  <!-- FILTER BAR -->
+  <div class="filter-bar">
+    <div class="filter-tab active" onclick="filterCat('all', this)">All services</div>
+    <div class="filter-tab" onclick="filterCat('balayage', this)">Balayage</div>
+    <div class="filter-tab" onclick="filterCat('coupe', this)">Cut & Styling</div>
+    <div class="filter-tab" onclick="filterCat('coloration', this)">Coloring</div>
+    <div class="filter-tab" onclick="filterCat('enfant', this)">Child & Student</div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content-wrap">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <img class="sidebar-img" src="/assets/images/insta2.jpg" alt="Studio 3" />
+      <div class="sidebar-overlay"></div>
+      <div class="sidebar-quote">
+        « Beauty begins the moment you decide to be yourself. »
+        <cite>— Studio 3, Esch-sur-Alzette</cite>
+      </div>
+    </div>
+
+    <!-- PRICE CONTENT -->
+    <div class="price-content">
+
+      <!-- BALAYAGE -->
+      <div class="category-block reveal" data-cat="balayage">
+        <div class="category-header">
+          <div class="category-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="category-label">Women — Enhancement</span>
+            <div class="category-name">Balayage</div>
+          </div>
+        </div>
+        <div class="price-list">
+          <div class="price-row featured">
+            <div>
+              <div class="price-service-name">Coup d'Éclat (Glow Up)</div>
+              <span class="price-service-sub">A custom lightening to enhance your blonde, including balayage, Epres treatment, gloss, cut and styling.</span>
+            </div>
+            <div class="price-right">
+              <span class="price-from">Starting at</span>
+              <span class="price-amount"><span class="currency">€</span>249</span>
+            </div>
+          </div>
+          <div class="price-row">
+            <div>
+              <div class="price-service-name">Reverse Balayage</div>
+              <span class="price-service-sub">Restores depth and contrast to hair that has become too light after balayage or bleaching.</span>
+            </div>
+            <div class="price-right">
+              <span class="price-from">Starting at</span>
+              <span class="price-amount"><span class="currency">€</span>219</span>
+            </div>
+          </div>
+          <div class="price-row">
+            <div>
+              <div class="price-service-name">Sun Kiss</div>
+              <span class="price-service-sub">Brings light to the hair while keeping depth at the roots for more natural maintenance, including balayage, Epres treatment, gloss, cut and styling.</span>
+            </div>
+            <div class="price-right">
+              <span class="price-from">Starting at</span>
+              <span class="price-amount"><span class="currency">€</span>199</span>
+            </div>
+          </div>
+        </div>
+        <p class="price-note">
+          <strong>Note:</strong> Balayage prices are shown as starting prices and vary according to length, hair density and chosen technique. A personalized quote is provided during consultation.
+        </p>
+      </div>
+
+      <!-- CUT & STYLING -->
+      <div class="category-block reveal" data-cat="coupe">
+        <div class="category-header">
+          <div class="category-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/>
+              <line x1="20" y1="4" x2="8.12" y2="15.88"/>
+              <line x1="14.47" y1="14.48" x2="20" y2="20"/>
+              <line x1="8.12" y1="8.12" x2="12" y2="12"/>
+            </svg>
+          </div>
+          <div>
+            <span class="category-label">Women — Essential</span>
+            <div class="category-name">Cut <em>&amp; Styling</em></div>
+          </div>
+        </div>
+        <div class="price-list">
+          <div class="price-row">
+            <div>
+              <div class="price-service-name">Shampoo + Cut + Blow-dry</div>
+              <span class="price-service-sub">Includes diagnosis, treatment shampoo, specific care and styling products.</span>
+            </div>
+            <div class="price-right">
+              <span class="price-from">Starting at</span>
+              <span class="price-amount"><span class="currency">€</span>64</span>
+            </div>
+          </div>
+          <div class="price-row">
+            <div>
+              <div class="price-service-name">Shampoo + Blow-dry</div>
+              <span class="price-service-sub">Diagnosis, treatment shampoo, specific care and styling products included.</span>
+            </div>
+            <div class="price-right">
+              <span class="price-from">Starting at</span>
+              <span class="price-amount"><span class="currency">€</span>34</span>
+            </div>
+          </div>
+          <div class="price-row">
+            <div>
+              <div class="price-service-name">Updo / Bun</div>
+              <span class="price-service-sub">Consultation, hair preparation and updo creation included.</span>
+            </div>
+            <div class="price-right">
+              <span class="price-from">Starting at</span>
+              <span class="price-amount"><span class="currency">€</span>71</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLORING -->
+      <div class="category-block reveal" data-cat="coloration">
+        <div class="category-header">
+          <div class="category-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="category-label">Women — Color</span>
+            <div class="category-name">Coloring <em>&amp; Gloss</em></div>
+          </div>
+        </div>
+        <div class="price-list">
+          <div class="price-row">
+            <div>
+              <div class="price-service-name">Full Color</div>
+              <span class="price-service-sub">Unifies the color, covers white hair and brings natural or vibrant highlights.</span>
+            </div>
+            <div class="price-right">
+              <span class="price-amount"><span class="currency">€</span>88</span>
+            </div>
+          </div>
+          <div class="price-row">
+            <div>
+              <div class="price-service-name">Root Touch-up</div>
+              <span class="price-service-sub">Root coloring to unify color, cover white hair and bring natural or vibrant highlights.</span>
+            </div>
+            <div class="price-right">
+              <span class="price-amount"><span class="currency">€</span>54</span>
+            </div>
+          </div>
+          <div class="price-row">
+            <div>
+              <div class="price-service-name">Gloss (Toner)</div>
+              <span class="price-service-sub">Adds shine to hair, neutralizes unwanted undertones or slightly darkens the color.</span>
+            </div>
+            <div class="price-right">
+              <span class="price-amount"><span class="currency">€</span>40</span>
+            </div>
+          </div>
+        </div>
+        <p class="price-note">
+          <strong>Products used:</strong> We work exclusively with professional hair colors that respect the hair fiber, ammonia-free upon request.
+        </p>
+      </div>
+
+      <!-- CHILD & STUDENT -->
+      <div class="category-block reveal" data-cat="enfant">
+        <div class="category-header">
+          <div class="category-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <div>
+            <span class="category-label">Discounted rates</span>
+            <div class="category-name">Child <em>&amp; Student</em></div>
+          </div>
+        </div>
+        <div class="price-list">
+          <div class="price-row">
+            <div>
+              <div class="price-service-name">Child Cut — 0 to 5 years</div>
+              <span class="price-service-sub">Gentle cut adapted for little ones</span>
+            </div>
+            <div class="price-right">
+              <span class="price-amount"><span class="currency">€</span>20</span>
+            </div>
+          </div>
+          <div class="price-row">
+            <div>
+              <div class="price-service-name">Cut + Styling Girl — 6 to 11 years</div>
+              <span class="price-service-sub">Cut and styling for girls aged 6 to 11</span>
+            </div>
+            <div class="price-right">
+              <span class="price-amount"><span class="currency">€</span>35</span>
+            </div>
+          </div>
+          <div class="price-row">
+            <div>
+              <div class="price-service-name">Shampoo + Cut + Styling Student</div>
+              <span class="price-service-sub">Student rate upon presentation of student ID. Shampoo, cut and styling.</span>
+            </div>
+            <div class="price-right">
+              <span class="price-from">Starting at</span>
+              <span class="price-amount"><span class="currency">€</span>49</span>
+            </div>
+          </div>
+        </div>
+        <p class="price-note">
+          <strong>Student ID required</strong> to benefit from the student rate.
+        </p>
+      </div>
+
+      <!-- BOOKING CTA -->
+      <div class="booking-cta reveal">
+        <div class="booking-cta-text">
+          <span class="cta-label">Booking</span>
+          <h3>Ready to <em>take care of your hair?</em></h3>
+          <p>Book your appointment online or contact us.</p>
+        </div>
+        <a href="https://salonkee.lu/salon/studio-3" class="btn-primary"
+   onclick="if(window.gtag) gtag('event', 'book_click', { event_label: 'Book my session' });">
+  Book my session
+</a>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Filter tabs
+    function filterCat(cat, tabEl) {
+      document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+      tabEl.classList.add('active');
+      document.querySelectorAll('.category-block').forEach(block => {
+        const show = cat === 'all' || block.dataset.cat === cat;
+        block.style.display = show ? 'block' : 'none';
+      });
+    }
+  </script>
+
+{% endblock %}

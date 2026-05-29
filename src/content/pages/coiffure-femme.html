@@ -1,0 +1,291 @@
+---
+title: Coiffure Femme à Esch-sur-Alzette | Studio 3 Coiffeur
+description: Coupes, balayage, brushing et soins capillaires pour femmes. Tarifs transparents et réservation en ligne. Studio 3 Coiffeur, 3ème étage, Esch-sur-Alzette.
+permalink: "/coiffure-femme/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/projects.css">
+{% endblock %}
+
+{% block body %}
+
+     <!-- HERO -->
+  <div class="page-hero">
+    <div class="page-hero-img" style="--hero-img: url('/assets/images/studio3-salon1.webp')"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <p class="breadcrumb"><a href="/index/">Accueil</a> &nbsp;/&nbsp; Services &amp; Prix</p>
+      <h1 class="page-title">Coiffure<br/><em>Femme</em></h1>
+      <p class="page-subtitle">Coupes, balayages et colorations réalisés avec soin. Un résultat naturel grâce au conseil de nos coiffeurs.</p>
+    </div>
+  </div>
+
+  <!-- FILTER BAR -->
+  <div class="filter-bar">
+    <div class="filter-tab active" onclick="filterCat('all', this)">Tous les services</div>
+    <div class="filter-tab" onclick="filterCat('balayage', this)">Balayage</div>
+    <div class="filter-tab" onclick="filterCat('coupe', this)">Coupe & Coiffage</div>
+    <div class="filter-tab" onclick="filterCat('coloration', this)">Coloration</div>
+    <div class="filter-tab" onclick="filterCat('enfant', this)">Enfant & Étudiante</div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content-wrap">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <img class="sidebar-img" src="/assets/images/insta2.jpg" alt="Studio 3" />
+      <div class="sidebar-overlay"></div>
+      <div class="sidebar-quote">
+        « La beauté commence au moment où vous décidez d'être vous-même. »
+        <cite>— Studio 3, Esch-sur-Alzette</cite>
+      </div>
+    </div>
+
+    <!-- PRICE CONTENT -->
+    <div class="price-content">
+
+      <!-- BALAYAGE -->
+      <div class="category-block reveal" data-cat="balayage">
+        <div class="category-header">
+          <div class="category-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="category-label">Femme — Mise en valeur</span>
+            <div class="category-name">Balayage</div>
+          </div>
+        </div>
+        <div class="price-list">
+          <div class="price-row featured">
+            <div>
+              <div class="price-service-name">Coup d'Éclat</div>
+              <span class="price-service-sub">Un éclaircissement sur mesure pour sublimer votre blond, avec balayage, soin Epres, gloss, coupe et coiffage.</span>
+                <!--Changer phrase via salonkee-->
+              
+            </div>
+            <div class="price-right">
+              <span class="price-from">À partir de</span>
+              <span class="price-amount"><span class="currency">€</span>249</span>
+            </div>
+          </div>
+          <div class="price-row">
+            <div>
+              <div class="price-service-name">Inversé</div>
+              <span class="price-service-sub">Redonne profondeur et contraste aux cheveux trop clairs après balayage ou décoloration.</span>
+            </div>
+            <div class="price-right">
+              <span class="price-from">À partir de</span>
+              <span class="price-amount"><span class="currency">€</span>219</span>
+            </div>
+          </div>
+          <div class="price-row">
+            <div>
+              <div class="price-service-name">Coup de Soleil</div>
+              <span class="price-service-sub">Apporte de la lumière aux cheveux tout en gardant de la profondeur à la racine pour un entretien plus naturel, incluant balayage, soin Epres, gloss, coupe et coiffage.</span>
+            </div>
+            <div class="price-right">
+              <span class="price-from">À partir de</span>
+              <span class="price-amount"><span class="currency">€</span>199</span>
+            </div>
+          </div>
+        </div>
+        <p class="price-note">
+          <strong>Note :</strong> Les tarifs de balayage sont indiqués à partir de et varient selon la longueur, la densité des cheveux et la technique choisie. Un devis personnalisé est réalisé lors de la consultation.
+        </p>
+      </div>
+
+      <!-- COUPE & COIFFAGE -->
+      <div class="category-block reveal" data-cat="coupe">
+        <div class="category-header">
+          <div class="category-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/>
+              <line x1="20" y1="4" x2="8.12" y2="15.88"/>
+              <line x1="14.47" y1="14.48" x2="20" y2="20"/>
+              <line x1="8.12" y1="8.12" x2="12" y2="12"/>
+            </svg>
+          </div>
+          <div>
+            <span class="category-label">Femme — Essentiel</span>
+            <div class="category-name">Coupe <em>&amp; Coiffage</em></div>
+          </div>
+        </div>
+        <div class="price-list">
+          <div class="price-row">
+            <div>
+              <div class="price-service-name">Shampooing + Coupe + Brushing</div>
+              <span class="price-service-sub">Comprend diagnostic, shampooing traitant, soin spécifique et produits coiffants.</span>
+            </div>
+            <div class="price-right">
+              <span class="price-from">À partir de</span>
+              <span class="price-amount"><span class="currency">€</span>64</span>
+            </div>
+          </div>
+          <div class="price-row">
+            <div>
+              <div class="price-service-name">Shampooing + Brushing</div>
+              <span class="price-service-sub">Diagnostic, shampooing traitant, soin spécifique et produits coiffants inclus.</span>
+            </div>
+            <div class="price-right">
+              <span class="price-from">À partir de</span>
+              <span class="price-amount"><span class="currency">€</span>34</span>
+            </div>
+          </div>
+          <div class="price-row">
+            <div>
+              <div class="price-service-name">Chignon</div>
+              <span class="price-service-sub">Consultation, préparation des cheveux et réalisation du chignon inclus.</span>
+            </div>
+            <div class="price-right">
+              <span class="price-from">À partir de</span>
+              <span class="price-amount"><span class="currency">€</span>71</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLORATION -->
+      <div class="category-block reveal" data-cat="coloration">
+        <div class="category-header">
+          <div class="category-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="category-label">Femme — Couleur</span>
+            <div class="category-name">Coloration <em>&amp; Gloss</em></div>
+          </div>
+        </div>
+        <div class="price-list">
+          <div class="price-row">
+            <div>
+              <div class="price-service-name">Coloration complète</div>
+              <span class="price-service-sub">Unifie la couleur, couvre les cheveux blancs et apporte des reflets naturels ou vibrants.</span>
+            </div>
+            <div class="price-right">
+              <span class="price-amount"><span class="currency">€</span>88</span>
+            </div>
+          </div>
+          <div class="price-row">
+            <div>
+              <div class="price-service-name">Coloration racines</div>
+              <span class="price-service-sub">Coloration des racines pour unifier la couleur, couvrir les cheveux blancs et apporter des reflets naturels ou vibrants.</span>
+            </div>
+            <div class="price-right">
+              <span class="price-amount"><span class="currency">€</span>54</span>
+            </div>
+          </div>
+          <div class="price-row">
+            <div>
+              <div class="price-service-name">Gloss (Patine)</div>
+              <span class="price-service-sub">Brillance aux cheveux, neutralisation des reflets indésirables ou léger fonçage de la couleur.</span>
+            </div>
+            <div class="price-right">
+              <span class="price-amount"><span class="currency">€</span>40</span>
+            </div>
+          </div>
+        </div>
+        <p class="price-note">
+          <strong>Produits utilisés :</strong> Nous travaillons exclusivement avec des colorations professionnelles respectueuses de la fibre capillaire, sans ammoniaque sur demande.
+        </p>
+      </div>
+
+      <!-- ENFANT & ÉTUDIANTE -->
+      <div class="category-block reveal" data-cat="enfant">
+        <div class="category-header">
+          <div class="category-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <div>
+            <span class="category-label">Tarifs préférentiels</span>
+            <div class="category-name">Enfant <em>&amp; Étudiante</em></div>
+          </div>
+        </div>
+        <div class="price-list">
+          <div class="price-row">
+            <div>
+              <div class="price-service-name">Coupe Enfant — 0 à 5 ans</div>
+              <span class="price-service-sub">Coupe douce et adaptée aux plus petits</span>
+            </div>
+            <div class="price-right">
+              <span class="price-amount"><span class="currency">€</span>20</span>
+            </div>
+          </div>
+          <div class="price-row">
+            <div>
+              <div class="price-service-name">Coupe + Coiffage Fille — 6 à 11 ans</div>
+              <span class="price-service-sub">Coupe et mise en forme pour les filles de 6 à 11 ans</span>
+            </div>
+            <div class="price-right">
+              <span class="price-amount"><span class="currency">€</span>35</span>
+            </div>
+          </div>
+          <div class="price-row">
+            <div>
+              <div class="price-service-name">Sh. + Coupe + Coiffage Étudiante</div>
+              <span class="price-service-sub">Tarif étudiant sur présentation de carte. Shampooing, coupe et coiffage</span>
+            </div>
+            <div class="price-right">
+              <span class="price-from">À partir de</span>
+              <span class="price-amount"><span class="currency">€</span>49</span>
+            </div>
+          </div>
+        </div>
+        <p class="price-note">
+          <strong>Carte étudiante requise</strong> pour bénéficier du tarif étudiante.
+        </p>
+      </div>
+
+      <!-- BOOKING CTA -->
+      <div class="booking-cta reveal">
+        <div class="booking-cta-text">
+          <span class="cta-label">Réservation</span>
+          <h3>Prête à prendre <em>soin de vos cheveux ?</em></h3>
+          <p>Réservez votre rendez-vous en ligne ou contactez-nous.</p>
+        </div>
+        <a href="https://salonkee.lu/salon/studio-3" class="btn-primary"
+   onclick="if(window.gtag) gtag('event', 'book_click', { event_label: 'Réserver ma séance' });">
+  Réserver ma séance
+</a>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Filter tabs
+    function filterCat(cat, tabEl) {
+      document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+      tabEl.classList.add('active');
+      document.querySelectorAll('.category-block').forEach(block => {
+        const show = cat === 'all' || block.dataset.cat === cat;
+        block.style.display = show ? 'block' : 'none';
+      });
+    }
+  </script>
+
+
+{% endblock %}

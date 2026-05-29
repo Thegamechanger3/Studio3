@@ -1,0 +1,315 @@
+---
+title: Studio 3 - Coiffeur à Esch-sur-Alzette | Balayage & Coloration Experte
+description: Studio 3, coiffeur à Esch-sur-Alzette, est spécialisé en balayage, coloration et coupes sur-mesure pour femmes et hommes. Diagnostic personnalisé et résultat professionnel.
+permalink: "/"
+tags: "sitemap" # content/content.json will make sure that all pages in content/ are marked with a "sitemap" tag, for automatic sitemap generation. As index.html is not in content/, we need to add it here to ensure the root page is included in the sitemap generation
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/assets/css/critical.css" />
+
+    <!-- If we're in production, defer the rest of the home page styles. In development, always load it. Otherwise the site will break when hot-reload is used. -->
+    {% if client.isProduction %}
+        <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/assets/css/local.css">
+        </noscript>
+
+    {% else %}
+        <link rel="stylesheet" href="/assets/css/local.css" />
+    {% endif %}
+
+    <!-- To ensure proper validation, prevent errors, and encourage developers to check, schema's are an opt-in feature. They're very bespoke and requires some customising  -->
+    <!-- Uncomment the code below to enable Structured Data, and test it when you deploy to Netlify - https://developers.google.com/search/docs/appearance/structured-data -->
+    <!-- {% include "components/home-schema.html" %} -->
+{% endblock %}
+
+{% block body %}
+
+<form name="contact" netlify data-netlify="true" hidden>
+  <input type="text" name="prenom" />
+  <input type="text" name="nom" />
+  <input type="email" name="email" />
+  <input type="tel" name="telephone" />
+  <input type="radio" name="sujet" />
+  <select name="service"><option value="">service</option></select>
+  <textarea name="message"></textarea>
+</form>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-img"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Une coiffure<br/><em>pensée pour</em><br/>vous.</h1>
+      <p class="hero-subtitle">L'éclat de vos cheveux à Esch-sur-Alzette<br> Balayage, Coupe & Brushing. </p>
+      <div class="hero-actions">
+        <a href="https://salonkee.lu/salon/studio-3" class="btn-primary"
+   onclick="if(window.gtag) gtag('event', 'book_click', { event_label: 'Prendre rendez-vous' });">
+  Prendre rendez-vous
+</a>
+        <a href="/coiffure-femme/" class="btn-ghost">Nos services</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Défiler</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- INTRO BAR -->
+  <div class="intro-bar">
+    <div class="intro-bar-item">
+      <a href="https://maps.app.goo.gl/dCup4so6xBd7WhRM9" target="_blank" rel="noopener noreferrer" style="display:flex; align-items:center; gap:14px; color:inherit; text-decoration:none;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        <p>9 Rue de l'Alzette, Esch-sur-Alzette</p>
+      </a>
+    </div>
+    <div class="intro-bar-divider"></div>
+    <div class="intro-bar-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <p>Lun–Ven : 9h–19h &nbsp;·&nbsp; Sam : 8h–15h</p>
+    </div>
+    <div class="intro-bar-divider"></div>
+  <div class="intro-bar-item">
+  <a href="tel:+352621411909" style="display:flex; align-items:center; gap:14px; color:inherit; text-decoration:none;">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 11.5 19.79 19.79 0 011.02 2.82 2 2 0 013 .64h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.5a16 16 0 006.29 6.29l1.22-1.22a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    <p>+352 621 411 909</p>
+  </a>
+</div>
+    <div class="intro-bar-divider"></div>
+    <div class="intro-bar-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      <p>Savoir-faire et passion depuis 2025</p>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-media reveal">
+      <img class="about-img-main" src="/assets/images/salon4.jpg" alt="Coiffeur au travail" />
+      <img class="about-img-accent" src="/assets/images/reservation.jpg" alt="Détail coiffure" />
+    </div>
+    <div class="about-text reveal">
+      <span class="section-label">Notre histoire</span>
+      <h2 class="section-title">Bien plus qu’un<em> simple salon</em></h2>
+      <p class="about-body">Studio 3 est un salon de coiffure situé au cœur d’Esch-sur-Alzette, installé au 3ᵉ étage, offrant un espace privé, calme et lumineux.</p>
+      <p class="about-body">Nous avons imaginé un lieu chaleureux où l’on prend le temps de vous accueillir, écouter et conseiller.</p>
+      <p class="about-body">Nos coiffeurs, formés aux techniques les plus actuelles, réalisent coupes personnalisées, balayages, colorations et soins capillaires adaptés à vos cheveux et à votre quotidien.</p>
+      <a href="/coiffure-femme" class="btn-primary">Découvrir nos services</a>
+      <div class="about-stats">
+        <div>
+          <span class="stat-num">25+</span>
+          <span class="stat-label">Années d'expérience</span>
+        </div>
+        <div>
+          <span class="stat-num">1000+</span>
+          <span class="stat-label">Clients satisfaits</span>
+        </div>
+        <div>
+          <span class="stat-num">4</span>
+          <span class="stat-label">Collaborateurs</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services-section" id="services">
+    <div class="services-header reveal">
+      <div>
+        <span class="section-label">Ce que nous faisons</span>
+        <h2 class="section-title">Nos <em>prestations</em></h2>
+      </div>
+      <a href="https://salonkee.lu/salon/studio-3" class="btn-ghost" style="color:var(--warm-light)">Voir tous les services</a>
+    </div>
+    <div class="services-grid reveal">
+      <a href="/coiffure-femme/" class="service-card">
+        <img src="/assets/images/coupe.webp" alt="Coupe femme" />
+        <div class="service-card-overlay"></div>
+        <div class="service-arrow">→</div>
+        <div class="service-card-body">
+          <span class="service-num">01</span>
+          <div class="service-name">Coupe Femme</div>
+          <p class="service-desc">Coupe personnalisée selon votre morphologie et vos envies, pour un résultat naturel et élégant.</p>
+        </div>
+      </a>
+      <a href="/coiffure-femme/" class="service-card">
+        <img src="/assets/images/coloration.webp" alt="Coloration" />
+        <div class="service-card-overlay"></div>
+        <div class="service-arrow">→</div>
+        <div class="service-card-body">
+          <span class="service-num">02</span>
+          <div class="service-name">Coloration</div>
+          <p class="service-desc">Balayages, ombrés, couleurs tendance — nos coloristes maîtrisent toutes les techniques modernes.</p>
+        </div>
+      </a>
+      <a href="/coiffure-homme/" class="service-card">
+        <img src="/assets/images/coupe2.jpeg" alt="Soin & Traitement" />
+        <div class="service-card-overlay"></div>
+        <div class="service-arrow">→</div>
+        <div class="service-card-body">
+          <span class="service-num">03</span>
+          <div class="service-name">Coupe Homme</div>
+          <p class="service-desc">Dégradés précis, barbe et finitions soignées pour un look moderne et raffiné.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- GALLERY STRIP -->
+  <div class="gallery-strip">
+    <div class="gallery-strip-item">
+      <img src="/assets/images/salon3.jpg" alt="" />
+    </div>
+    <div class="gallery-strip-item">
+      <img src="/assets/images/balayage1.jpeg" alt="" />
+    </div>
+    <div class="gallery-strip-item">
+      <img src="/assets/images/coupe3.jpeg" alt="" />
+    </div>
+    <div class="gallery-strip-item">
+      <img src="/assets/images/insta2.jpg" alt="" />
+    </div>
+  </div>
+
+  <!-- TEAM -->
+  <section class="team-section" id="equipe">
+    <div class="team-intro reveal">
+      <span class="section-label">Notre équipe</span>
+      <h2 class="section-title">Des professionnels à<em> votre écoute</em></h2>
+      <p>Derrière chaque coupe, couleur ou balayage se trouvent des coiffeurs attentifs qui prennent le temps de comprendre vos envies.</p>
+    </div>
+    <div class="team-grid reveal">
+      <div class="team-card">
+        <img class="team-card-img" src="/assets/images/cindy.jpg" alt="Cindy Aniceto" />
+        <div class="team-img-overlay">Fondatrice</div>
+        <div class="team-card-info">
+          <div class="team-name">Cindy Aniceto</div>
+          <div class="team-langs">
+            <span class="lang-tag">LU</span>
+            <span class="lang-tag">FR</span>
+            <span class="lang-tag">DE</span>
+            <span class="lang-tag">EN</span>
+          </div>
+          <div class="team-line"></div>
+        </div>
+      </div>
+      <div class="team-card">
+        <img class="team-card-img" src="/assets/images/gwendy.webp" alt="Gwendy Guyomarc'h" />
+        <div class="team-img-overlay">Coiffeuse</div>
+        <div class="team-card-info">
+          <div class="team-name">Gwendy Guyomarc'h</div>
+          <div class="team-langs">
+            <span class="lang-tag">FR</span>
+          </div>
+          <div class="team-line"></div>
+        </div>
+      </div>
+      <div class="team-card">
+        <img class="team-card-img" src="/assets/images/korinne.webp" alt="Korinna" />
+        <div class="team-img-overlay">Coiffeuse</div>
+        <div class="team-card-info">
+          <div class="team-name">Korinna Lucas</div>
+          <div class="team-langs">
+            <span class="lang-tag">LU</span>
+            <span class="lang-tag">FR</span>
+            <span class="lang-tag">DE</span>
+            <span class="lang-tag">EN</span>
+          </div>
+          <div class="team-line"></div>
+        </div>
+      </div>
+      <div class="team-card">
+        <img class="team-card-img" src="/assets/images/alex.webp" alt="Alex Mendes" />
+        <div class="team-img-overlay">Barbier</div>
+        <div class="team-card-info">
+          <div class="team-name">Alex Mendes</div>
+          <div class="team-langs">
+            <span class="lang-tag">FR</span>
+            <span class="lang-tag">PT</span>
+          </div>
+          <div class="team-line"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="testimonial-section">
+    <span class="section-label">Avis clients</span>
+    <blockquote class="testimonial-quote" id="testimonial-text">
+      « Studio 3, c'est bien plus qu'un salon — c'est une expérience. Je repars toujours avec exactement ce que je voulais, ou encore mieux. »
+    </blockquote>
+    <p class="testimonial-author" id="testimonial-author">— Marie-Claire B., Cliente depuis 2025</p>
+    <div class="testimonial-dots">
+      <div class="dot active" onclick="setTestimonial(0)"></div>
+      <div class="dot" onclick="setTestimonial(1)"></div>
+      <div class="dot" onclick="setTestimonial(2)"></div>
+    </div>
+  </section>
+
+  <script>
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
+
+// ─── ABOUT STATS COUNTUP ─────────────────────────────────────────────────────
+function animateCountUp(el) {
+  const raw = el.textContent.trim();
+  const suffix = raw.replace(/[\d]/g, '');     // captures "+", "%", etc.
+  const target = parseInt(raw.replace(/\D/g, ''), 10);
+  const duration = 1800;
+  const startTime = performance.now();
+
+  function update(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+    el.textContent = Math.floor(eased * target) + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+  }
+
+  requestAnimationFrame(update);
+}
+
+const aboutStatsObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.querySelectorAll('.stat-num').forEach(animateCountUp);
+      aboutStatsObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+
+document.querySelectorAll('.about-stats').forEach(el => aboutStatsObserver.observe(el));
+
+    // Testimonials
+    const testimonials = [
+  { text: '« Ce salon est excellent grâce au professionnalisme de Cindy, qui propose des coupes parfaites et une analyse capillaire personnalisée, notamment pour le post-partum. Le rapport qualité-prix est extraordinaire et l\'accueil est si chaleureux que j\'y retournerai sans hésiter. »', author: '— Valérie R.' },
+  { text: '« Cindy offre un accueil chaleureux et des conseils experts pour un résultat toujours impeccable depuis 5 ans. Je recommande à 100 % le Studio 3 pour ce vrai moment de détente et le talent d\'une coiffeuse passionnée. »', author: '— Marlène M.' },
+  { text: '« Le Studio 3 est un salon moderne et accueillant où l\'on se sent immédiatement à l\'aise. Alex est un coiffeur-barbier précis et à l\'écoute, qui livre un résultat impeccable dont je suis pleinement satisfait. »', author: '— Christian' },
+];
+    let current = 0;
+    function setTestimonial(index) {
+      current = index;
+      document.getElementById('testimonial-text').textContent = testimonials[index].text;
+      document.getElementById('testimonial-author').textContent = testimonials[index].author;
+      document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === index));
+    }
+    setInterval(() => setTestimonial((current + 1) % testimonials.length), 5000);
+  </script>
+
+{% endblock %}

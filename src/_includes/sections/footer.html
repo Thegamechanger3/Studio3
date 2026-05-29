@@ -1,0 +1,133 @@
+<!-- FOOTER -->
+<footer>
+    <div class="footer-container">
+        <!-- Logo Group -->
+        <div class="footer-logo-group">
+            <a href="{% if page.url and page.url.indexOf('/en/') === 0 %}/en/index.html{% else %}index.html{% endif %}" class="footer-logo">
+                <img src="/assets/svgs/logo-studio3.svg" alt="Studio 3" height="40">
+            </a>
+            <p class="footer-text">
+                {% if page.url and page.url.indexOf("/en/") === 0 %}
+                    An exceptional hair salon in the heart of Esch-sur-Alzette, Luxembourg.
+                {% else %}
+                    Un salon de coiffure d'exception au cœur d'Esch-sur-Alzette, Luxembourg.
+                {% endif %}
+            </p>
+            <div class="footer-social">
+                <a class="footer-social-link" aria-label="visit instagram profile" href="https://www.instagram.com/studio3.lu/" target="_blank" rel="noopener">
+                    <img class="footer-social-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/instagram.svg" alt="instagram" width="11" height="11">
+                </a>
+                <a class="footer-social-link" aria-label="visit facebook profile" href="https://www.facebook.com/p/Studio-3-61575205494311/" target="_blank" rel="noopener">
+                    <img class="footer-social-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/facebook.svg" alt="facebook" width="6" height="11">
+                </a>
+                <a class="footer-social-link" aria-label="visit tiktok profile" href="https://www.tiktok.com/@studio3.lu" target="_blank" rel="noopener">
+                    <img class="footer-social-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/tiktok.ico" alt="tiktok" width="11" height="11">
+                </a>
+            </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <ul class="footer-nav">
+            <li class="footer-nav-li">
+                <span class="footer-header">Sitemap</span>
+            </li>
+            <li class="footer-nav-li">
+                <a class="footer-nav-link" href="{% if page.url and page.url.indexOf('/en/') === 0 %}/en/index.html{% else %}/index{% endif %}">
+                    {% if page.url and page.url.indexOf("/en/") === 0 %}Home{% else %}Accueil{% endif %}
+                </a>
+            </li>
+            <li class="footer-nav-li">
+                <a class="footer-nav-link" href="{% if page.url and page.url.indexOf('/en/') === 0 %}/en/about.html{% else %}/a-propos{% endif %}">
+                    {% if page.url and page.url.indexOf("/en/") === 0 %}About{% else %}À Propos{% endif %}
+                </a>
+            </li>
+            <li class="footer-nav-li">
+                <a class="footer-nav-link" href="{% if page.url and page.url.indexOf('/en/') === 0 %}/en/gallery.html{% else %}/galerie{% endif %}">
+                    {% if page.url and page.url.indexOf("/en/") === 0 %}Gallery{% else %}Galerie{% endif %}
+                </a>
+            </li>
+            <li class="footer-nav-li">
+                <a class="footer-nav-link" href="{% if page.url and page.url.indexOf('/en/') === 0 %}/en/contact.html{% else %}/contact{% endif %}">
+                    {% if page.url and page.url.indexOf("/en/") === 0 %}Contact{% else %}Contact{% endif %}
+                </a>
+            </li>
+            <li class="footer-nav-li">
+                <a class="footer-nav-link" href="{% if page.url and page.url.indexOf('/en/') === 0 %}/en/legal.html{% else %}/mentions-legales{% endif %}">
+                    {% if page.url and page.url.indexOf("/en/") === 0 %}Legal Notice{% else %}Mentions Légales{% endif %}
+                </a>
+            </li>
+        </ul>
+
+        <!-- Hours Links -->
+        <ul class="footer-nav">
+            <li class="footer-nav-li">
+                <span class="footer-header">
+                    {% if page.url and page.url.indexOf("/en/") === 0 %}Opening Hours{% else %}Horaires{% endif %}
+                </span>
+            </li>
+            <li class="footer-nav-li">
+                <span class="footer-nav-link">
+                    {% if page.url and page.url.indexOf("/en/") === 0 %}Monday: 9am – 7pm{% else %}Lundi : 9h – 19h{% endif %}
+                </span>
+            </li>
+            <li class="footer-nav-li">
+                <span class="footer-nav-link">
+                    {% if page.url and page.url.indexOf("/en/") === 0 %}Tuesday: 9am – 7pm{% else %}Mardi : 9h – 19h{% endif %}
+                </span>
+            </li>
+            <li class="footer-nav-li">
+                <span class="footer-nav-link">
+                    {% if page.url and page.url.indexOf("/en/") === 0 %}Wednesday: 9am – 7pm{% else %}Mercredi : 9h – 19h{% endif %}
+                </span>
+            </li>
+            <li class="footer-nav-li">
+                <span class="footer-nav-link">
+                    {% if page.url and page.url.indexOf("/en/") === 0 %}Thursday: 9am – 7pm{% else %}Jeudi : 9h – 19h{% endif %}
+                </span>
+            </li>
+            <li class="footer-nav-li">
+                <span class="footer-nav-link">
+                    {% if page.url and page.url.indexOf("/en/") === 0 %}Friday: 9am – 7pm{% else %}Vendredi : 9h – 19h{% endif %}
+                </span>
+            </li>
+            <li class="footer-nav-li">
+                <span class="footer-nav-link">
+                    {% if page.url and page.url.indexOf("/en/") === 0 %}Saturday: 8am – 3pm{% else %}Samedi : 8h – 15h{% endif %}
+                </span>
+            </li>
+        </ul>
+
+        <!-- Contact Info -->
+        <ul class="footer-contact">
+            <li class="footer-nav-li">
+                <span class="footer-header">Contact</span>
+            </li>
+            <li class="footer-contact-li">
+                <a class="footer-contact-link" href="tel:+352621411909">+352 621 411 909</a>
+            </li>
+            <li class="footer-contact-li">
+                <a class="footer-contact-link" href="mailto:contact@studio3.lu">contact@studio3.lu</a>
+            </li>
+            <li class="footer-contact-li">
+                <a class="footer-contact-link" href="https://maps.app.goo.gl/4fuMqwBjfftyxNgy8" target="_blank" rel="noopener">9 Rue de l'Alzette, 4011 Esch-sur-Alzette</a>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+            <p class="footer-copyright">© 2026 Studio 3</p>
+            <p class="footer-credit">
+                {% if page.url and page.url.indexOf("/en/") === 0 %}
+                    A digital experience by
+                {% else %}
+                    Une expérience digitale réalisée par
+                {% endif %}
+                <a href="https://luxentisluxembourg.lu" target="_blank" rel="noopener">
+                    Luxentis
+                </a>
+            </p>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,174 @@
+<!-- ============================================ -->
+<!--                 Navigation                   -->
+<!-- ============================================ -->
+
+<nav id="cs-navigation">
+    <div class="cs-container">
+        <!-- Nav Logo -->
+        <a href="{% if page.url and page.url.indexOf('/en/') === 0 %}/en/index.html{% else %}/{% endif %}" class="nav-logo" aria-label="Studio 3 Home page">
+            <img src="/assets/svgs/logo-studio3.svg" alt="Studio 3" />
+        </a>
+        
+        <!-- Mobile Nav Toggle -->
+        <button class="cs-toggle" id="cs-toggle" aria-expanded="false" aria-controls="cs-ul-wrapper" aria-label="mobile menu toggle" aria-haspopup="menu">
+            <span class="cs-box" aria-hidden="true">
+                <span class="cs-line cs-line1" aria-hidden="true"></span>
+                <span class="cs-line cs-line2" aria-hidden="true"></span>
+                <span class="cs-line cs-line3" aria-hidden="true"></span>
+            </span>
+        </button>
+        
+        <!-- Navigation List Wrapper -->
+        <div class="cs-ul-wrapper" id="cs-ul-wrapper" inert>
+            <ul class="nav-links">
+                <!-- About Link -->
+                <li class="cs-li">
+                    <a href="{% if page.url and page.url.indexOf('/en/') === 0 %}/en/about.html{% else %}/a-propos/{% endif %}" class="cs-li-link">
+                        {% if page.url and page.url.indexOf("/en/") === 0 %}About{% else %}À propos{% endif %}
+                    </a>
+                </li>
+                
+                <!-- Services Dropdown -->
+                <li class="cs-li cs-dropdown">
+                    <button class="cs-li-link cs-dropdown-toggle" aria-haspopup="menu" aria-expanded="false" id="services-dropdown-toggle">
+                        Services
+                        <img class="cs-drop-icon" src="/assets/svgs/dropdown.svg" alt="" width="15" height="15" decoding="async" aria-hidden="true">
+                    </button>
+                    <ul class="cs-drop-ul" aria-labelledby="services-dropdown-toggle">
+                        <li class="cs-drop-li">
+                            <a href="{% if page.url and page.url.indexOf('/en/') === 0 %}/en/womens-hair.html{% else %}/coiffure-femme/{% endif %}" class="cs-li-link cs-drop-link">
+                                {% if page.url and page.url.indexOf("/en/") === 0 %}Women's Hair{% else %}Coiffure Femme{% endif %}
+                            </a>
+                        </li>
+                        <li class="cs-drop-li">
+                            <a href="{% if page.url and page.url.indexOf('/en/') === 0 %}/en/mens-hair.html{% else %}/coiffure-homme/{% endif %}" class="cs-li-link cs-drop-link">
+                                {% if page.url and page.url.indexOf("/en/") === 0 %}Men's Hair{% else %}Coiffure Homme{% endif %}
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li class="cs-li">
+                    <a href="{% if page.url and page.url.indexOf('/en/') === 0 %}/en/gallery.html{% else %}/galerie/{% endif %}" class="cs-li-link">
+                        {% if page.url and page.url.indexOf("/en/") === 0 %}Gallery{% else %}Galerie{% endif %}
+                    </a>
+                </li>
+
+                <!-- Contact Link -->
+                <li class="cs-li">
+                    <a href="{% if page.url and page.url.indexOf('/en/') === 0 %}/en/contact.html{% else %}/contact/{% endif %}" class="cs-li-link">
+                        {% if page.url and page.url.indexOf("/en/") === 0 %}Contact{% else %}Contact{% endif %}
+                    </a>
+                </li>
+
+                <!-- Language Switcher MOBILE -->
+                <div class="language-switcher-mobile">
+                    {% if page.url and page.url.indexOf("/en/") === 0 %}
+                        <!-- Sur EN → lien vers FR -->
+                        {% if page.url == "/en/index.html" or page.url == "/en/" %}
+                            <a href="/" class="lang-link">FR</a>
+                        {% elif page.url == "/en/about.html" %}
+                            <a href="/a-propos/" class="lang-link">FR</a>
+                        {% elif page.url == "/en/womens-hair.html" %}
+                            <a href="/coiffure-femme/" class="lang-link">FR</a>
+                        {% elif page.url == "/en/mens-hair.html" %}
+                            <a href="/coiffure-homme/" class="lang-link">FR</a>
+                        {% elif page.url == "/en/contact.html" %}
+                            <a href="/contact/" class="lang-link">FR</a>
+                        {% elif page.url == "/en/gallery.html" %}
+                            <a href="/galerie/" class="lang-link">FR</a>
+                        {% elif page.url == "/en/legal.html" %}
+                            <a href="/mentions-legales/" class="lang-link">FR</a>
+                        {% else %}
+                            <a href="/" class="lang-link">FR</a>
+                        {% endif %}
+                        <span class="lang-sep">|</span>
+                        <span class="lang-active">EN</span>
+                    {% else %}
+                        <!-- Sur FR → lien vers EN -->
+                        <span class="lang-active">FR</span>
+                        <span class="lang-sep">|</span>
+                        {% if page.url == "/" or page.url == "/index/" %}
+                            <a href="/en/index.html" class="lang-link">EN</a>
+                        {% elif page.url == "/a-propos/" %}
+                            <a href="/en/about.html" class="lang-link">EN</a>
+                        {% elif page.url == "/coiffure-femme/" %}
+                            <a href="/en/womens-hair.html" class="lang-link">EN</a>
+                        {% elif page.url == "/coiffure-homme/" %}
+                            <a href="/en/mens-hair.html" class="lang-link">EN</a>
+                        {% elif page.url == "/contact/" %}
+                            <a href="/en/contact.html" class="lang-link">EN</a>
+                        {% elif page.url == "/galerie/" %}
+                            <a href="/en/gallery.html" class="lang-link">EN</a>
+                        {% elif page.url == "/mentions-legales/" %}
+                            <a href="/en/legal.html" class="lang-link">EN</a>
+                        {% else %}
+                            <a href="/en/index.html" class="lang-link">EN</a>
+                        {% endif %}
+                    {% endif %}
+                </div>
+
+                <!-- Booking CTA (visible in mobile menu) -->
+                <li class="cs-li">
+                    <a href="https://salonkee.lu/salon/studio-3" class="nav-cta"
+                       onclick="if(window.gtag) gtag('event', 'book_click', { event_label: 'Réserver - mobile nav' });">
+                        {% if page.url and page.url.indexOf("/en/") === 0 %}Book{% else %}Réserver{% endif %}
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+                    <!-- Language Switcher DESKTOP -->
+            <div class="language-switcher">
+                {% if page.url and page.url.indexOf("/en/") === 0 %}
+                    <!-- Sur EN → lien vers FR -->
+                    {% if page.url == "/en/index.html" or page.url == "/en/" %}
+                        <a href="/" class="lang-link">FR</a>
+                    {% elif page.url == "/en/about.html" %}
+                        <a href="/a-propos/" class="lang-link">FR</a>
+                    {% elif page.url == "/en/womens-hair.html" %}
+                        <a href="/coiffure-femme/" class="lang-link">FR</a>
+                    {% elif page.url == "/en/mens-hair.html" %}
+                        <a href="/coiffure-homme/" class="lang-link">FR</a>
+                    {% elif page.url == "/en/contact.html" %}
+                        <a href="/contact/" class="lang-link">FR</a>
+                    {% elif page.url == "/en/gallery.html" %}
+                        <a href="/galerie/" class="lang-link">FR</a>
+                    {% elif page.url == "/en/legal.html" %}
+                        <a href="/mentions-legales/" class="lang-link">FR</a>
+                    {% else %}
+                        <a href="/" class="lang-link">FR</a>
+                    {% endif %}
+                    <span class="lang-sep">|</span>
+                    <span class="lang-active">EN</span>
+                {% else %}
+                    <span class="lang-active">FR</span>
+                    <span class="lang-sep">|</span>
+                    {% if page.url == "/" or page.url == "/index/" %}
+                        <a href="/en/index.html" class="lang-link">EN</a>
+                    {% elif page.url == "/a-propos/" %}
+                        <a href="/en/about.html" class="lang-link">EN</a>
+                    {% elif page.url == "/coiffure-femme/" %}
+                        <a href="/en/womens-hair.html" class="lang-link">EN</a>
+                    {% elif page.url == "/coiffure-homme/" %}
+                        <a href="/en/mens-hair.html" class="lang-link">EN</a>
+                    {% elif page.url == "/contact/" %}
+                        <a href="/en/contact.html" class="lang-link">EN</a>
+                    {% elif page.url == "/galerie/" %}
+                        <a href="/en/gallery.html" class="lang-link">EN</a>
+                    {% elif page.url == "/mentions-legales/" %}
+                        <a href="/en/legal.html" class="lang-link">EN</a>
+                    {% else %}
+                        <a href="/en/index.html" class="lang-link">EN</a>
+                    {% endif %}
+                {% endif %}
+            </div>
+
+        <!-- Desktop CTA Button (visible only on desktop) -->
+        <a href="https://salonkee.lu/salon/studio-3" class="nav-cta desktop-cta"
+           onclick="if(window.gtag) gtag('event', 'book_click', { event_label: 'Réserver - desktop nav' });">
+            {% if page.url and page.url.indexOf("/en/") === 0 %}Book{% else %}Réserver{% endif %}
+        </a>
+    </div>
+</nav>
+
