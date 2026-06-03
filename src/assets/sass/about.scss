@@ -265,8 +265,9 @@
     }
     .team-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 340px));
       gap: 28px;
+      justify-content: center;
     }
     .team-card { position: relative; }
     .team-card-img-wrap {
