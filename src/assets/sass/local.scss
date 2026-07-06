@@ -262,6 +262,12 @@
   }
   .team-card:hover .team-line { width: 60px; }
 
+  @media (max-width: 600px) {
+    .team-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
   /* ─── TESTIMONIAL ─── */
   .testimonial-section {
     background: var(--warm);
@@ -420,11 +426,12 @@
     height: 360px;
   }
 
-  /* Team */
-  .team-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
+
+/* Team */
+.team-grid {
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
 
   /* Testimonial */
   .testimonial-section {
@@ -506,11 +513,11 @@
     opacity: 1; /* always visible since no hover on touch */
   }
 
-  /* Team */
-  .team-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
+/* Team */
+.team-grid {
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
   .team-intro {
     margin-bottom: 44px;
   }
