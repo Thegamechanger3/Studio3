@@ -227,13 +227,15 @@
     .stats-band {
       background: var(--warm);
       padding: 70px 60px;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      display: flex;
+      justify-content: center;
       gap: 2px;
     }
     .stat-item {
       text-align: center;
       padding: 20px;
+      flex: 1;
+      max-width: 250px; /* optional, keeps items from stretching too wide */
     }
     .stat-num {
       font-family: 'Cormorant Garamond', serif;
